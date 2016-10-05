@@ -26,17 +26,12 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        s_length = len(s)
-
-        if len(s_length) == 0:
+        if len(s) == 0:
             return s
 
         longest_center = 0
         longest_length = 1
-
-        main_char_center = 0
-        main_dev_center = 0
-        longests = [[0, 0]] * (s_length - 1)
+        s_length = len(s)
 
         for i in range(len(s) - 1):
             length = self.longestWithCharCenter(s, i, s_length)

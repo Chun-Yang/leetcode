@@ -1,51 +1,65 @@
+# https://www.youtube.com/watch?v=nbTSfrEfo6M
+
 class Solution(object):
-    def longestWithCenter(self, padded_s, i):
-        length = 0
-        while padded_s[i - length - 1] == padded_s[i + length + 1]:
-            length += 1
+    def longestWithCharCenter(self, s, i, length):
+        longest_length = 1
+        for j in range(1, min(i + 1, length - i)):
+            if s[i - j] == s[i + j]:
+                longest_length += 2
+            else:
+                return longest_length
 
-        # print("i", i)
-        # print("length", length)
-        # string = padded_s[
-        #         i - length:
-        #         i + length + 1
-        #         ]
-        # print("string", string)
+        return longest_length
 
-        return length
+    def longestWithDivCenter(self, s, i, length):
+        longest_length = 0
+        for j in range(1, min(i + 2, length - i)):
+            if s[i - j + 1] == s[i + j]:
+                longest_length += 2
+            else:
+                return longest_length
+
+        return longest_length
 
     def longestPalindrome(self, s):
         """
         :type s: str
         :rtype: str
         """
-        if len(s) == 0:
+        s_length = len(s)
+
+        if len(s_length) == 0:
             return s
 
-        padded_s = '^#' + '#'.join(list(s)) + '#$'
-        # NOTE: the length is real, the string is padded
+        longest_center = 0
+        longest_length = 1
 
-        padded_len = len(padded_s)
-        longest_center = 1
-        longest_length = 0
+        main_char_center = 0
+        main_dev_center = 0
+        longests = [[0, 0]] * (s_length - 1)
 
-        for i in range(1, len(padded_s) - 1):
-            length = self.longestWithCenter(padded_s, i)
+        for i in range(len(s) - 1):
+            length = self.longestWithCharCenter(s, i, s_length)
+            if length > longest_length:
+                longest_length = length
+                longest_center = i
+            length = self.longestWithDivCenter(s, i, s_length)
             if length > longest_length:
                 longest_length = length
                 longest_center = i
 
-        longest_string = ''.join(filter(
-            lambda x: x != '#',
-            list(padded_s[
-                longest_center - longest_length:
-                longest_center + longest_length + 1
-            ])
-        ))
+        offset = longest_length // 2
 
-        # print("longest_string", longest_string)
-
-        return longest_string
+        if longest_length % 2 == 0:
+            return s[
+                longest_center - offset + 1:
+                longest_center + offset + 1
+            ]
+        else:
+            return s[
+                longest_center - offset:
+                longest_center + offset + 1
+            ]
 
 
 # assert Solution().longestPalindrome('abba') == 'abba'

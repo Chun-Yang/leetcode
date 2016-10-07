@@ -7,28 +7,29 @@ class Solution(object):
 
         if is_star:
             if s == '':
-                return self.isMatchRec(s, p[2:])
+                return (len(p) % 2 == 0) and \
+                        all([char == '*' for char in p[3::2]])
 
-            if s[0] == p[0] or p[0] == '.':
-                return self.isMatchRec(s[1:], p) \
-                        or self.isMatchRec(s, p[2:])
+            if self.isMatchRec(s, p[2:]):
+                return True
 
-            return self.isMatchRec(s, p[2:])
-        else:
-            if s == '':
-                return False
-
-            if s[0] == p[0] or p[0] == '.':
-                return self.isMatchRec(s[1:], p[1:])
-
+            for i in range(len(s)):
+                if s[i] == p[0] or p[0] == '.':
+                    if self.isMatchRec(s[i+1:], p[2:]):
+                        return True
+                else:
+                    return False
             return False
 
-    def isMatch(self, s, p):
-        """
-        :type s: str
-        :type p: str
-        :rtype: bool
-        """
+        else:
+            return s != '' and \
+                (s[0] == p[0] or p[0] == '.') and \
+                self.isMatchRec(s[1:], p[1:])
+
+    def simplifyPattern(self, p):
+        # No simplification
+        # return p
+
         simplified_p = ''
         previous_star = ''
         previous_star_index = 0
@@ -43,8 +44,16 @@ class Solution(object):
                 previous_star_index = index
             else:
                 simplified_p += char
+        return simplified_p
 
-        return self.isMatchRec(s, simplified_p)
+
+    def isMatch(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        return self.isMatchRec(s, self.simplifyPattern(p))
 
 # assert not Solution().isMatch('aa', 'a')
 # assert Solution().isMatch('aa', 'aa')
@@ -55,3 +64,6 @@ class Solution(object):
 # assert not Solution().isMatch('ab', '.*c')
 # assert Solution().isMatch('bbbba','.*a*a')
 # assert Solution().isMatch("aasdfasdfasdfasdfas","aasdf.*asdf.*asdf.*asdf.*s")
+# assert not Solution().isMatch("aaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*c")
+# assert Solution().isMatch("cbaacacaaccbaabcb","c*b*b*.*ac*.*bc*a*")
+# assert Solution().isMatch("","c*a*")

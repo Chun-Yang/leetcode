@@ -1,3 +1,5 @@
+from bisect import bisect_left
+
 class Solution(object):
     def maxEnvelopes(self, envelopes):
         if len(envelopes) == 0:
@@ -7,25 +9,22 @@ class Solution(object):
         :type envelopes: List[List[int]]
         :rtype: int
         """
-        envelopes = sorted(envelopes, reverse=True)
-        memo = [None] * len(envelopes)
-        memo[len(envelopes) - 1] = 1
+        heights = [e[1] for e in sorted(envelopes, key=lambda x: (x[0], -x[1]))]
 
-        def maxEnvelopesAt(i):
-            if memo[i]:
-                return memo[i]
+        ends = [heights[0]]
+        lengths = [1]
 
-            memo[i] = 1
+        for h in heights[1:]:
+            if h > ends[-1]:
+                ends.append(h)
+                lengths.append(lengths[-1] + 1)
+            elif h < ends[0]:
+                ends[0] = h
+            else:
+                index = bisect_left(ends, h)
+                ends[index] = h
 
-            for j in range(i + 1, len(envelopes)):
-                if envelopes[i][0] > envelopes[j][0] and envelopes[i][1] > envelopes[j][1]:
-                    memo[i] = max(memo[i], maxEnvelopesAt(j) + 1)
+        return lengths[-1]
 
-            return memo[i]
-
-
-        res = max(maxEnvelopesAt(i) for i in range(len(envelopes)))
-        return res
-
-assert Solution().maxEnvelopes([[5,4],[6,4],[6,7],[2,3]]) ==  3
-assert Solution().maxEnvelopes([[1,3],[3,5],[6,7],[6,8],[8,4],[9,5]]) == 3
+# assert Solution().maxEnvelopes([[5,4],[6,4],[6,7],[2,3]]) ==  3
+# assert Solution().maxEnvelopes([[1,3],[3,5],[6,7],[6,8],[8,4],[9,5]]) == 3

@@ -7,8 +7,10 @@ class Solution(object):
         if len(prices) == 0:
             return 0
 
-        buy = prices[0]
-        sell = prices[0]
+        buy_one = prices[0]
+        buy_two = None
+        sell_one = None
+        sell_two = None
         lowest = prices[0]
         for price in prices[1:]:
             if price - lowest > sell - buy:
@@ -16,7 +18,7 @@ class Solution(object):
                 sell = price
             elif price > sell:
                 sell = price
-            elif price < buy:
+            elif price < lowest:
                 lowest = price
 
 

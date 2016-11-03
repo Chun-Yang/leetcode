@@ -1,29 +1,31 @@
 class Solution(object):
-    def area(self, height, left, right):
-        return min(height[left], height[right]) * (right - left)
-
     def maxArea(self, height):
         """
         :type height: List[int]
         :rtype: int
         """
+        def area(left, right):
+            return (right - left) * min(height[left], height[right])
+
         left = 0
         right = len(height) - 1
-        max_left = 0
-        max_right = len(height) - 1
-        max_area = self.area(height, max_left, max_right)
+        leftMax = left
+        rightMax = right
+        res = area(left, right)
 
-        while (left < right):
-            # move the one that is smaller
-            if height[left] > height[right]:
-                if height[right - 1] > height[max_right]:
-                    max_right = right - 1
-                    max_area = max(max_area, self.area(height, max_left, max_right))
-                right -= 1
-            else:
-                if height[left + 1] > height[max_left]:
-                    max_left = left + 1
-                    max_area = max(max_area, self.area(height, max_left, max_right))
+        while left < right:
+            if height[leftMax] < height[rightMax]:
                 left += 1
+                if height[leftMax] < height[left]:
+                    res = max(res, area(left, rightMax))
+                    leftMax = left
+            else:
+                right -= 1
+                if height[rightMax] < height[right]:
+                    res = max(res, area(leftMax, right))
+                    rightMax = right
 
-        return max_area
+        return res
+
+
+# assert Solution().maxArea([2,3,4,5,18,17,6]) == 17

@@ -41,10 +41,53 @@
 #        :rtype List[NestedInteger]
 #        """
 
+# class NestedInteger(object):
+#     def __init__(self, value=None):
+#         pass
+#     def add(self, value):
+#         pass
+
 class Solution(object):
     def deserialize(self, s):
         """
         :type s: str
         :rtype: NestedInteger
         """
+        if s[0] != '[':
+            return NestedInteger(int(s))
 
+        s = s[1:-1]
+
+        res = NestedInteger()
+        stack = [res]
+        num = ''
+
+        for c in s:
+            if c == '[':
+                ni = NestedInteger()
+                stack[-1].add(ni)
+                stack.append(ni)
+            elif c == ']':
+                if num:
+                    stack[-1].add(NestedInteger(int(num)))
+                stack.pop()
+            elif c == ',':
+                if num:
+                    stack[-1].add(NestedInteger(int(num)))
+            elif c == '-':
+                num = '-'
+                continue
+            else:
+                num += c
+                continue
+
+            num = ''
+
+        if num:
+            res.add(NestedInteger(int(num)))
+
+        return res
+
+
+# Solution().deserialize("[-1]")
+# Solution().deserialize("[123,[456,[789]]]")

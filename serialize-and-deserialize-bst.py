@@ -8,48 +8,62 @@
 class Codec:
 
     def serialize(self, root):
-        """Encodes a tree to a single string.
+        vals = []
 
-        :type root: TreeNode
-        :rtype: str
-        """
-        def dfs(node):
-            if node is None:
-                return ''
-            else:
-                return str(node.val) + ' ' + dfs(node.left) + dfs(node.right)
+        def preOrder(node):
+            if node:
+                vals.append(node.val)
+                preOrder(node.left)
+                preOrder(node.right)
 
-        # NOTE: remove the last space
-        return dfs(root)[:-1]
+        preOrder(root)
 
+        return ' '.join(map(str, vals))
+
+    # O( N )
     def deserialize(self, data):
-        """Decodes your encoded data to tree.
+        vals = [int(val) for val in data.split()]
 
-        :type data: str
-        :rtype: TreeNode
-        """
-        if data == '':
-            return None
+        def build(minVal, maxVal):
+            if len(vals) == 0:
+                return None
 
-        values = map(int, data.split(' '))
-        rootValue = values[0]
-        root = TreeNode(rootValue)
-        def insert(node, value):
-            if value < node.val:
-                if node.left is None:
-                    node.left = TreeNode(value)
-                else:
-                    insert(node.left, value)
+            if minVal < vals[0] < maxVal:
+                val = vals.pop(0)
+                node = TreeNode(val)
+                node.left = build(minVal, val)
+                node.right = build(val, maxVal)
+                return node
             else:
-                if node.right is None:
-                    node.right = TreeNode(value)
-                else:
-                    insert(node.right, value)
+                return None
 
-        for value in values[1:]:
-            insert(root, value)
+        return build(float('-infinity'), float('infinity'))
 
-        return root
+    # O( N*log(N) )
+    # def deserialize(self, data):
+    #     if data == '':
+    #         return None
+
+    #     def insert(node, val):
+    #         if val < node.val:
+    #             if node.left is None:
+    #                 node.left = TreeNode(val)
+    #             else:
+    #                 insert(node.left, val)
+    #         else:
+    #             if node.right is None:
+    #                 node.right = TreeNode(val)
+    #             else:
+    #                 insert(node.right, val)
+
+    #     vals = [int(val) for val in data.split(' ')]
+
+    #     root = TreeNode(vals[0])
+
+    #     for val in vals[1:]:
+    #         insert(root, val)
+
+    #     return root
 
 
 # Your Codec object will be instantiated and called as such:

@@ -20,22 +20,17 @@ class Codec:
 
         return ' '.join(map(str, vals))
 
-    # O( N )
+    # O( N ) since each val run build once
     def deserialize(self, data):
-        vals = [int(val) for val in data.split()]
+        vals = collections.deque(int(val) for val in data.split())
 
         def build(minVal, maxVal):
-            if len(vals) == 0:
-                return None
-
-            if minVal < vals[0] < maxVal:
-                val = vals.pop(0)
+            if vals and minVal < vals[0] < maxVal:
+                val = vals.popleft()
                 node = TreeNode(val)
                 node.left = build(minVal, val)
                 node.right = build(val, maxVal)
                 return node
-            else:
-                return None
 
         return build(float('-infinity'), float('infinity'))
 

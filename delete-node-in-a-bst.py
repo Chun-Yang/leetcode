@@ -12,53 +12,31 @@ class Solution(object):
         :type key: int
         :rtype: TreeNode
         """
-        def isLeaf(node):
-            return node and not node.left and not node.right
+        def findMax(root):
+            node = root
+            while node.right:
+                node = node.right
+            return node.val
 
-        # return leaf value and remove leaf
-        def deleteLeaf(root):
-            if isLeaf(root.left):
-                val = root.left.val
-                root.left = None
-                return val
-            elif isLeaf(root.right):
-                val = root.right.val
-                root.right = None
-                return val
-            elif root.left:
-                return deleteLeaf(root.left)
-            else:
-                return deleteLeaf(root.right)
-
-        def sink(root):
-            val = root.val
-            if root.left and val < root.left.val:
-                root.val = root.left.val
-                root.left.val = val
-                sink(root.left)
-            elif root.right and val > root.right.val:
-                root.val = root.right.val
-                root.right.val = val
-                sink(root.right)
-
-        def delete(root):
-            leafVal = deleteLeaf(root)
-            root.val = leafVal
-            sink(root)
-            return root
-
-        def find(node, key):
-            if node is None:
+        def delete(root, key):
+            if root is None:
                 return None
-            elif key < node.val:
-                node.left = find(node.left, key)
-            elif key > node.val:
-                node.right = find(node.right, key)
-            elif node.left is None and node.right is None:
+            elif key < root.val:
+                root.left = delete(root.left, key)
+                return root
+            elif key > root.val:
+                root.right = delete(root.right, key)
+                return root
+            elif root.left is None and root.right is None:
                 return None
+            elif root.left is None:
+                return root.right
+            elif root.right is None:
+                return root.left
             else:
-                return delete(node)
+                maxInLeft = findMax(root.left)
+                root.val = maxInLeft
+                root.left = delete(root.left, maxInLeft)
+                return root
 
-            return node
-
-        return find(root, key)
+        return delete(root, key)

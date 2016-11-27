@@ -1,28 +1,22 @@
-from itertools import chain
-from collections import Counter
+class Solution:
+    # @param num, a list of integer
+    # @return a list of lists of integer
+    def subsetsWithDup(self, S):
+        res = [[]]
+        S.sort()
+        if len(S):
+            res.append([S[0]])
 
-class Solution(object):
-    def subsetsWithDup(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
-        counter = Counter(nums)
-        counts = [[num, counter[num]] for num in counter]
-        l = len(counts)
-        res = []
-
-        def mutate(i):
-            if i == l:
-                item = sum([[num] * count for num, count in counts], [])
-                res.append(item)
-                return
-
-            num, count = counts[i]
-            for j in range(count + 1):
-                counts[i][1] = j
-                mutate(i + 1)
-
-        mutate(0)
-
+        end = 1
+        for i in range(1, len(S)):
+            l = len(res)
+            if S[i] != S[i - 1]:
+                end = l
+            for j in range(l - end, l):
+                res.append(res[j] + [S[i]])
         return res
+
+
+# print("Solution().subsetsWithDup([1,2,3])", Solution().subsetsWithDup([1,2,3]))
+# print("Solution().subsetsWithDup([1,2,2])", Solution().subsetsWithDup([1,2,2]))
+# print("Solution().subsetsWithDup([1,1])", Solution().subsetsWithDup([1,1]))

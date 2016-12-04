@@ -26,16 +26,16 @@ class Solution(object):
             shift = findShift(0, l - 1)
 
         # use the pivot to construct the transform
-        lo, hi = shift, shift + l - 1
+        lo, hi = shift, shift + l
 
         # binary search to find the pivot
-        while lo <= hi:
+        while lo < hi:
             mid = (lo + hi) // 2
             curNum = nums[mid % l]
             if curNum < target:
                 lo = mid + 1
             elif curNum > target:
-                hi = mid - 1
+                hi = mid
             else:
                 return mid % l
 

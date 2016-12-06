@@ -5,35 +5,14 @@ class Solution(object):
         :rtype: int
         """
         l = len(nums)
+        if l == 0:
+            return 0
 
-        lo, hi = 0, l
-        loPrev, hiPrev = - float('inf'), float('inf')
+        lo, hi = 1, 1
+        while hi < l:
+            if nums[hi] != nums[hi - 1]:
+                nums[lo] = nums[hi]
+                lo += 1
+            hi += 1
 
-        while lo < hi:
-            # print('=====')
-            # print("lo, hi", lo, hi)
-            # print("nums", nums)
-            # print("loPrev, hiPrev", loPrev, hiPrev)
-            if nums[lo] == loPrev:
-                hi -= 1
-                if nums[lo] == nums[hi]:
-                    return lo
-                while lo < hi and nums[hi] == hiPrev:
-                    hi -= 1
-                hiPrev = nums[hi]
-                nums[lo], nums[hi] = nums[hi], nums[lo]
-            elif nums[lo] == hiPrev:
-                return lo
-            else:
-                loPrev = nums[lo]
-            lo += 1
-
-        # print('*****')
-        # print("lo, hi", lo, hi)
-        return hi
-
-# x = [1,1,2,3]
-# xExp = [1,2,3]
-# ans = 3
-# assert Solution().removeDuplicates(x) == ans
-# assert set(x[0:ans]) == set(xExp)
+        return lo

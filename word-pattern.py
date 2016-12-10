@@ -11,15 +11,16 @@ class Solution(object):
             return False
 
         w2p = {}
-        p2w = {}
+        existingPatterns = set()
         for i in range(len(pattern)):
-            if words[i] in w2p:
-                if w2p[words[i]] != pattern[i]:
+            w, p = words[i], pattern[i]
+            if w in w2p:
+                if w2p[w] != p:
                     return False
             else:
-                if pattern[i] in p2w:
+                if p in existingPatterns:
                     return False
-                p2w[pattern[i]] = words[i]
-                w2p[words[i]] = pattern[i]
+                existingPatterns.add(p)
+                w2p[w] = p
 
         return True

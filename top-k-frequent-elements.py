@@ -1,4 +1,5 @@
 import collections
+import itertools
 
 class Solution(object):
     def topKFrequent(self, nums, k):
@@ -12,18 +13,6 @@ class Solution(object):
         for num, count in counter.items():
             buckets[count].append(num)
 
-        i, left, res = len(nums), k, []
-        while i > 0:
-            l = len(buckets[i])
-            if l:
-                if l < left:
-                    res.extend(buckets[i])
-                    left -= l
-                else:
-                    res.extend(buckets[i][0:left])
-                    break;
-            i -= 1
+        return list(itertools.islice(itertools.chain(*reversed(buckets)), k))
 
-        return res
-
-# assert Solution().topKFrequent([1,2,2,3], 2) == [1,2,3]
+# assert Solution().topKFrequent([1,2,2,3], 2) == [2,1]

@@ -1,3 +1,5 @@
+from functools import reduce
+
 class Solution(object):
     def singleNumber(self, nums):
         """

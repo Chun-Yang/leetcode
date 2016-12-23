@@ -4,11 +4,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        rwb = [0, 0, 0]
-        for num in nums:
-            rwb[num] += 1
-        k = 0
-        for i in range(len(rwb)):
-            for j in range(rwb[i]):
-                nums[k] = i
-                k += 1
+        zero, one, two = 0, 0, len(nums) - 1
+        while one <= two:
+            if nums[one] == 0:
+                nums[one], nums[zero] = nums[zero], nums[one]
+                one += 1
+                zero += 1
+            elif nums[one] == 1:
+                one += 1
+            else:
+                nums[one], nums[two] = nums[two], nums[one]
+                two -= 1

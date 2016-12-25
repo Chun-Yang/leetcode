@@ -34,8 +34,12 @@ class Solution(object):
         i, size = 0, len(s)
 
         cToOp = { '+': add, '-': sub, '*': mul, '/': floordiv }
+
         def applyOp(op, right, left):
             return cToOp[op](left, right)
+
+        def hasPrecedence(op1, op2):
+            return op1 in ['*', '/'] and op2 in ['+', '-']
 
         while i < size:
             c = s[i]
@@ -44,18 +48,15 @@ class Solution(object):
                 continue
             elif c in ['+', '-', '*', '/']:
                 i += 1
-                if c in ['+', '-'] and operators:
+                while operators and not hasPrecedence(c, operators[-1]):
                     operands.append(applyOp(operators.pop(), operands.pop(), operands.pop()))
                 operators.append(c)
             else:
                 j = i
                 while j < size and s[j] in '0123456789':
                     j += 1
-                value, i = int(s[i:j]), j
-                if operators and operators[-1] in ['*', '/']:
-                    operands.append(applyOp(operators.pop(), value, operands.pop()))
-                else:
-                    operands.append(value)
+                operands.append(int(s[i:j]))
+                i = j
 
         while operators:
             operands.append(applyOp(operators.pop(), operands.pop(), operands.pop()))

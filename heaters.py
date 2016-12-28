@@ -5,27 +5,25 @@ class Solution(object):
         :type heaters: List[int]
         :rtype: int
         """
-        housesCount, heatersCount = len(houses), len(heaters)
-        distForHouses = [float('inf')] * housesCount
-        houseIndex, heaterIndex = 0, 0
-        while True:
-            if houseIndex == housesCount:
-                return max(distForHouses)
-
-            if heaterIndex == heatersCount:
-                distForHouses[houseIndex] = houses[houseIndex] - heaters[-1]
-                houseIndex += 1
-            else:
-                house = houses[houseIndex]
-                heater = heaters[heaterIndex]
-                distForHouses[houseIndex] = min(
-                        abs(house - heater),
-                        distForHouses[houseIndex]
-                        )
-                # advance the small one
-                if house < heater:
-                    houseIndex += 1
+        houses = sorted(houses)
+        heaters = sorted(heaters)
+        heatersCount, left, right, radius = len(heaters), 0, 0, -float('inf')
+        for i, house in enumerate(houses):
+            leftHeater, rightHeater = heaters[left], heaters[right]
+            if house < leftHeater:
+                radius = max(radius, leftHeater - house)
+            elif house > rightHeater:
+                while house > heaters[right]:
+                    if right == heatersCount - 1:
+                        break
+                    right += 1
+                if house > heaters[right]:
+                    radius = max(radius, house - heaters[right])
                 else:
-                    heaterIndex += 1
+                    while heaters[left + 1] < house:
+                        left += 1
+                    radius = max(radius, min(house - heaters[left], heaters[right] - house))
+            else:
+                radius = max(radius, min(house - leftHeater, rightHeater - house))
 
-# assert Solution().findRadius([1,2,3], [2]) == 1
+        return radius

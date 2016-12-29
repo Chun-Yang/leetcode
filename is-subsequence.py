@@ -1,3 +1,5 @@
+import bisect
+
 class Solution(object):
     def isSubsequence(self, s, t):
         """
@@ -5,7 +7,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        indexes = { c: [] for c in 'abcdefghijklmnopqrstuvwxyz' }
+        for i, c in enumerate(t):
+            indexes[c].append(i)
+        lo = 0
+        for c in s:
+            cIndex = bisect.bisect_left(indexes[c], lo)
+            if cIndex == len(indexes[c]):
+                return False
+            lo = indexes[c][cIndex] + 1
 
+        return True
 
 # class Solution(object):
 #     def isSubsequence(self, s, t):

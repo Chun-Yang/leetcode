@@ -35,4 +35,4 @@ class Solution(object):
 
         return dfs((1 << maxChoosableInteger) - 1, desiredTotal)
 
-# assert Solution().canIWin(5, 50) == False
+# assert Solution().canIWin(5, 10) == False

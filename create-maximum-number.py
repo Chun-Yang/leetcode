@@ -1,3 +1,4 @@
+# TODO: use bottom up dp
 class Solution(object):
     def maxNumber(self, nums1, nums2, k):
         """

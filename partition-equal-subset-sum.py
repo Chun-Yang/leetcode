@@ -5,21 +5,12 @@ class Solution(object):
         :rtype: bool
         """
         half, residue = divmod(sum(nums), 2)
-        if residue:
+        if residue or max(nums) > half:
             return False
 
-        nums = sorted(nums, reverse=True)
-        if nums[0] > half:
-            return False
-        if nums[0] == half:
-            return True
+        possible = [True] + [False] * half
+        for num in nums:
+            for j in reversed(range(num, half + 1)):
+                possible[j] = possible[j] or possible[j - num]
 
-        def dfs(nums, target):
-            for i, num in enumerate(nums):
-                if num == target or (num < target and dfs(nums[:i]+nums[i+1:], target - num)):
-                    return True
-            return False
-
-        return dfs(nums[1:], half - nums[0])
-
-# assert Solution().canPartition([1, 1])
+        return possible[half]

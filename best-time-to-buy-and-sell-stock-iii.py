@@ -4,22 +4,19 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        if len(prices) == 0:
-            return 0
+        # max profit for any sequence that ends with buy or buy and hold
+        buy1 = - float('inf')
+        buy2 = - float('inf')
+        # max profit for any sequence that ends with sell or sell and hold
+        sell1 = 0
+        sell2 = 0
+        for price in prices:
+            sell2 = max(sell2, price + buy2)
+            buy2 = max(buy2, - price + sell1)
+            sell1 = max(sell1, price + buy1)
+            buy1 = max(buy1, - price)
 
-        buy_one = prices[0]
-        buy_two = None
-        sell_one = None
-        sell_two = None
-        lowest = prices[0]
-        for price in prices[1:]:
-            if price - lowest > sell - buy:
-                buy = lowest
-                sell = price
-            elif price > sell:
-                sell = price
-            elif price < lowest:
-                lowest = price
+        return sell2
 
-
-        return sell - buy
+# assert Solution().maxProfit([1,2,3]) == 2
+# assert Solution().maxProfit([1,2,3,4]) == 3

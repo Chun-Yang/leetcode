@@ -1,10 +1,10 @@
 class Solution(object):
-    def solveNQueens(self, n):
+    def totalNQueens(self, n):
         """
         :type n: int
         :rtype: List[List[str]]
         """
-        ans, positions = [], []
+        counter, positions = [0], []
 
         def attacked(layer, position):
             for i in range(layer):
@@ -17,7 +17,7 @@ class Solution(object):
 
         def dfs(layer):
             if layer == n:
-                ans.append(positions[:])
+                counter[0] += 1
                 return
             for i in range(n):
                 if not attacked(layer, i):
@@ -27,10 +27,4 @@ class Solution(object):
 
         dfs(0)
 
-        def toString(i):
-            return '.' * (i) + 'Q' + '.' * (n - i - 1)
-
-        graph = [[toString(i) for i in solution] for solution in ans]
-        return graph
-
-# Solution().solveNQueens(4)
+        return counter[0]

@@ -11,27 +11,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        if not root:
-            return []
-
-        values, path = [], []
-
-        node = root
-        while node:
-            path.append(node)
-            if node.left:
-                node = node.left
-            elif node.right:
-                node = node.right
-            else:
-                break
+        lead = TreeNode(0)
+        lead.left = TreeNode(0)
+        lead.right = root
+        values, path = [], [lead, lead.left]
 
         while True:
             cur = path.pop()
             values.append(cur.val)
 
             if not path:
-                return values
+                return values[1:-1]
 
             if path[-1].left == cur:
                 node = path[-1].right

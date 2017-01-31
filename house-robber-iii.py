@@ -11,21 +11,17 @@ class Solution(object):
         :type root: TreeNode
         :rtype: int
         """
-        inclusiveMax = 0
-        exclusiveMax = 0
-        currentLayer = [root] if root else []
-        while currentLayer:
-            currentSum = sum(node.val for node in currentLayer)
-            inclusiveMax, exclusiveMax = \
-                    currentSum + exclusiveMax, max(inclusiveMax, exclusiveMax)
+        # post order
+        # return two values: maxInclusive, maxExclusive
+        def dfs(node):
+            if not node:
+                return 0, 0
+            leftInclusive,  leftExclusive  = dfs(node.left)
+            rightInclusive, rightExclusive = dfs(node.right)
+            maxInclusive = leftExclusive + rightExclusive + node.val
+            maxExclusive = max(leftExclusive, leftInclusive) \
+                    + max(rightExclusive, rightInclusive)
 
-            nextLayer = []
-            for node in currentLayer:
-                if node.left:
-                    nextLayer.append(node.left)
-                if node.right:
-                    nextLayer.append(node.right)
+            return maxInclusive, maxExclusive
 
-            currentLayer = nextLayer
-
-        return max(inclusiveMax, exclusiveMax)
+        return max(dfs(root))

@@ -2,3 +2,4 @@
 - heapq
 - bisect
 - defaultdict
+  - defaultdict(list)

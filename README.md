@@ -44,3 +44,13 @@
   - permutations
   - product
   - islice
+- # error handling
+```
+try:
+  pass
+except ValueError as e:
+  print('error')
+
+raise ValueError('message')
+raise Exception('generic error')
+```

@@ -54,3 +54,4 @@ except ValueError as e:
 raise ValueError('message')
 raise Exception('generic error')
 ```
+- isinstance

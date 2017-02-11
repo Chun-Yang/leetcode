@@ -31,16 +31,14 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        nodes = data.split(',')
-        counter = [0]
+        nodes = iter(data.split(','))
 
         def preorder():
-            if nodes[counter[0]] == '':
-                counter[0] += 1
+            val = next(nodes)
+            if val == '':
                 return None
             else:
-                node = TreeNode(int(nodes[counter[0]]))
-                counter[0] += 1
+                node = TreeNode(int(val))
                 node.left = preorder()
                 node.right = preorder()
                 return node

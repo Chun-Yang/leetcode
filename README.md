@@ -55,3 +55,5 @@ raise ValueError('message')
 raise Exception('generic error')
 ```
 - isinstance
+- remove last bit
+  - x & (x - 1)

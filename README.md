@@ -75,5 +75,10 @@ raise Exception('generic error')
 - two sum closest
   - 找到所有比target number小的对儿的个数
 - 给出一群Interval，在一条实数轴上，返回一堆点，要求每个Interval都有点，而且点的个数尽量少。
-- 说每个城市都有个日历，日历上面有假期，问一年之内怎么休息能拿到最多的假期
+- (?) 说每个城市都有个日历，日历上面有假期，问一年之内怎么休息能拿到最多的假期
 - 自动补全的实现
+
+- given list of points, 求可围成的最小矩形的面积（矩形定义式跟x\y轴平行）
+- Moving Average from Data Stream
+  http://www.programcreek.com/2014/05/leetcode-moving-average-from-data-stream-java/
+- tournament-scheduling的题目：N名选手，实力按数字排序，越厉害的数字越小，按要求给出初赛的scheduling。要求为每一轮最厉害的选手都跟当前最弱的人比

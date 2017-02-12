@@ -69,3 +69,11 @@ raise Exception('generic error')
   https://discuss.leetcode.com/category/388/range-sum-query-2d-mutable
 - 给一个string和一个string list，把所有string list里在string里match到的字符加上<b></b>, 这题可以用KMP如果你能现场写的话，楼主用的trie，勉强写完，没时间follow up，感觉还可以改进，如果要挂就挂在这里了
 - 给一个二维数组，一个source位置和一个goal，有的位置之间还有wall，每次移动必须朝一个方向移动到不能移动为止，问从source能不能到goal
+- external sort (merge sort)
+  - 给你一大堆文件，每个文件里面是排序好的数，一行只有一个数字，文件可能很大，内存装不下。要求把所有文件里的数字排序好放到一个输出文件里面
+
+- two sum closest
+  - 找到所有比target number小的对儿的个数
+- 给出一群Interval，在一条实数轴上，返回一堆点，要求每个Interval都有点，而且点的个数尽量少。
+- 说每个城市都有个日历，日历上面有假期，问一年之内怎么休息能拿到最多的假期
+- 自动补全的实现

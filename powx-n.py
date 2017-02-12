@@ -5,13 +5,17 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
-        res, base, isPositive, n = 1, x, n >= 0, abs(n)
-        while n > 0:
-            if 1 & n:
+        base = x
+        res = 1
+        isPositive = n > 0
+        n = abs(n)
+        while n:
+            if n & 1:
                 res *= base
+            n >>= 1
             base *= base
-            n = n >> 1
+        return res if isPositive else 1.0 / res
 
-        return res if isPositive else 1 / res
-
-# Solution().myPow(3,5)
+# assert Solution().myPow(1.9, 0) == 1
+# assert Solution().myPow(3,5) == 3 ** 5
+# assert Solution().myPow(1.5, 2) == 1.5 ** 2

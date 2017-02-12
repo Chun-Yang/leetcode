@@ -58,7 +58,6 @@
 class Solution(object):
     def canJump(self, nums):
         maxIndex = 0
-        lastIndex = len(nums) - 1
         for i, num in enumerate(nums):
             if i > maxIndex:
                 return False

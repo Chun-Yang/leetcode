@@ -1,20 +1,37 @@
+# def maxValue(weights, values, weightLimit):
+#     itemsCount = len(weights)
+#     maxValues = [
+#             [ 0 for _ in range(weightLimit + 1) ]
+#             for _ in range(itemsCount + 1)
+#             ]
+#     for i in range(1, itemsCount + 1):
+#         w, v = weights[i-1], values[i-1]
+#         for j in range(1, weightLimit + 1):
+#             if w <= j:
+#                 maxValues[i][j] = max(
+#                         maxValues[i-1][j],
+#                         maxValues[i-1][j-w] + v
+#                         )
+#             else:
+#                 maxValues[i][j] = maxValues[i-1][j]
+#     return maxValues[-1][-1]
+
 def maxValue(weights, values, weightLimit):
     itemsCount = len(weights)
     maxValues = [
-            [ 0 for _ in range(weightLimit + 1) ]
-            for _ in range(itemsCount + 1)
+            [ 0 for _ in range(itemsCount + 1) ]
+            for _ in range(weightLimit + 1)
             ]
-    for i in range(1, itemsCount + 1):
-        w, v = weights[i-1], values[i-1]
-        for j in range(1, weightLimit + 1):
-            if w <= j:
-                maxValues[i][j] = max(
-                        maxValues[i-1][j],
-                        maxValues[i-1][j-w] + v
-                        )
+    for i in range(1, weightLimit + 1):
+        for j in range(1, itemsCount + 1):
+            w, v = weights[j - 1], values[j - 1]
+            if w > i:
+                maxValues[i][j] = maxValues[i][j-1]
             else:
-                maxValues[i][j] = maxValues[i-1][j]
-
+                maxValues[i][j] = max(
+                        maxValues[i][j-1],
+                        maxValues[i-w][j-1] + v
+                        )
     return maxValues[-1][-1]
 
 assert maxValue([], [], 10) == 0

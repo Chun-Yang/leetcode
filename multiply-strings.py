@@ -12,7 +12,9 @@ class Solution(object):
             for i2, d2 in enumerate(reversed(num2)):
                 lo = i1 + i2
                 hi = lo + 1
-                product[hi], product[lo] = divmod(product[lo] + int(d1) * int(d2), 10)
+                hiValue, loValue = divmod(product[lo] + int(d1) * int(d2), 10)
+                product[lo] = loValue
+                product[hi] += hiValue
 
         while product and product[-1] == 0:
             product.pop()
@@ -23,3 +25,4 @@ class Solution(object):
 # assert Solution().multiply('1', '0') == '0'
 # assert Solution().multiply('100', '10') == '1000'
 # assert Solution().multiply('12', '12') == '144'
+# assert Solution().multiply('123', '456') == '56088'

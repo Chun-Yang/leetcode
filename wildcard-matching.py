@@ -9,6 +9,7 @@ class Solution(object):
         matchMatrix = [ [ False for _ in range(lp + 1) ] for _ in range(ls + 1) ]
 
         matchMatrix[0][0] = True
+        anyPreMatch = [True] + [False] * lp
 
         for j in range(1, lp + 1):
             if p[j-1] == '*':
@@ -21,7 +22,9 @@ class Solution(object):
                 if s[i-1] == p[j-1] or p[j-1] == '?':
                     matchMatrix[i][j] = matchMatrix[i-1][j-1]
                 elif p[j-1] == '*':
-                    matchMatrix[i][j] = any(matchMatrix[k][j-1] for k in range(i+1))
+                    matchMatrix[i][j] = anyPreMatch[j-1]
+                if matchMatrix[i][j]:
+                    anyPreMatch[j] = True
 
         return matchMatrix[-1][-1]
 

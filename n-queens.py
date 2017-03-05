@@ -4,28 +4,44 @@ class Solution(object):
         :type n: int
         :rtype: List[List[str]]
         """
-        solutions = []
-        positions = [0] * n
+        solutions, qs = [], []
+        qSet, pqSumSet, pqDifSet = set(), set(), set()
 
-        def valid(index, position):
-            for i in range(index):
-                if positions[i] == position or index - i == abs(position - positions[i]):
-                    return False
-            return True
-
-        def dfs(index):
-            if index == n:
-                solutions.append(positions[:])
+        def dfs(p):
+            if p == n:
+                solutions.append(qs[:])
             else:
-                for position in range(n):
-                    if valid(index, position):
-                        positions[index] = position
-                        dfs(index + 1)
+                for q in range(n):
+                    if not (q in qSet or (p + q) in pqSumSet or (p - q) in pqDifSet):
+                        qs.append(q)
+                        qSet.add(q)
+                        pqSumSet.add(p + q)
+                        pqDifSet.add(p - q)
+
+                        dfs(p + 1)
+
+                        qs.pop()
+                        qSet.remove(q)
+                        pqSumSet.remove(p + q)
+                        pqDifSet.remove(p - q)
+
         dfs(0)
 
-        def toBoard(positions):
-            return [ '.' * p + 'Q' + '.' * (n-1-p) for p in positions ]
+        return [
+                [ '.' * p + 'Q' + '.' * (n-1-p) for p in s ]
+                for s in solutions
+                ]
 
-        return [toBoard(s) for s in solutions]
-
-# Solution().solveNQueens(2)
+# assert Solution().solveNQueens(2) == []
+# assert Solution().solveNQueens(4) == [
+#         [
+#             ".Q..",
+#             "...Q",
+#             "Q...",
+#             "..Q."],
+#         [
+#             "..Q.",
+#             "Q...",
+#             "...Q",
+#             ".Q.."]
+# ]

@@ -31,53 +31,70 @@
 class Solution(object):
     def merge(self, intervals):
         ## insert
-        ## @return (Node, left, right)
+        ## @return (Node, feedbackInterval)
         ## Node: [Interval, Node, Node]
+        ## the feedback is passed up to the first merged node so that it can
+        ## extend accordingly
         def insert(node, newI, merged):
             if node is None:
-                return None if merged else [newI, None, None]
+                if merged:
+                    return (None, None)
+                else:
+                    return ([newI, None, None], None)
 
             curI = node[0]
 
             # no overlap, on the left side
             if newI.end < curI.start:
-                node[1] = insert(node[1], newI, merged)
+                node[1], fi = insert(node[1], newI, merged)
             # no overlap, on the right size
             elif newI.start > curI.end:
-                node[2] = insert(node[2], newI, merged)
+                node[2], fi = insert(node[2], newI, merged)
             # overlap
             else:
+                mergeLeft, mergeRight = False, False
                 # extends left
                 if newI.start < curI.start:
+                    mergeRight = True
                     curI.start = newI.start
-                    leftNode = insert(node[1], newI, True)
+                    leftNode, fi = insert(node[1], newI, True)
                     # should merge
                     if leftNode and leftNode[0].end >= curI.start:
                         curI.start = min(leftNode[0].start, curI.start)
                         node[1] = leftNode[1]
                     else:
                         node[1] = leftNode
+                    if fi and fi.start < curI.start:
+                        curI.start = fi.start
                 # extends right
                 if newI.end > curI.end:
+                    mergeLeft = True
                     curI.end = newI.end
-                    rightNode = insert(node[2], newI, True)
+                    rightNode, fi = insert(node[2], newI, True)
                     # should merge
                     if rightNode and rightNode[0].start <= curI.end:
                         curI.end = max(rightNode[0].end, curI.end)
                         node[2] = rightNode[2]
                     else:
                         node[2] = rightNode
+                    if fi and fi.end > curI.end:
+                        curI.end = fi.end
+
+                fi = curI
                 if merged:
-                    if newI.start > curI.start:
-                        return node[1]
-                    if newI.end < curI.end:
-                        return node[2]
-                    return None
-            return node
+                    if mergeLeft and mergeRight:
+                        return None, None
+                    elif mergeLeft:
+                        return node[1], fi
+                    elif mergeRight:
+                        return node[2], fi
+                    else:
+                        raise ValueError()
+            return node, fi
 
         root = None
         for i in intervals:
-            root = insert(root, i, False)
+            root, _ = insert(root, i, False)
 
         ## inorder to get saperate intervals
         mergedIntervals = []

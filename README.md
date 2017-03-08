@@ -1,2 +1,2 @@
 ## Progress:
-55 Jump Game
+58 Jump Game

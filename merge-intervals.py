@@ -35,6 +35,18 @@ class Solution(object):
         ## Node: [Interval, Node, Node]
         ## the feedback is passed up to the first merged node so that it can
         ## extend accordingly
+        def findRightMost(node):
+            if node[2]:
+                return findRightMost(node[2])
+            else:
+                return node
+
+        def findLeftMost(node):
+            if node[1]:
+                return findLeftMost(node[1])
+            else:
+                return node
+
         def insert(node, newI, merged):
             if node is None:
                 if merged:
@@ -83,7 +95,16 @@ class Solution(object):
                 fi = curI
                 if merged:
                     if mergeLeft and mergeRight:
-                        return None, None
+                        if node[1]:
+                            rightMost = findRightMost(node[1])
+                            rightMost[2] = node[2]
+                            return node[1], fi
+                        elif node[2]:
+                            leftMost = findLeftMost(node[2])
+                            leftMost[1] = node[1]
+                            return node[2], fi
+                        else:
+                            return None, fi
                     elif mergeLeft:
                         return node[1], fi
                     elif mergeRight:

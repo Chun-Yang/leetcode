@@ -1,11 +1,5 @@
-function deleteRoot (root) {
-  if (root.left && root.right) {
-    root.val = root.left.val
-    root.left = deleteRoot(root.left)
-    return root
-  } else {
-    return root.left || root.right
-  }
+function findMax (root) {
+  return root.right ? findMax(root.right) : root.val
 }
 
 /**
@@ -30,6 +24,13 @@ var deleteNode = function(root, key) {
     root.left = deleteNode(root.left, key)
     return root
   } else {
-    return deleteRoot(root)
+    // delete node
+    if (root.left && root.right) {
+      root.val = findMax(root.left)
+      root.left = deleteNode(root.left, root.val)
+      return root
+    } else {
+      return root.left || root.right
+    }
   }
 };

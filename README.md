@@ -10,6 +10,8 @@
     list.length
     String.length()
     ArrayList.size()
+  - if I can solve a sub problem with a spcific way, maybe I can try
+    to solve the whole problem using this algorithem
 - 70. Climbing Stairs
   - trick: x, y = y, x + y
     => x = (y += x) - x;

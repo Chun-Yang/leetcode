@@ -5,6 +5,11 @@
     we can not use (r - 1) to try to converge, since divide operation
     goes to the left side: e.g. 1 / 2 == 1
   - to avoid int overflow, we should use divide instead of multiply,
+- 72. Edit Distance
+  - ways to get length
+    list.length
+    String.length()
+    ArrayList.size()
 - 70. Climbing Stairs
   - trick: x, y = y, x + y
     => x = (y += x) - x;

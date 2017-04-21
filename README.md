@@ -25,3 +25,5 @@
   - for binary search, when you use lo <= hi,
     the loop may never stop.
     for example: search 2 in [3, 4]
+- 75. Sort Colors
+  - move one position in while loop may simplify the logic

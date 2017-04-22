@@ -2,6 +2,23 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Solution {
+  // public List<List<Integer>> combine(int n, int k) {
+  //   List<List<Integer>> combs = new ArrayList<>();
+  //   dfs(combs, new ArrayList<Integer>(), 1, n - k + 1, k);
+  //   return combs;
+  // }
+  // public void dfs(List<List<Integer>> combs, List<Integer> comb, int from, int to, int k) {
+  //   if (k == 0) {
+  //     combs.add(new ArrayList<Integer>(comb));
+  //     return;
+  //   }
+
+  //   for (int i=from; i<=to; i++) {
+  //     comb.add(i);
+  //     dfs(combs, comb, i+1, to+1, k-1);
+  //     comb.remove(comb.size() - 1);
+  //   }
+  // }
   public List<List<Integer>> combine(int n, int k) {
     if (k > n) return new ArrayList<>();
 
@@ -36,9 +53,5 @@ public class Solution {
         return combos;
       }
     }
-  }
-  public static void main (String[] args) {
-    Solution s = new Solution();
-    s.combine(5, 3);
   }
 }

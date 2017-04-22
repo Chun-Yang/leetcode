@@ -31,3 +31,6 @@
 - 77. Combinations
   - combinations can be viewed as a counting problem, we reset
     when we find the first digit that does not have a carry
+  - use graph to draw an example may help with a dfs/backtracking solution
+    - what is the termination condition? height of tree? found something?
+    - what are the children?

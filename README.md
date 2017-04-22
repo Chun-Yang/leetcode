@@ -28,3 +28,6 @@
 - 75. Sort Colors
   - move one position in while loop may simplify the logic
   - sort from one end is simpler from two ends at the same time
+- 77. Combinations
+  - combinations can be viewed as a counting problem, we reset
+    when we find the first digit that does not have a carry

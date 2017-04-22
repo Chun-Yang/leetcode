@@ -27,3 +27,4 @@
     for example: search 2 in [3, 4]
 - 75. Sort Colors
   - move one position in while loop may simplify the logic
+  - sort from one end is simpler from two ends at the same time

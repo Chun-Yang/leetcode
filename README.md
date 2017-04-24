@@ -46,3 +46,6 @@
     it reserved some 2-bytes point for 4-bytes use (4 bytes can store all chars)
     http://www.oracle.com/us/technologies/java/supplementary-142654.html
   - ASCII has 128 chars, it is stored in 7 bits. 1 byte can store 256 chars
+- 80. Remove Duplicates from Sorted Array II
+  - we can use the invariance of the de-duped part to count the existing number
+  - concise and easy to reason is more important than micro optimization

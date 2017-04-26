@@ -49,3 +49,12 @@
 - 80. Remove Duplicates from Sorted Array II
   - we can use the invariance of the de-duped part to count the existing number
   - concise and easy to reason is more important than micro optimization
+- 81. Search in Rotated Sorted Array II
+  - remember the set of combinations we use and why
+    - lo < hi,  lo = mid + 1, hi = mid,     nums[lo] == target
+    - lo <= hi, lo = mid + 1, hi = mid - 1, false
+  - use negative thinking in binary search, if it's not in my range, it must be
+    in the other.
+  - for binary search, we can use this for testing my case:
+      1   3
+    0 1 2 3 4

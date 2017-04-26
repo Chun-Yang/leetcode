@@ -58,3 +58,8 @@
   - for binary search, we can use this for testing my case:
       1   3
     0 1 2 3 4
+- 82. Remove Duplicates from Sorted List II
+  - In some case, it might be better to use nested while.
+    In this case, we can group the action of removing all duplicates in one
+    block which is inside another while loop
+    https://discuss.leetcode.com/topic/24470/java-simple-and-clean-code-with-comment

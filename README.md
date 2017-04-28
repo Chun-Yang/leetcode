@@ -28,6 +28,23 @@
 - 75. Sort Colors
   - move one position in while loop may simplify the logic
   - sort from one end is simpler from two ends at the same time
+- 76. Minimum Window Substring
+  - we can use a counter to indicate wether a match is met
+  - use while loop can be more flexible than for loop and more symmatic
+    for two pointer problems
+  - go though a test case using all of the variables
+    with the thought algorithem is helpful, expecially for two pointer
+    since there might be multiple variables
+  - choose variable based on the result may be benifical and straight forward
+    e.g. use [) for substring
+  - for right exclusive, we can do
+    ```
+    r = 1
+    while (r <= length) {
+      // do things
+      r++;
+    }
+    ```
 - 77. Combinations
   - combinations can be viewed as a counting problem, we reset
     when we find the first digit that does not have a carry
@@ -63,3 +80,11 @@
     In this case, we can group the action of removing all duplicates in one
     block which is inside another while loop
     https://discuss.leetcode.com/topic/24470/java-simple-and-clean-code-with-comment
+- 86. Partition List
+  - use diagram to go through a relatively simple test case
+  - use different notation for different operations
+  - for linked-list we can use
+    "-" for next
+    "->" for link change
+    "=" for equal
+    "=>" for equal change

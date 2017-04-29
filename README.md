@@ -103,3 +103,9 @@
   - if we want to use dfs, we need to konw:
     - what are the children
     - termination condition
+- 91. Decode Ways
+  - we can reduce the amount of memory we use for dp if the optimal
+    equation consists only limited amount of previous steps
+- 92. Reverse Linked List II
+  - go though one example may be missleading, we may need multiple examples
+    in multiple steps

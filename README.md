@@ -97,3 +97,9 @@
     2. dfs with early termination
 - 88. Merge Sorted Array
   - try different order forward, backward...
+- 90. Subsets II
+  - we can use dp like this: loop through all elements, and add new ones based
+    on those exsisting ones
+  - if we want to use dfs, we need to konw:
+    - what are the children
+    - termination condition

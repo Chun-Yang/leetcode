@@ -88,3 +88,12 @@
     "->" for link change
     "=" for equal
     "=>" for equal change
+- 87. Scramble String
+  - when you think its exponential, try dp
+  - try to reduce a recursive operation to one operation that recurse
+  - when use dp, string length is a good way to be a dimension.
+  - for a NP-complete like problem, we can try:
+    1. dp
+    2. dfs with early termination
+- 88. Merge Sorted Array
+  - try different order forward, backward...

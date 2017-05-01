@@ -1,22 +1,22 @@
-- 69. Sqrt(x)
+69. Sqrt(x)
   - for binary search, try to find the constrain for mid
     as long as we get in the constrain, the mid will be correct
   - for binary search, when we do ``` l + (r - l) / 2 ```,
     we can not use (r - 1) to try to converge, since divide operation
     goes to the left side: e.g. 1 / 2 == 1
   - to avoid int overflow, we should use divide instead of multiply,
-- 70. Climbing Stairs
+70. Climbing Stairs
   - trick: x, y = y, x + y
     => x = (y += x) - x;
     => y += x; x = y - x;
-- 72. Edit Distance
+72. Edit Distance
   - ways to get length
     list.length
     String.length()
     ArrayList.size()
   - if I can solve a sub problem with a spcific way, maybe I can try
     to solve the whole problem using this algorithem
-- 74. Search a 2D Matrix
+74. Search a 2D Matrix
   - for binary search, when you use lo < hi to search,
     you may hit the search even the loop stops.
     for example: search 2 in [1, 2]
@@ -25,10 +25,10 @@
   - for binary search, when you use lo <= hi,
     the loop may never stop.
     for example: search 2 in [3, 4]
-- 75. Sort Colors
+75. Sort Colors
   - move one position in while loop may simplify the logic
   - sort from one end is simpler from two ends at the same time
-- 76. Minimum Window Substring
+76. Minimum Window Substring
   - we can use a counter to indicate wether a match is met
   - use while loop can be more flexible than for loop and more symmatic
     for two pointer problems
@@ -45,13 +45,13 @@
       r++;
     }
     ```
-- 77. Combinations
+77. Combinations
   - combinations can be viewed as a counting problem, we reset
     when we find the first digit that does not have a carry
   - use graph to draw an example may help with a dfs/backtracking solution
     - what is the termination condition? height of tree? found something?
     - what are the children?
-- 79. Word Search
+79. Word Search
   - for 2-d search, we can detect the validity of the current cell together
     instead of check one by one for each direction. This will clean up
     code and will not create time-complexity wise panelty
@@ -63,10 +63,10 @@
     it reserved some 2-bytes point for 4-bytes use (4 bytes can store all chars)
     http://www.oracle.com/us/technologies/java/supplementary-142654.html
   - ASCII has 128 chars, it is stored in 7 bits. 1 byte can store 256 chars
-- 80. Remove Duplicates from Sorted Array II
+80. Remove Duplicates from Sorted Array II
   - we can use the invariance of the de-duped part to count the existing number
   - concise and easy to reason is more important than micro optimization
-- 81. Search in Rotated Sorted Array II
+81. Search in Rotated Sorted Array II
   - remember the set of combinations we use and why
     - lo < hi,  lo = mid + 1, hi = mid,     nums[lo] == target
     - lo <= hi, lo = mid + 1, hi = mid - 1, false
@@ -75,12 +75,12 @@
   - for binary search, we can use this for testing my case:
       1   3
     0 1 2 3 4
-- 82. Remove Duplicates from Sorted List II
+82. Remove Duplicates from Sorted List II
   - In some case, it might be better to use nested while.
     In this case, we can group the action of removing all duplicates in one
     block which is inside another while loop
     https://discuss.leetcode.com/topic/24470/java-simple-and-clean-code-with-comment
-- 86. Partition List
+86. Partition List
   - use diagram to go through a relatively simple test case
   - use different notation for different operations
   - for linked-list we can use
@@ -88,24 +88,29 @@
     "->" for link change
     "=" for equal
     "=>" for equal change
-- 87. Scramble String
+87. Scramble String
   - when you think its exponential, try dp
   - try to reduce a recursive operation to one operation that recurse
   - when use dp, string length is a good way to be a dimension.
   - for a NP-complete like problem, we can try:
     1. dp
     2. dfs with early termination
-- 88. Merge Sorted Array
+88. Merge Sorted Array
   - try different order forward, backward...
-- 90. Subsets II
+90. Subsets II
   - we can use dp like this: loop through all elements, and add new ones based
     on those exsisting ones
   - if we want to use dfs, we need to konw:
     - what are the children
     - termination condition
-- 91. Decode Ways
+91. Decode Ways
   - we can reduce the amount of memory we use for dp if the optimal
     equation consists only limited amount of previous steps
-- 92. Reverse Linked List II
+92. Reverse Linked List II
   - go though one example may be missleading, we may need multiple examples
     in multiple steps
+94. Binary Tree Inorder Traversal
+  - when we use stack, we do not have to save all of the nodes along the path
+    we only need to save those that we need to check later on
+96. Unique Binary Search Trees
+  - Catalan Numbers

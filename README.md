@@ -114,3 +114,5 @@
     we only need to save those that we need to check later on
 96. Unique Binary Search Trees
   - Catalan Numbers
+99. Recover Binary Search Tree
+  - Inorder Traversal is an important traversal for BST

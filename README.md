@@ -114,3 +114,5 @@
     we only need to save those that we need to check later on
 96. Unique Binary Search Trees
   - Catalan Numbers
+98. Validate Binary Search Tree
+  - Binary search tree's parents constrain the child with a range

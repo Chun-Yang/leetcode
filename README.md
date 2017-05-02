@@ -113,6 +113,7 @@
 93. Maximal Rectangle
   - We can try to reduce a 2D problem to a 1D problem
   - The largest matrix has to be one of the largest histogram of one row
+  - we can also use a lefts, rights and heights dp solution for each row
 94. Binary Tree Inorder Traversal
   - when we use stack, we do not have to save all of the nodes along the path
     we only need to save those that we need to check later on

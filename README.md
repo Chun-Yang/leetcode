@@ -110,6 +110,9 @@
 92. Reverse Linked List II
   - go though one example may be missleading, we may need multiple examples
     in multiple steps
+93. Maximal Rectangle
+  - We can try to reduce a 2D problem to a 1D problem
+  - The largest matrix has to be one of the largest histogram of one row
 94. Binary Tree Inorder Traversal
   - when we use stack, we do not have to save all of the nodes along the path
     we only need to save those that we need to check later on

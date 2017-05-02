@@ -80,6 +80,7 @@
     In this case, we can group the action of removing all duplicates in one
     block which is inside another while loop
     https://discuss.leetcode.com/topic/24470/java-simple-and-clean-code-with-comment
+84. One key observation is the max area will cover equal to at least one of the bar
 86. Partition List
   - use diagram to go through a relatively simple test case
   - use different notation for different operations

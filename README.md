@@ -116,3 +116,7 @@
   - Catalan Numbers
 98. Validate Binary Search Tree
   - Binary search tree's parents constrain the child with a range
+99. Recover Binary Search Tree
+  - Inorder Traversal is an important traversal for BST
+  - If I can solve a problem as a sorted list, then I should be able to do
+    it using inorder traversal

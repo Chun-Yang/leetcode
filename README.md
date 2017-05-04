@@ -130,3 +130,7 @@
 108. Convert Sorted Array to Binary Search Tree
   - Height balanced vs Weight balanced (less common)
   - Height balanced means the diff or height of any leaf is at most one
+109. Convert Sorted List to Binary Search Tree
+  - We can find middle using fast and slow pointer, also the two pointers
+    are reusable
+  - In-order traversal align with linked-list

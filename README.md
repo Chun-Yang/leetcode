@@ -125,3 +125,8 @@
   - Inorder Traversal is an important traversal for BST
   - If I can solve a problem as a sorted list, then I should be able to do
     it using inorder traversal
+105. Construct Binary Tree from Preorder and Inorder Traversal
+  - When the values are unique, we can try to use hash table to speed lookup
+108. Convert Sorted Array to Binary Search Tree
+  - Height balanced vs Weight balanced (less common)
+  - Height balanced means the diff or height of any leaf is at most one

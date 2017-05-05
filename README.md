@@ -138,3 +138,7 @@
   - we can use a special number (0, negative number) to indicate the state
   - complete: 1 2 3
   - full: 1 2 4
+  - iterative:
+    - preorder: a stack
+    - inorder: a stack + cur
+    - postorder: two stacks (like preorder, but from one stack to another)

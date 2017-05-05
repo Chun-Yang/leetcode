@@ -134,3 +134,7 @@
   - We can find middle using fast and slow pointer, also the two pointers
     are reusable
   - In-order traversal align with linked-list
+110. Balanced Binary Tree
+  - we can use a special number (0, negative number) to indicate the state
+  - complete: 1 2 3
+  - full: 1 2 4

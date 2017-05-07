@@ -142,3 +142,5 @@
     - preorder: a stack
     - inorder: a stack + cur
     - postorder: two stacks (like preorder, but from one stack to another)
+120. Triangle
+  - For un-symmatric structure, we can try to do things from another end

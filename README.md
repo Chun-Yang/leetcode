@@ -144,3 +144,11 @@
     - postorder: two stacks (like preorder, but from one stack to another)
 120. Triangle
   - For un-symmatric structure, we can try to do things from another end
+121. Best Time to Buy and Sell Stock
+  - DP can use multiple values, not just one single value
+123. Best Time to Buy and Sell Stock III
+  - When we have exponential run time, we should consider DP
+  - If we want to use DP, we have to find atomic operations,
+    for this stock problem, a transation consists of a buy
+    and a sell actions which come in sequence. We should consider
+    them saparately

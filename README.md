@@ -154,3 +154,6 @@
     them saparately
 127. Word Ladder
   - we can use the length of a string and alphabet to iterate
+130. Surrounded Regions
+  - union find quick union + pass compression is amoritized at log(n) per operation
+  - union find with rank/weight + pass compression is amortized 1 per operation

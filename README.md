@@ -163,3 +163,23 @@
     - for each end, for each start
 134. This is a math problem
 135. This is a math problem
+136. Single Number
+  - x ^ x = 0
+  - (x ^ y) ^ z = x ^ (y ^ z)
+  - x ^ y operator is a flip based on y,
+    y = 1 : flip
+    y = 0 : do not filp
+  - ^ : flip on one
+  - x ^ y can be seen as 0 ^ x ^ y (both of x y are operations)
+137. Single Number II
+  - we can count the bits and use %
+  - we can use binary couting. 00 01 10
+138. Copy List with Random Pointer
+  - we can use one Linked List and extract the clone from the merged one
+  - if we use a hash, we do not really need to create the list first,
+    as lone as we have the links, we can use hash only
+  - java HashMap output null when key does not exist. Also, null is a permitted
+    key
+140. Word Break II
+  - bottom up dp has a draw back: we compute all sub problems
+    if we use dfs we might not need to compute them

@@ -183,3 +183,10 @@
 140. Word Break II
   - bottom up dp has a draw back: we compute all sub problems
     if we use dfs we might not need to compute them
+142. Linked List Cycle II
+  - fast - slow = CycleLength
+  - slow = BeforeCycle + AfterCycle
+  - fast = 2 * slow
+  - we have: BeforeCycle = CycleLength - AfterCycle
+    this means at the point of slow, if it moves BeforeCycle, it will be at the
+    beginning of the Cycle

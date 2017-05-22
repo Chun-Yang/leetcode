@@ -190,3 +190,5 @@
   - we have: BeforeCycle = CycleLength - AfterCycle
     this means at the point of slow, if it moves BeforeCycle, it will be at the
     beginning of the Cycle
+143. Reorder List
+  - in the while loop for linked list, we can check node equal to stop, not just null

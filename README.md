@@ -141,7 +141,8 @@
   - iterative:
     - preorder: a stack
     - inorder: a stack + cur
-    - postorder: two stacks (like preorder, but from one stack to another)
+    - postorder: reverse preorder
+      outdated: two stacks (like preorder, but from one stack to another)
 120. Triangle
   - For un-symmatric structure, we can try to do things from another end
 121. Best Time to Buy and Sell Stock
@@ -192,3 +193,13 @@
     beginning of the Cycle
 143. Reorder List
   - in the while loop for linked list, we can check node equal to stop, not just null
+144. Binary Tree Preorder Traversal
+  - we can store right instead of parent
+  - we can store both and pop them one by one for left and right using
+    stack property
+145. Binary Tree Postorder Traversal
+  - single stack: preorder + reverse (note: this only work for serailization,
+    not for general operation) some times we just want to traverse the tree
+    and not save the whole sequence. and if we do it this way,
+    we are not doing it in the right order.
+    This might be ok since we can run the traverse function on the final

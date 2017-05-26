@@ -203,3 +203,8 @@
     and not save the whole sequence. and if we do it this way,
     we are not doing it in the right order.
     This might be ok since we can run the traverse function on the final
+149. Max Points on a Line
+  - as long as we have the same asymptotic complexity,
+    we can choose the one that is simpler to reason and implement
+  - the sign of gcd is the first number passed to gcd
+  - use normalized delta to indicate slop

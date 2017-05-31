@@ -208,3 +208,7 @@
     we can choose the one that is simpler to reason and implement
   - the sign of gcd is the first number passed to gcd
   - use normalized delta to indicate slop
+162. Find Peak Element
+  - this is like climbing a mountain, we just need to choose the higher path
+164. Maximum Gap
+  - use bucket sort, couting sort, radix sort when we need a O(n) sort

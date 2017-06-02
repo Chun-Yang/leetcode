@@ -212,3 +212,10 @@
   - this is like climbing a mountain, we just need to choose the higher path
 164. Maximum Gap
   - use bucket sort, couting sort, radix sort when we need a O(n) sort
+166. Fraction to Recurring Decimal
+  - four parts: sign, before dot, dot, after dot
+  - move one decimal at a time for denominator
+  - rem is int all the time
+  - remove (0) if we found it
+168. Excel Sheet Column Title
+  - We can convert 1-26 to 0-25

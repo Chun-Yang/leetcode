@@ -5,6 +5,14 @@ public class Solution {
   public int maxProfit(int k, int[] prices) {
     if (k == 0) return 0;
 
+    if (k >= prices.length / 2) {
+      int profit = 0;
+      for (int i=1; i<prices.length; i++) {
+        profit += Math.max(0, prices[i] - prices[i-1]);
+      }
+      return profit;
+    }
+
     int[] buys = new int[k];
     int[] sells = new int[k];
     Arrays.fill(buys, Integer.MIN_VALUE);

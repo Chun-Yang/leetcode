@@ -219,3 +219,12 @@
   - remove (0) if we found it
 168. Excel Sheet Column Title
   - We can convert 1-26 to 0-25
+169. Majority Element
+  - we can assume current element is the major
+    - yes +1
+    - no -1
+    - 0 change the element to the new element
+174. Dungeon Game
+  - sometimes we can think from the opposite direction
+187. Repeated DNA Sequences
+  - use two sets to make sure we only save one repeation once

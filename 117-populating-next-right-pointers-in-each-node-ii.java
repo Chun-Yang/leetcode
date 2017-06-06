@@ -29,6 +29,27 @@ public class Solution {
       upperHead = lowerHat.next;
     }
   }
+
+  // public void connect(TreeLinkNode root) {
+  //   TreeLinkNode upperHead = root;
+  //   TreeLinkNode lowerHat = new TreeLinkNode(0);
+  //   while (upperHead != null) {
+  //     lowerHat.next = null;
+  //     TreeLinkNode lowerIter = lowerHat;
+  //     while (upperHead != null) {
+  //       if (upperHead.left != null) {
+  //         lowerIter.next = upperHead.left;
+  //         lowerIter = lowerIter.next;
+  //       }
+  //       if (upperHead.right != null) {
+  //         lowerIter.next = upperHead.right;
+  //         lowerIter = lowerIter.next;
+  //       }
+  //       upperHead = upperHead.next;
+  //     }
+  //     upperHead = lowerHat.next;
+  //   }
+  // }
   // public void connect(TreeLinkNode root) {
   //   if (root == null) return;
 

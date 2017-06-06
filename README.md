@@ -143,6 +143,8 @@
     - inorder: a stack + cur
     - postorder: reverse preorder
       outdated: two stacks (like preorder, but from one stack to another)
+116. Populating Next Right Pointers in Each Node
+  - We can use the structure we setup, here we can use the next pointer
 120. Triangle
   - For un-symmatric structure, we can try to do things from another end
 121. Best Time to Buy and Sell Stock

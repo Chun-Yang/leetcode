@@ -228,3 +228,5 @@
   - sometimes we can think from the opposite direction
 187. Repeated DNA Sequences
   - use two sets to make sure we only save one repeation once
+190. Reverse Bits
+  - for bit cacheing, we can use small size to cache

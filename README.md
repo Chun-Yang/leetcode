@@ -159,6 +159,10 @@
   - we can use the length of a string and alphabet to iterate
   - we can use the whole words as toVisit set and remove from them
   - rember to remove the element as soon as we see it
+129. Word Ladder II
+  - BFS to build an directed adjacency graph
+    (from end to top, there may have orphaned nodes)
+    then DFS back track using the graph
 130. Surrounded Regions
   - union find quick union + pass compression is amoritized at log(n) per operation
   - union find with rank/weight + pass compression is amortized 1 per operation

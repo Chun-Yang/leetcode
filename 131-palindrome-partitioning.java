@@ -13,6 +13,12 @@ public class Solution {
       }
     }
 
+    // dp:
+    // [endOfSubstring][partitionIndex][StringIndex]
+    // partitionsForEachEnd = [ partitions... ]
+    // partitions = [ partition... ]
+    // partition = [ string... ]
+
     // get all partitions using dp
     List<List<List<String>>> partitions = new ArrayList<>();
     List<List<String>> first = new ArrayList<>();

@@ -192,6 +192,7 @@
 140. Word Break II
   - bottom up dp has a draw back: we compute all sub problems
     if we use dfs we might not need to compute them
+  - we can use substring as hash key for dp
 142. Linked List Cycle II
   - fast - slow = CycleLength
   - slow = BeforeCycle + AfterCycle

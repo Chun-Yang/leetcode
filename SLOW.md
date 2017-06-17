@@ -8,3 +8,8 @@ https://leetcode.com/problems/word-break/#/description
 https://leetcode.com/problems/word-break-ii/#/description
 https://leetcode.com/problems/binary-tree-postorder-traversal/#/description
 https://leetcode.com/problems/sort-list/#/description
+https://leetcode.com/problems/find-peak-element/#/description
+https://leetcode.com/problems/fraction-to-recurring-decimal/#/description
+https://leetcode.com/problems/maximum-gap/#/description
+https://leetcode.com/problems/number-of-1-bits/#/description
+https://leetcode.com/problems/binary-tree-right-side-view/#/description

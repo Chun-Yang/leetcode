@@ -1,4 +1,4 @@
-// TODO: use KMP
+// FUTURE: use KMP
 public class Solution {
   public String shortestPalindrome(String s) {
     // find the length of the longest palindrome prefix

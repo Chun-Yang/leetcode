@@ -13,6 +13,7 @@ public class Solution {
     nums[pivotIndex] = nums[end];
     nums[end] = pivotNum;
     // partition
+    // invarirant: when index <= smallEnd, num < pivotNum
     int smallEnd = start - 1;
     for (int i=start; i<end; i++) {
       if (nums[i] < pivotNum) {

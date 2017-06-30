@@ -239,3 +239,9 @@
   - use two sets to make sure we only save one repeation once
 190. Reverse Bits
   - for bit cacheing, we can use small size to cache
+204. Count Primes
+  - we need to go from 2 to the max for each number if the current is prime
+    the reason is for each prime number, we want to find all non-prime numbers
+    by multiplying the prime number with any number(prime or not)
+    2 * 4 (none prime)
+    2 * 3 (prime)

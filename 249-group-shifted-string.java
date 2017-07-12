@@ -11,6 +11,6 @@
 
 // My Solution
 // 1. group by size
-// 2. create a string that contains distance from the first letter( number to string )
+// 2. create a string that contains distance from the first letter( number to string ), saparate by ,
 // use a hash to do it
 // NOTE: 1 and 2 can be done at the same time by using a key

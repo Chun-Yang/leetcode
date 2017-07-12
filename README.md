@@ -245,3 +245,7 @@
     by multiplying the prime number with any number(prime or not)
     2 * 4 (none prime)
     2 * 3 (prime)
+259. 3Sum Smaller
+  - two pointer
+  - i < j < k does not mean we can not sort, it only mean one number can not
+    be used twice in the triplet

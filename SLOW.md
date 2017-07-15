@@ -25,5 +25,8 @@ https://leetcode.com/problems/majority-element-ii/#/description
 https://leetcode.com/problems/sliding-window-maximum/#/description
 248-strobogrammatic-number-iii.java
 253-meeting-rooms-ii.java
+
 259-3sum-smaller.java
 https://leetcode.com/problems/single-number-iii/#/description
+https://leetcode.com/problems/ugly-number-ii/#/description
+265-paint-house-ii.java

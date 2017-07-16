@@ -30,3 +30,7 @@ https://leetcode.com/problems/sliding-window-maximum/#/description
 https://leetcode.com/problems/single-number-iii/#/description
 https://leetcode.com/problems/ugly-number-ii/#/description
 265-paint-house-ii.java
+272-closest-binary-search-tree-value-ii.java
+https://leetcode.com/problems/h-index/#/description
+https://leetcode.com/problems/h-index-ii/#/description
+https://leetcode.com/problems/perfect-squares/#/description

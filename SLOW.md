@@ -39,3 +39,4 @@ https://leetcode.com/problems/expression-add-operators/#/description
 https://leetcode.com/problems/find-the-duplicate-number/#/description
 https://leetcode.com/problems/game-of-life/#/description "follow up: infinite"
 https://leetcode.com/problems/find-median-from-data-stream/#/description
+https://leetcode.com/problems/longest-increasing-subsequence/#/description "O(n * log(n))"

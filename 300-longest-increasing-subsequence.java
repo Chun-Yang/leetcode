@@ -13,6 +13,20 @@
 
 public class Solution {
   public int lengthOfLIS(int[] nums) {
-
+    int[] mins = new int[nums.length];
+    int size = 0;
+    for (int num : nums) {
+      int lo = 0;
+      int hi = size;
+      while (lo < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (num > mins[mid]) lo = mid + 1;
+        else hi = mid;
+      }
+      mins[lo] = num;
+      if (lo == size) size++;
+    }
+    return size;
   }
+
 }

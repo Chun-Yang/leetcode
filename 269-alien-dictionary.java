@@ -1,4 +1,3 @@
-// Given a sorted dictionary of an alien language, find order of characters
 // Given a sorted dictionary (array of words) of an alien language,
 // find order of characters in the language.
 

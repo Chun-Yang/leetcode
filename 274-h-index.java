@@ -18,6 +18,15 @@
 // has more than one possible values, is when they only consider the first part
 // of the definition
 
+
+
+
+
+
+
+
+
+
 public class Solution {
   public int hIndex(int[] citations) {
     int n = citations.length;

@@ -26,10 +26,8 @@ https://leetcode.com/problems/sliding-window-maximum/#/description
 248-strobogrammatic-number-iii.java
 253-meeting-rooms-ii.java
 
-259-3sum-smaller.java
-https://leetcode.com/problems/single-number-iii/#/description
-https://leetcode.com/problems/ugly-number-ii/#/description
-265-paint-house-ii.java
+261-graph-valid-tree.java
+271-encode-and-decode-strings.java
 272-closest-binary-search-tree-value-ii.java
 https://leetcode.com/problems/h-index/#/description
 https://leetcode.com/problems/h-index-ii/#/description

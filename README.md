@@ -249,3 +249,14 @@
   - two pointer
   - i < j < k does not mean we can not sort, it only mean one number can not
     be used twice in the triplet
+269. Alien Dictionary
+  - khan's BFS topological sort:
+    https://discuss.leetcode.com/topic/32900/java-bfs-solution/2
+    - use indegree, 0 means it is one of the starts
+    - if the visited count does not equal to count of nodes, then there is loop (this is not obvious)
+  - we can compare two adjancent and get the first difference to build the adjancecy hash
+278. First Bad Version
+  - lo < hi, mid = lo + (hi - lo) / 2, lo = mid + 1: find the first qualified one(bad version in this case)
+    you can think of (lo = mid + 1) removes all unqualified ones(good versions in this case)
+279. Perfect Squares
+  - dp: find all possible squares and a previous one that is smallest and composed with squares

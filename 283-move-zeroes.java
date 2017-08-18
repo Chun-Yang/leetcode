@@ -9,21 +9,32 @@
 
 public class Solution {
   public void moveZeroes(int[] nums) {
-    int start = 0;
-    int end = 0;
-    while (true) {
-      if (start == nums.length) return;
-      else if (nums[start] != 0) start++;
-      else if (end == nums.length) return;
-      else if (end <= start) end = start + 1;
-      else if (nums[end] == 0) end++;
-      else {
-        // now nums[start] != 0 && nums[end] == 0
-        nums[start] = nums[end];
-        nums[end] = 0;
-        start++;
-        end++;
+    int startOfZero = 0;
+    for (int i=0; i<nums.length; i++) {
+      if (nums[i] != 0) {
+        int temp = nums[startOfZero];
+        nums[startOfZero] = nums[i];
+        nums[i] = temp;
+        startOfZero++;
       }
     }
   }
+  // public void moveZeroes(int[] nums) {
+  //   int start = 0;
+  //   int end = 0;
+  //   while (true) {
+  //     if (start == nums.length) return;
+  //     else if (nums[start] != 0) start++;
+  //     else if (end == nums.length) return;
+  //     else if (end <= start) end = start + 1;
+  //     else if (nums[end] == 0) end++;
+  //     else {
+  //       // now nums[start] != 0 && nums[end] == 0
+  //       nums[start] = nums[end];
+  //       nums[end] = 0;
+  //       start++;
+  //       end++;
+  //     }
+  //   }
+  // }
 }

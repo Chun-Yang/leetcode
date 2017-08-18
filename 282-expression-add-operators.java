@@ -12,6 +12,12 @@
 import java.util.*;
 
 public class Solution {
+
+  public static void main (String[] args) {
+    Solution s = new Solution();
+    System.out.println(s.addOperators("123", 6));
+  }
+
   String num;
   int length;
   int target;
@@ -43,26 +49,25 @@ public class Solution {
       if (num.charAt(start) == '0' && end > start + 1) break;
       String token = num.substring(start, end);
       long curNum = Long.parseLong(token);
-      tokens.addLast(token);
       // check if this is the first number
       if (start == 0) {
-        dfs(end, curNum, 0);
+        tokens.addLast(token);
+        dfs(end, curNum, curNum);
+        tokens.removeLast();
       } else {
         // *
-        tokens.addLast("*");
+        tokens.addLast("*" + token);
         dfs(end, plus - multiply + multiply * curNum, multiply * curNum);
         tokens.removeLast();
         // +
-        tokens.addLast("+");
+        tokens.addLast("+" + token);
         dfs(end, plus + curNum, curNum);
         tokens.removeLast();
         // -
-        tokens.addLast("-");
+        tokens.addLast("-" + token);
         dfs(end, plus - curNum, -curNum);
         tokens.removeLast();
       }
-
-      tokens.removeLast();
     }
   }
 

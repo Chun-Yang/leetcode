@@ -21,27 +21,3 @@
 // house location: [1,2,3,6] -> best point is 2.5(actually 2 or 3)
 // For a sequence [a1, a2 ... an], dist(a1,bestPoint)+dist(an,bestPoint) is constant and equal to dist(a1,an)
 // https://math.stackexchange.com/questions/113270/the-median-minimizes-the-sum-of-absolute-deviations
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Solution1: O(n * m * k)
-// for each point, we check the total distance
-// Solution2: O((n + m) * k)
-// seperate two dimentions

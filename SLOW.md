@@ -33,9 +33,7 @@ https://leetcode.com/problems/h-index/#/description
 https://leetcode.com/problems/h-index-ii/#/description
 https://leetcode.com/problems/perfect-squares/#/description
 https://leetcode.com/problems/expression-add-operators/#/description
-285-inorder-successor-in-bst.java
 https://leetcode.com/problems/find-the-duplicate-number/#/description
-https://leetcode.com/problems/game-of-life/#/description "follow up: infinite"
 https://leetcode.com/problems/find-median-from-data-stream/#/description
 https://leetcode.com/problems/longest-increasing-subsequence/#/description "O(n * log(n))"
 https://leetcode.com/problems/remove-invalid-parentheses/#/description

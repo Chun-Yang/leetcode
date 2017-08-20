@@ -1,3 +1,12 @@
+// Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
+
+// Note: The input string may contain letters other than the parentheses ( and ).
+
+// Examples:
+// "()())()" -> ["()()()", "(())()"]
+// "(a)())()" -> ["(a)()()", "(a())()"]
+// ")(" -> [""]
+
 import java.util.*;
 
 public class Solution {
@@ -12,13 +21,6 @@ public class Solution {
       if (s.charAt(i) == pair[0]) open++;
       else if (s.charAt(i) == pair[1]) open--;
       if (open < 0) {
-        // NOTE: when j is i, this is definitly like this )) which means
-        // this is not the first consecutive one
-        // NOTE 1 is wrong since )
-        // NOTE: their are only two posibilitis:
-        // 1. lastRemovedAt
-        // 2. currentPosition, remember to set lastRemovedAt to the one before currentPosition
-        // NOTE 2 is wrong since ()()())
         for (int j=lastRemovedAt; j<=i; j++) {
           if (s.charAt(j) == pair[1] && (j==lastRemovedAt || s.charAt(j-1)!=pair[1])) {
             remove(s.substring(0, j) + s.substring(j+1), validStrings, i, j, pair);

@@ -18,6 +18,7 @@ public class Solution {
     for (int num : nums) {
       int lo = 0;
       int hi = size;
+      // find the first number that is larger than itself
       while (lo < hi) {
         int mid = lo + (hi - lo) / 2;
         if (num > mins[mid]) lo = mid + 1;

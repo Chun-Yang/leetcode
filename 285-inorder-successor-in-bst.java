@@ -15,9 +15,32 @@
 // In the above diagram, inorder successor of 8 is 10, inorder successor of 10 is
 // 12 and inorder successor of 14 is 20.
 
-// class Solution {
-//   Node inOrderSuccessor(Node root, Node n) {
-//   }
-// }
-
 // https://discuss.leetcode.com/topic/25076/share-my-java-recursive-solution
+
+
+
+
+
+
+
+
+
+
+class Node {
+  Node left;
+  Node right;
+  int val;
+}
+
+class Solution {
+  Node inOrderSuccessor(Node root, Node n) {
+    if (root == null) return null;
+    if (root.val <= n.val) {
+      return inOrderSuccessor(root.right, n);
+    } else {
+      Node succ = inOrderSuccessor(root.left, n);
+      return succ == null ? n : succ;
+    }
+  }
+}
+

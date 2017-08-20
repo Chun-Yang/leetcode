@@ -18,3 +18,15 @@
 //   2   2   1  -1
 //   1  -1   2  -1
 //   0  -1   3   4
+
+
+
+
+
+
+
+
+
+
+// bfs: queue
+// dfs: https://discuss.leetcode.com/topic/33459/my-short-java-solution-very-easy-to-understand

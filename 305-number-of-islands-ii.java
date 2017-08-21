@@ -33,6 +33,8 @@ class Solution {
 
   public List<Integer> numIslands2(int m, int n, int[][] positions) {
     // initialize parents
+    // NOTE: https://www.programcreek.com/2015/01/leetcode-number-of-islands-ii-java/
+    // we can flatten 2d array and use 1d
     int[][][] parents = new int[m][n][2];
     int[] water = new int[]{ -1, -1 };
     for (int i=0; i<m; i++) {

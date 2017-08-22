@@ -21,6 +21,39 @@
 //    coins =  3*1*5      +  3*5*8    +  1*3*8      + 1*8*1   = 167
 
 // Solution 2: use int[][] as cache
+import java.util.*;
+class Solution {
+  int[][] cache;
+  public int maxCoins(int[] nums) {
+    int n = nums.length + 2;
+
+    int[] extendedNums = new int[n];
+    extendedNums[0] = extendedNums[n-1] = 1;
+    for (int i=0; i<nums.length; i++) extendedNums[i+1] = nums[i];
+
+    cache = new int[n][n];
+    for (int[] subCache : cache) {
+      Arrays.fill(subCache, -1);
+    }
+
+    return max(extendedNums, 0, n - 1);
+  }
+
+  private int max(int[] nums, int lb, int rb) {
+    if (rb - lb == 1) return 0;
+    if (cache[lb][rb] != -1) return cache[lb][rb];
+    int maxGlobal = 0;
+    int maxLocal = 0;
+
+    for (int i=lb+1; i<rb; i++) {
+      maxLocal = max(nums, lb, i) + nums[lb] * nums[i] * nums[rb] + max(nums, i, rb);
+      maxGlobal = Math.max(maxGlobal, maxLocal);
+    }
+
+    cache[lb][rb] = maxGlobal;
+    return maxGlobal;
+  }
+}
 
 // Solution 1: use HashMap as cache
 // public class Solution {

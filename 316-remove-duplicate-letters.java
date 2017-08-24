@@ -12,6 +12,20 @@
 
 class Solution {
   public String removeDuplicateLetters(String s) {
+    if (s.length() == 0) return s;
 
+    int[] count = new int[26];
+    for (int i=0; i<s.length(); i++) count[s.charAt(i) - 'a']++;
+
+    int minIndex = 0;
+    for (int i=0; i<s.length(); i++) {
+      if (s.charAt(i) < s.charAt(minIndex)) minIndex = i;
+      count[s.charAt(i) - 'a']--;
+      if (count[s.charAt(i) - 'a'] == 0) break;
+    }
+    String rest = s
+      .substring(minIndex + 1)
+      .replace(String.valueOf(s.charAt(minIndex)), "");
+    return s.charAt(minIndex) + removeDuplicateLetters(rest);
   }
 }

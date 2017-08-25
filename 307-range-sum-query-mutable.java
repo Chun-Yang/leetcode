@@ -73,6 +73,8 @@ class NumArray {
  * int param_2 = obj.sumRange(i,j);
  */
 
+// https://cs.stackexchange.com/questions/10538/bit-what-is-the-intuition-behind-a-binary-indexed-tree-and-how-was-it-thought-a
+
 // Solution 1 Binary Indexed Tree
 // import java.util.*;
 

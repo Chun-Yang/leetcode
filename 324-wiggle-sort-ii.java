@@ -11,8 +11,24 @@
 // Follow Up:
 // Can you do it in O(n) time and/or in-place with O(1) extra space?
 
-class Solution {
-  public void wiggleSort(int[] nums) {
+import java.util.*;
 
+class Solution {
+  public static void main (String[] args) {
+    Solution s = new Solution();
+    s.wiggleSort(new int[]{ 1,1,2,1,2,2,1 });
+    s.wiggleSort(new int[]{ 1,1,2,1,2,2 });
+  }
+  public void wiggleSort(int[] nums) {
+    Arrays.sort(nums);
+    int[] sorted = new int[nums.length];
+    for (int i=0; i<nums.length; i++) {
+      int index = i / 2 + ((i % 2 == 0) ? 0 : ((nums.length + 1) / 2));
+      sorted[i] = nums[index];
+    }
+    for (int i=0; i<nums.length; i++) {
+      nums[i] = sorted[i];
+    }
+    System.out.println(Arrays.toString(nums));
   }
 }

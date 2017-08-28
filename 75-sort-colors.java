@@ -3,6 +3,7 @@
 
 public class Solution {
   // swap
+  // NOTE: the indexes are exclusive boundaries
   public void sortColors(int[] nums) {
     int zero=0, one=0, two=nums.length - 1;
     while (one <= two) {

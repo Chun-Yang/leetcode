@@ -12,6 +12,8 @@
 
 import java.util.*;
 
+// Solution: recursive merge sort
+
 // Solution: BST
 // NOTE: we can simplify the logic by calculating the numbers that is smaller and larger than the range
 // https://discuss.leetcode.com/topic/34107/java-bst-solution-averagely-o-nlogn

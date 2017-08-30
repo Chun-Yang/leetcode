@@ -1,2 +1,2 @@
 second: 320
-nextReviewPoint: 350
+nextReviewPoint: 340

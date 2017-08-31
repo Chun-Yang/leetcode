@@ -41,7 +41,7 @@ class Solution {
 
   public void dfs(String departure) {
     PriorityQueue<String> arrivals = flights.get(departure);
-    if (arrivals != null && arrivals.size() > 0) {
+    while (arrivals != null && arrivals.size() > 0) {
       dfs(arrivals.poll());
     }
     path.addFirst(departure);

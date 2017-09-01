@@ -3,7 +3,7 @@ import java.util.*;
 public class TopologicalSort {
   public static void main (String[] args) {
     assert Arrays.equals(
-        TopologicalSort.sort(
+        TopologicalSort.dfsSort(
           new int[][]{
             new int[] { 0, 3 },
                 new int[] { 0, 4 },
@@ -23,8 +23,11 @@ public class TopologicalSort {
   }
   private TopologicalSort() {}
 
-  public static int[] sort(int[][] edges, int n) {
-    List<Integer> vertices = new ArrayList<Integer>();
+  //
+
+  // dfsSort
+  public static int[] dfsSort(int[][] edges, int n) {
+    LinkedList<Integer> vertices = new LinkedList<Integer>();
     HashMap<Integer, ArrayList<Integer>> adj = new HashMap<>();
     for (int[] edge : edges) {
       adj.putIfAbsent(edge[0], new ArrayList<Integer>());
@@ -36,13 +39,12 @@ public class TopologicalSort {
       dfs(vertices, adj, visited, i);
     }
 
-    Collections.reverse(vertices);
     int i=0;
     int[] sorted = new int[n];
     for (int v : vertices) sorted[i++] = v;
     return sorted;
   }
-  private static void dfs(List<Integer> vertices, HashMap<Integer, ArrayList<Integer>> adj, boolean[] visited, int i) {
+  private static void dfs(LinkedList<Integer> vertices, HashMap<Integer, ArrayList<Integer>> adj, boolean[] visited, int i) {
     if (visited[i]) return;
 
     if (adj.containsKey(i)) {
@@ -52,6 +54,6 @@ public class TopologicalSort {
     }
 
     visited[i] = true;
-    vertices.add(i);
+    vertices.addFirst(i);
   }
 }

@@ -18,8 +18,8 @@
 - selection sort
 - insertion sort
 - bubble sort
-- [?] radix sort
-- [?] couting sort
+- radix sort
+- couting sort
 - [?] bucket sort
 - [?] topological sort
 - two pointer(multiple pointers) with (constrain / boundary condition / invariance)

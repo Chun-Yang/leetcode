@@ -20,7 +20,7 @@
 - bubble sort
 - radix sort
 - couting sort
-- [?] bucket sort
+- bucket sort
 - [?] topological sort
 - two pointer(multiple pointers) with (constrain / boundary condition / invariance)
 - slow fast pointers / cycle detection

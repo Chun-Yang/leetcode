@@ -21,7 +21,7 @@
 - radix sort
 - couting sort
 - bucket sort
-- [?] topological sort
+- topological sort
 - two pointer(multiple pointers) with (constrain / boundary condition / invariance)
 - slow fast pointers / cycle detection
 - dynamic programming

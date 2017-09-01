@@ -53,7 +53,7 @@
 - [?] segment tree
 - heap / priority queue (java PriorityQueue can have duplicates)
 - linked list
-- [?] trie
+- trie
 
 ### Tricks
 - (x & (x-1)) remove last bit

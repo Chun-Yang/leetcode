@@ -4,17 +4,35 @@
 public class Solution {
   // swap
   // NOTE: the indexes are exclusive boundaries
+  // public void sortColors(int[] nums) {
+  //   int zero=0, one=0, two=nums.length - 1;
+  //   while (one <= two) {
+  //     if (nums[one] == 2) {
+  //       nums[one] = nums[two];
+  //       nums[two--] = 2;
+  //     } else if (nums[one] == 0) {
+  //       nums[one++] = nums[zero];
+  //       nums[zero++] = 0;
+  //     } else {
+  //       one++;
+  //     }
+  //   }
+  // }
+
   public void sortColors(int[] nums) {
-    int zero=0, one=0, two=nums.length - 1;
-    while (one <= two) {
-      if (nums[one] == 2) {
-        nums[one] = nums[two];
-        nums[two--] = 2;
-      } else if (nums[one] == 0) {
-        nums[one++] = nums[zero];
-        nums[zero++] = 0;
+    int zeroEnd=0, oneEnd=0, twoStart=nums.length;
+    while (oneEnd < twoStart) {
+      if (nums[oneEnd] == 2) {
+        twoStart--;
+        nums[oneEnd] = nums[twoStart];
+        nums[twoStart] = 2;
+      } else if (nums[oneEnd] == 0) {
+        nums[oneEnd] = nums[zeroEnd];
+        nums[zeroEnd] = 0;
+        oneEnd++;
+        zeroEnd++;
       } else {
-        one++;
+        oneEnd++;
       }
     }
   }

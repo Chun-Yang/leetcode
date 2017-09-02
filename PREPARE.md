@@ -35,9 +35,9 @@
 - greedy
 - divide and counquer
 - union find
-- [?] minimum cuts
+- minimum cuts
 - Hierholzer's algorithm (greedy)
-- [?] gcd
+- gcd
 
 ### Data Structures
 - array

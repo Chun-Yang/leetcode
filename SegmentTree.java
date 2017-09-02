@@ -1,6 +1,7 @@
 import java.util.*;
 
 // maximum range update and query
+// NOTE: use a full tree to reason about the algorithm
 public class SegmentTree {
   public static void main (String[] args) {
     SegmentTree s = new SegmentTree(new int[]{ 0, 2, 9, 8, 2, 1 });

@@ -35,7 +35,6 @@
 - greedy
 - divide and counquer
 - union find
-- [?] spanning tree
 - [?] minimum cuts
 - Hierholzer's algorithm (greedy)
 - [?] gcd
@@ -49,6 +48,7 @@
 - hash table
 - binary search tree
 - red-black tree ( balanced binary search tree )
+- spanning tree
 - [?] binary indexed tree
 - [?] segment tree
 - heap / priority queue (java PriorityQueue can have duplicates)

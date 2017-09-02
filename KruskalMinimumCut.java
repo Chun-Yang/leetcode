@@ -32,6 +32,7 @@ public class KruskalMinimumCut {
 
     for (int[] edge : edges) {
       if (getOrigin(edge[1], parents) != getOrigin(edge[2], parents)) {
+        // NOTE: we merge the two origins!
         parents[getOrigin(edge[1], parents)] = getOrigin(edge[2], parents);
         cut += edge[0];
       }

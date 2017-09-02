@@ -22,6 +22,7 @@ class NumArray {
   int n;
   int[] tree;
 
+  // NOTE: this is a complete tree
   public NumArray(int[] nums) {
     n = nums.length;
     if (n == 0) return;
@@ -35,10 +36,11 @@ class NumArray {
     i += n;
     tree[i] = val;
     while (i > 0) {
-      int left = i;
-      int right = i;
-      if (i % 2 == 0) right++;
-      else left--;
+      // left is always even
+      // right is always odd
+      // index: 8 9
+      int left = i % 2 == 0 ? i : i - 1;
+      int right = i % 2 == 0 ? i + 1 : i;
       i /= 2;
       tree[i] = tree[left] + tree[right];
     }

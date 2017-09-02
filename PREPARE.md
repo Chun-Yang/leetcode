@@ -49,8 +49,7 @@
 - binary search tree
 - red-black tree ( balanced binary search tree )
 - spanning tree
-- [?] binary indexed tree
-- [?] segment tree
+- segment tree
 - heap / priority queue (java PriorityQueue can have duplicates)
 - linked list
 - trie

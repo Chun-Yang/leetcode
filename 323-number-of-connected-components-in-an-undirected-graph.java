@@ -1,5 +1,6 @@
-// Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge
-//     is a pair of nodes), write a function to find the number of connected
+// Given n nodes labeled from 0 to n - 1 and a list of undirected edges
+// (each edge is a pair of nodes),
+// write a function to find the number of connected
 // components in an undirected graph.
 
 // Example 1:
@@ -18,14 +19,14 @@ class Solution {
   public int countComponents(int n, int[][] edges) {
     int[] parents = new int[n];
     for (int i=0; i<n; i++) parents[i] = i;
+    int count = n;
     for (int[] edge : edges) {
       int leftParent = find(parents, edge[0]);
       int rightParent = find(parents, edge[1]);
-      parents[rightParent] = leftParent;
-    }
-    int count = 0;
-    for (int i=0; i<n; i++) {
-      if (parents[i] == i) count++;
+      if (leftParent != rightParent) {
+        count--;
+        parents[rightParent] = leftParent;
+      }
     }
     return count;
   }

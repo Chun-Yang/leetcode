@@ -25,6 +25,7 @@
 - two pointer(multiple pointers) with (constrain / boundary condition / invariance)
 - slow fast pointers / cycle detection
 - dynamic programming
+  - [?] knapsack http://www.geeksforgeeks.org/knapsack-problem/
 - dfs
   - preorder
   - postorder

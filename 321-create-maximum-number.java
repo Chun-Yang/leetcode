@@ -23,6 +23,8 @@
 // k = 3
 // return [9, 8, 9]
 
+// https://discuss.leetcode.com/topic/32272/share-my-greedy-solution
+
 import java.util.*;
 
 class Solution {

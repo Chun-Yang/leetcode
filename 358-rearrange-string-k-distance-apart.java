@@ -12,6 +12,8 @@
 
 // The same letters are at least distance 3 from each other.
 
+// Solution: greedy by index
+// https://discuss.leetcode.com/topic/48260/java-15ms-solution-with-two-auxiliary-array-o-n-time
 
 import java.util.*;
 

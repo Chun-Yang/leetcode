@@ -18,6 +18,7 @@ class Solution {
   public int[] intersect(int[] nums1, int[] nums2) {
     HashMap<Integer, Integer> uniqueNums1 = new HashMap<>();
     for (int num : nums1) uniqueNums1.put(num, uniqueNums1.getOrDefault(num, 0) + 1);
+    // NOTE: we can use an array list instead of a HashMap
     HashMap<Integer, Integer> overlay = new HashMap<>();
     for (int num : nums2) {
       if (uniqueNums1.containsKey(num)) {

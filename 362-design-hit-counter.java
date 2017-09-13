@@ -47,8 +47,12 @@ class HitCounter {
 
   public void hit(int timestamp) {
     int index = timestamp % HitCounter.SECONDS;
-    if (times[index] == timestamp) times[index]++;
-    hits[index]++;
+    if (times[index] == timestamp) {
+      hits[index]++;
+    } else {
+      times[index] = timestamp;
+      hits[index] = 1;
+    }
   }
 
   public int getHits(int timestamp) {

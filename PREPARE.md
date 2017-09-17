@@ -59,6 +59,7 @@
 - (x & (x-1)) remove last bit
 - (x & (-x)) extract last bit
 - (x ^ y) ^ y is x
+- ~x + 1 get negative of the current number
 
 ## Interview
 

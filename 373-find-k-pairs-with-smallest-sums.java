@@ -28,8 +28,30 @@
 // All possible pairs are returned from the sequence:
 // [1,3],[2,3]
 
+import java.util.*;
+
 class Solution {
   public List<int[]> kSmallestPairs(int[] nums1, int[] nums2, int k) {
+    if (k == 0 || nums1.length == 0 || nums2.length == 0) return new ArrayList<>();
 
+    PriorityQueue<int[]> pq = new PriorityQueue<>(new Comparator<int[]>() {
+      @Override
+      public int compare(int[] p1, int[] p2) {
+        return p1[0] + p1[1] - p2[0] - p2[1];
+      }
+    });
+    for (int i=0; i<Math.min(nums1.length, k); i++) pq.offer(new int[]{ nums1[i], nums2[0], 0 });
+
+    List<int[]> pairs = new ArrayList<>();
+    for (int i=0; i<k; i++) {
+      int[] pair = pq.poll();
+      pairs.add(new int[]{ pair[0], pair[1] });
+      if (pair[2] < nums2.length - 1) {
+        pq.offer(new int[]{ pair[0], nums2[pair[2] + 1], pair[2] + 1 });
+      }
+      if (pq.isEmpty()) break;
+    }
+
+    return pairs;
   }
 }

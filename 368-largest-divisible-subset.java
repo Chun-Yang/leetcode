@@ -15,6 +15,30 @@
 
 // Result: [1,2,4,8]
 
+
+// Solution:
+// - sort it O(n * log(n))
+// - for each value, we count all values before it that can be divided by it
+// O(n * n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Solution1: Sort, and dp O(n^2)
 import java.util.*;
 
@@ -39,3 +63,7 @@ class Solution {
     return largest;
   }
 }
+
+// Solution2: Sort dp O(n^2) O(n) space, only save length in first dp, or just
+// brutal force. The second run, we get all the numbers that num_largest % num_i = 0
+// https://discuss.leetcode.com/topic/49741/easy-understood-java-dp-solution-in-28ms-with-o-n-2-time/2

@@ -38,7 +38,7 @@ class Solution {
     int index = 1;
     ListNode runner = head.next;
     while (runner != null) {
-      boolean shouldReplace = Math.random() < (1.0 / (1 + index));
+      boolean shouldReplace = Math.random() < (1.0 / (1 + index++));
       if (shouldReplace) val = runner.val;
       runner = runner.next;
     }

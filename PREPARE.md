@@ -1,7 +1,7 @@
 # Prepare for Interview
 
 ## Materials
-- Though Process
+- Thought Process
   - http://www.crackingthecodinginterview.com/uploads/6/5/2/8/6528028/handout_-_cracking_the_coding_skills.png
 - Basic Algorithems
   - http://www.geeksforgeeks.org/fundamentals-of-algorithms/
@@ -39,6 +39,7 @@
 - minimum cuts
 - Hierholzer's algorithm (greedy)
 - gcd
+- reservoir sampling
 
 ### Data Structures
 - array

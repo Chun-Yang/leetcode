@@ -20,7 +20,7 @@ import java.util.*;
 // Solution 3: n * Log(max - min)
 // https://discuss.leetcode.com/topic/52948/share-my-thoughts-and-clean-java-code/2
 
-// Solution 2: improve on solution 1
+// Solution 2: improve on solution 1 O(k * log(n))
 class Solution {
   class Node implements Comparable<Node> {
     int val;
@@ -51,7 +51,7 @@ class Solution {
   }
 }
 
-// Solution 1: pq greedy
+// Solution 1: pq greedy O(k * log(n))
 // class Solution {
 //   class Node {
 //     int val;

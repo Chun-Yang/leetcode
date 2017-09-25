@@ -41,6 +41,10 @@
 // - Update only the first and end element is sufficient.
 // - The optimal time complexity is O(k + n) and uses O(1) extra space.
 
+
+
+
+
 // Solution1 O(k log(k) + n) create merged array of changes [startAt, change]
 // sort them and go through the list and add up the values
 

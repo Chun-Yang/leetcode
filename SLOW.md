@@ -47,3 +47,5 @@ https://leetcode.com/problems/remove-duplicate-letters/description/
 363-max-sum-of-rectangle-no-larger-than-k.java
 371-sum-of-two-integers.java
 375-guess-number-higher-or-lower-ii.java
+
+384-shuffle-an-array.java

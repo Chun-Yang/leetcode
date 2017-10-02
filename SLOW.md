@@ -50,3 +50,4 @@ https://leetcode.com/problems/remove-duplicate-letters/description/
 
 384-shuffle-an-array.java
 390-elimination-game.java
+392-is-subsequence.java

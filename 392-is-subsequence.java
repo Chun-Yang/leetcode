@@ -38,7 +38,7 @@
 //   }
 // }
 
-// Solution2 tri O(n^2) memory O(m) lookup
+// Solution2 tri O(2^n) memory O(m) lookup
 // Solution3 TreeSet for different chars
 // a [1,2,3,9,100]
 // b [12,32,34]

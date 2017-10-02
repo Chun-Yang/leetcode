@@ -107,3 +107,24 @@
 - [culture] how does tech leadership work here? what happens when memebers have different
   opinions? Do you feel your opinion is respected? Or do you feel authority
   should be honored due to their experience?
+
+### Behavior
+- success: cms engine two parts 700 forms,  applied as multiple applications
+- mistake: none optimal solution, type system
+- mistake: lesson dont just be a developer, always try to align with higher level requirement
+
+### PLAN
+- review 400 problems
+- prepare for design interview
+- prepare for experience/behavior interview
+- prepare for an interview with an enterprise manager
+  - I architected multiple applications
+  - I lead teams of 2 to 5
+  - Not just implement the design, try to think from first priciple
+    and figure out what and how should I do to optimize the project as
+    a whole.
+  - The project I am working on CMS for one of the biggest company in the world
+    - initial problem digging
+    - solution proposal
+    - implementation
+    - lessons learnt

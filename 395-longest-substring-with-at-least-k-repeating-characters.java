@@ -22,7 +22,25 @@
 // The longest substring is "ababb", as 'a' is repeated 2 times and 'b' is
 // repeated 3 times.
 
-// Solution1: O(n) split at indexes where the frequence is low
+
+// Solution1: We calculate counter for each index of s, get any pair to check
+// if this is valid.
+// time O(n ^ 2) space O(n) where n == s.length()
+// class Solution {
+//   public int longestSubstring(String s, int k) {
+// }
+// }
+
+// Solution2:
+// time O(n) space O(n)
+// https://discuss.leetcode.com/topic/57596/java-strict-o-n-two-pointer-solution/2
+// for each counts (1, 2, 3...26 letters) we maintain a window.
+// if this windown is a a valid substring( all >=k ) then we record it
+
+// Solution3:
+// time O(n) space O(n)
+// https://discuss.leetcode.com/topic/57699/simple-java-o-n-solution
+// remove one char at a time
 class Solution {
   public int longestSubstring(String s, int k) {
     return splitAndCount(s.toCharArray(), 0, s.length() - 1, k);

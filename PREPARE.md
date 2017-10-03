@@ -108,11 +108,6 @@
   opinions? Do you feel your opinion is respected? Or do you feel authority
   should be honored due to their experience?
 
-### Behavior
-- success: cms engine two parts 700 forms,  applied as multiple applications
-- mistake: none optimal solution, type system
-- mistake: lesson dont just be a developer, always try to align with higher level requirement
-
 ### PLAN
 - review 400 problems
 

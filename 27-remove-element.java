@@ -11,3 +11,6 @@
 // 
 // 
 // Your function should return length = 2, with the first two elements of nums being 2.
+
+
+// https://leetcode.com/problems/remove-element

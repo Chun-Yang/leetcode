@@ -22,7 +22,11 @@ questions.forEach((props) => {
   scrapeIt(fullHref, { q: '.question-description' })
     .then(({ q }) => {
       const fileName = stringify(index, href)
-      const formattedQ = q.split('\n').map(s => '// ' + s.trim()).join('\n')
+      const formattedQ = q
+        .split('\n')
+        .map(s => '// ' + s.trim())
+        .concat(['', '', '// ' + fullHref ])
+        .join('\n')
       fs.writeFile(fileName, formattedQ, (e) => {
         if (e) {
           console.log('FILE ERROR: ', e)

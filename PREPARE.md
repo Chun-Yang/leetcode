@@ -62,6 +62,9 @@
 - (x ^ y) ^ y is x
 - ~x + 1 get negative of the current number
 
+### Basics
+- regex: https://swtch.com/~rsc/regexp/regexp1.html
+
 ## Interview
 
 ### Intros

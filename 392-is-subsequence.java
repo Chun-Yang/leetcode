@@ -38,7 +38,8 @@
 //   }
 // }
 
-// Solution2 tri O(2^n) memory O(m) lookup
+// FOR follow up:
+// Solution2 tri time: O(m), space: O(2^n)
 // Solution3 TreeSet for different chars
 // a [1,2,3,9,100]
 // b [12,32,34]

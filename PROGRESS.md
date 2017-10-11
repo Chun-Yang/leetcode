@@ -1,5 +1,10 @@
-1 - 400 tag and categorize
+## 2017-10-10
 
-4 binary search
+### TODO:
+- review 1-405
+- next 31-40
 
-finished: 401-405
+### HARD:
+4-median-of-two-sorted-arrays.java
+29-divide-two-integers.java
+30-substring-with-concatenation-of-all-words.java

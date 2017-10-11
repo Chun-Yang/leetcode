@@ -6,6 +6,9 @@
 //
 // You may assume no duplicate exists in the array.
 
+//  5 6 1 2 3 4 (2) (0)
+//  l   m     h
+
 class Solution {
   public int search(int[] nums, int target) {
     if (nums.length == 0) return -1;

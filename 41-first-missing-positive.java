@@ -24,25 +24,44 @@
 // after processing
 // >= 0 means not visited
 // -1 means visited
+
+// class Solution {
+//   public int firstMissingPositive(int[] nums) {
+//     for (int i=0; i<nums.length; i++) {
+//       if (nums[i] <= 0) nums[i] = 0;
+//     }
+//     for (int i=0; i<nums.length; i++) {
+//       int index = nums[i] - 1;
+//       while(index >= 0 && index < nums.length) {
+//         int nextIndex = nums[index] - 1;
+//         nums[index] = -1;
+//         index = nextIndex;
+//       }
+//     }
+//     for (int i=0; i<nums.length; i++) {
+//       if (nums[i] >= 0) return i + 1;
+//     }
+//     return nums.length + 1;
+//   }
+// }
+
+// Solution2: move value to its own position
+// https://discuss.leetcode.com/topic/1361/a-very-nice-solution-from-ants-aasma-stackoverflow
+
 class Solution {
   public int firstMissingPositive(int[] nums) {
     for (int i=0; i<nums.length; i++) {
-      if (nums[i] <= 0) nums[i] = 0;
-    }
-    for (int i=0; i<nums.length; i++) {
-      int index = nums[i] - 1;
-      while(index >= 0 && index < nums.length) {
-        int nextIndex = nums[index] - 1;
-        nums[index] = -1;
+      // index [1, n]
+      int index = nums[i];
+      while(index >= 1 && index <= nums.length && index != nums[index - 1]) {
+        int nextIndex = nums[index - 1];
+        nums[index - 1] = index;
         index = nextIndex;
       }
     }
     for (int i=0; i<nums.length; i++) {
-      if (nums[i] >= 0) return i + 1;
+      if (nums[i] != i + 1) return i + 1;
     }
     return nums.length + 1;
   }
 }
-
-// Solution2: move value to its own position
-// https://discuss.leetcode.com/topic/1361/a-very-nice-solution-from-ants-aasma-stackoverflow

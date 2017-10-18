@@ -7,18 +7,38 @@
 // Note: You must do this in-place without making a copy of the array. Minimize
 // the total number of operations.
 
-public class Solution {
+class Solution {
+  // solution3: optimal assignment
   public void moveZeroes(int[] nums) {
     int startOfZero = 0;
-    for (int i=0; i<nums.length; i++) {
+    // If the current element is not 0, then we need to
+    // append it just in front of last non 0 element we found.
+    for (int i = 0; i < nums.length; i++) {
       if (nums[i] != 0) {
-        int temp = nums[startOfZero];
-        nums[startOfZero] = nums[i];
-        nums[i] = temp;
+        //move non-zeno close to the head
+        if (startOfZero != i) nums[startOfZero] = nums[i];
         startOfZero++;
       }
     }
+    for (int i=startOfZero; i<nums.length; i++) {
+      if (nums[i] != 0) nums[i] = 0;
+    }
   }
+
+  // solution2:
+  // public void moveZeroes(int[] nums) {
+  //   int startOfZero = 0;
+  //   for (int i=0; i<nums.length; i++) {
+  //     if (nums[i] != 0) {
+  //       int temp = nums[startOfZero];
+  //       nums[startOfZero] = nums[i];
+  //       nums[i] = temp;
+  //       startOfZero++;
+  //     }
+  //   }
+  // }
+
+  // solution1:
   // public void moveZeroes(int[] nums) {
   //   int start = 0;
   //   int end = 0;
@@ -37,4 +57,5 @@ public class Solution {
   //     }
   //   }
   // }
+
 }

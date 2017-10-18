@@ -129,6 +129,28 @@
     - I did not provide enough info for facebook, however I can find my friends
       somehow suggested there
   - Have examples of how you dealt with conflict in the workplace in the past
+    - The first year I am at Poetic, we had a lead developer. I learn a lot
+      of things from him, expecially tooling including code editor, tmux, terminal
+      stuff. We had a confilcht around my end of the first year.
+      I proposed a simplified solution to the
+      existing archtecher and try to reduce a lot of unncecssary structural code
+      by using a mini router for different APIS. We had an argument about this.
+      I learnt that reason is not the only thing needed in an argument. I should
+      have been more constructive and thougthful instead of pointing out
+      someone's problem directly. Always think of other people's feeling first
+      when in an argument. Instead of purely argue on logic and techincal stuff.
+    - The leave of the lead developer is definitely a help for me. I start to
+      solve problem my self since there is no one to depend on. Graduelly I become
+      the person that other people depends on. But I always tell the others
+      to try to solve problems on their own first. For a mature developer,
+      the majority of the problems he ask shold be about domain knowledge, instead
+      of general problem solving questions.
+    - Since I am a senior developer, I will notice problems with junior developer's
+      design and implementation. When I make a mistake or misjudement on them
+      and them point it out, I always accept the critics and give them compelment
+      when they do it. As a person I want to be special, but I know the reality
+      is no one is irreplaceable and there are always people smarter than you,
+      work harder than you.
     - I try to figure out the ultimate goal we are trying to achieve together,
       this way it would reduce the friction and increse alignment
     - I have no problem with critics and will quickly accept them if the suggestions
@@ -166,15 +188,16 @@
         type in js. And the tool we are using json-schemaform does not play
         well with objects as primitives
   - Be talkative and excited
-  - There may be a light coding question that shouldn't take longer than 15-20 minutes. If the interviewer doesn't get to this, don't worry.
+  - There may be a light coding question that shouldn't take longer than 15-20 minutes.
+    If the interviewer doesn't get to this, don't worry.
 
 - prepare for an interview with an enterprise manager
+  No coding, but a chance to impress a manager and show off your knowledge
   - I architected multiple applications
   - I lead teams of 2 to 5
   - Not just implement the design, try to think from first priciple
     and figure out what and how should I do to optimize the project as
     a whole.
-  - No coding, but a chance to impress a manager and show off your knowledge
   - Have some questions about the enterprise team
     - examples of enterprise applications
     - tech stack

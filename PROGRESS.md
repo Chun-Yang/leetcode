@@ -9,6 +9,7 @@
 29-divide-two-integers.java
 30-substring-with-concatenation-of-all-words.java
 45-jump-game-ii.java
+47-permutations-ii.java
 
 ### TEACH:
 1. Know solution to every problem in the pool

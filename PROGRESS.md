@@ -8,3 +8,9 @@
 4-median-of-two-sorted-arrays.java
 29-divide-two-integers.java
 30-substring-with-concatenation-of-all-words.java
+45-jump-game-ii.java
+
+### TEACH:
+1. Know solution to every problem in the pool
+2. Set assumptions on interviewee's ability
+3. Set plans for them depending on the ability

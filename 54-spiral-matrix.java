@@ -25,7 +25,7 @@
 // 9,8
 // 7,4
 // edge case: single line (not a circle)
-// https://leetcode.com/problems/spiral-matrix/solution/
+// https://discuss.leetcode.com/topic/3713/super-simple-and-easy-to-understand-solution/
 // simple implimentation: keep track of cStart, cEnd, rStart, rEnd
 // deal with the edge case using cStart < cEnd && rStart < rEnd
 // deal with end case with cStart <= cEnd && rStart <= rEnd

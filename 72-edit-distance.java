@@ -1,6 +1,37 @@
-import java.util.Arrays;
+// Given two words word1 and word2, find the minimum number of steps
+// required to convert word1 to word2. (each operation is counted as 1 step.)
 
-public class Solution {
+// You have the following 3 operations permitted on a word:
+
+// a) Insert a character
+// b) Delete a character
+// c) Replace a character
+
+// Solution1:
+// dp, create a distance matrix, use length as the bases
+// time: O(mn), space O(mn)
+// NOTE: we can improve space to O(Math.min(m, n))
+// NOTE: reason when word1.charAt(i-1) == word2.charAt(j-1),
+// we only need distance[i-1][j-1]:
+// for this case, we have
+// ------x
+// ---------x
+// the cases to compare are:
+// - remove both x
+// ------
+// ---------
+// - remove first x, and add 1 to this case
+// ------x
+// ---------
+// - remove second x, and add 1 to this case
+// ------
+// ---------x
+// since we can construct case 2 and case 3 from case 1 with distance
+// no more than those cases, its safe to just use the first case without
+// comparation
+import java.util.*;
+
+class Solution {
   public int minDistance(String word1, String word2) {
     int l1 = word1.length();
     int l2 = word2.length();

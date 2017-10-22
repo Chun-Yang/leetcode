@@ -11,6 +11,7 @@
 45-jump-game-ii.java
 47-permutations-ii.java
 52-n-queens-ii.java
+72-edit-distance.java
 
 ### TEACH:
 1. Know solution to every problem in the pool

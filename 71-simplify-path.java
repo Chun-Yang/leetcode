@@ -1,8 +1,15 @@
-import java.util.*;
+// Given an absolute path for a file (Unix-style), simplify it.
+
+// For example,
+// path = "/home/", => "/home"
+// path = "/a/./b/../../c/", => "/c"
+
 
 // Solution1: stack
 // NOTE: asked in a facebook interview, a main path was introduced in
 // the arguments
+import java.util.*;
+
 class Solution {
   public String simplifyPath(String path) {
     String[] segments = path.split("/");

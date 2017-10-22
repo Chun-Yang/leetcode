@@ -1,8 +1,8 @@
 ## 2017-10-10
 
 ### TODO:
-- review 1-405
-- next 45-50
+- review 1-400
+- next 66-70
 
 ### HARD:
 4-median-of-two-sorted-arrays.java

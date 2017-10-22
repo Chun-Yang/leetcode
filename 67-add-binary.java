@@ -1,6 +1,12 @@
-// import java.util.Arrays;
+// Given two binary strings, return their sum (also a binary string).
 
-public class Solution {
+// For example,
+// a = "11"
+// b = "1"
+// Return "100".
+
+// Solution1: use a stack or reverse StringBuilder
+class Solution {
   public String addBinary(String a, String b) {
     int i = a.length();
     int j = b.length();

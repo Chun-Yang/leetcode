@@ -1,7 +1,9 @@
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
 
-public class Solution {
+// Solution1: stack
+// NOTE: asked in a facebook interview, a main path was introduced in
+// the arguments
+class Solution {
   public String simplifyPath(String path) {
     String[] segments = path.split("/");
     LinkedList<String> stack = new LinkedList<String>();

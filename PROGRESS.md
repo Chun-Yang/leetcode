@@ -2,7 +2,7 @@
 
 ### TODO:
 - review 1-400
-- next 66-70
+- next 71-75
 
 ### HARD:
 4-median-of-two-sorted-arrays.java

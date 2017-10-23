@@ -1,6 +1,23 @@
+// Given a m x n matrix, if an element is 0, set its entire row and column to 0. Do it in place.
+
+// click to show follow up.
+
+// Follow up:
+// Did you use extra space?
+// A straight forward solution using O(mn) space is probably a bad idea.
+// A simple improvement uses O(m + n) space, but still not the best solution.
+// Could you devise a constant space solution?
+
+// solution1:
+// 1st Pass:
+// put all 0 on the first row and first column
+// we need two values to track wether first row and first column contains 0
+// 2nd Pass:
+// set 0 using the first row and first column
+// set 0 for first row and first column
 import java.util.Arrays;
 
-public class Solution {
+class Solution {
   public void setZeroes(int[][] matrix) {
     int m = matrix.length;
     if (m == 0) return;

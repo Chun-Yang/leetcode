@@ -16,6 +16,22 @@
 //   []
 // ]
 
+// https://leetcode.com/problems/subsets/description/
+
+// solution1: dp
+// add current or not for all of the previous sets
+// []
+// [], [1]
+// [], [1], [2], [1,2]
+// [], [1], [2], [1,2], [3], [1,3], [2,3], [1,2,3]
+
+// solution2: dfs
+// []
+// [1],            [2],   [3]
+// [1,2],   [1,3], [2,3]
+// [1,2,3]
+
+
 import java.util.*;
 
 class Solution {

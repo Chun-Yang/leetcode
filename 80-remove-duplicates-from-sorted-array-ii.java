@@ -7,33 +7,20 @@
 // Your function should return length = 5, with the first five elements of nums
 // being 1, 1, 2, 2 and 3. It doesn't matter what you leave beyond the new length.
 
-class Solution {
-  // public int removeDuplicates(int[] nums) {
-  //   if (nums.length == 0) return 0;
+// https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
 
-  //   int validTill = 0;
-  //   int count = 1;
-  //   for (int i=1; i<nums.length; i++) {
-  //     if (nums[i] != nums[validTill]) {
-  //       nums[++validTill] = nums[i];
-  //       count = 1;
-  //     } else if (count < 2) {
-  //       nums[++validTill] = nums[i];
-  //       count++;
-  //     }
-  //   }
-  //   return validTill + 1;
-  // }
+// solution1: pointers
+// one iterator
+// one boundary
+// 1 1 3
+// 1 2 2
+class Solution {
   public int removeDuplicates(int[] nums) {
-    int length = 0;
-    for (int num: nums) {
-      if (length < 2 || num != nums[length - 2]) {
-        nums[length++] = num;
-      }
+    if (nums.length <= 2) return nums.length;
+    int length = 2;
+    for (int i=2; i<nums.length; i++) {
+      if (nums[i] != nums[length-2]) nums[length++]=nums[i];
     }
     return length;
-  }
-  public static void main (String[] args) {
-    Solution s = new Solution();
   }
 }

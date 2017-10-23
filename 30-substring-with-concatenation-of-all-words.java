@@ -17,12 +17,25 @@
 
 
 // https://leetcode.com/problems/substring-with-concatenation-of-all-words
+// https://discuss.leetcode.com/topic/6617/an-o-n-solution-with-detailed-explanation/10
 
-// Solution1: for each window that contains char count equals to words char count,
+// l is the length of string
+// wl is the length of each word
+// n is the count of words
+
+// Solution2:
+// we maintain wl sliding windows
+// for each sliding window, we slide through the whole string
+// using (l / wl) checks and each check cost wl for hashing
+// time O(l * wl)
+
+// Solution1:
+// for each window that contains char count equals to words char count,
 // we check if we can form a substring
-// n is the length of string
-// m is the length of words
-// time O(n * m!)
+// time O(l * n * wl)
+// for each index, we check all the words in side window, each hash lookup
+// is wl
+
 class Solution {
   public List<Integer> findSubstring(String s, String[] words) {
 

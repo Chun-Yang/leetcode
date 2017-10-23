@@ -1,7 +1,36 @@
+// Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+
+// For example,
+// If n = 4 and k = 2, a solution is:
+
+// [
+//   [2,4],
+//   [3,4],
+//   [2,3],
+//   [1,2],
+//   [1,3],
+//   [1,4],
+// ]
+
+// Solution1: backtracking, treat it as a tree,
+// we are trying to get all leafs of the tree
+// NOTE: use two constrains (may be redundent) is sometimes simpler
+// to reason about
+// n = 5
+// k = 3
+// 1
+//   2
+//     3
+//     4
+//     5
+//   3
+//     4
+//     5
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class Solution {
+class Solution {
   // public List<List<Integer>> combine(int n, int k) {
   //   List<List<Integer>> combs = new ArrayList<>();
   //   dfs(combs, new ArrayList<Integer>(), 1, n - k + 1, k);

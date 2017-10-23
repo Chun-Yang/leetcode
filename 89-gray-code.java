@@ -1,36 +1,21 @@
-import java.util.List;
-import java.util.Arrays;
-import java.util.ArrayList;
+// The gray code is a binary numeral system where two successive values differ in only one bit.
+// 
+// Given a non-negative integer n representing the total number of bits in the code, print the sequence of gray code. A gray code sequence must begin with 0.
+// 
+// For example, given n = 2, return [0,1,3,2]. Its gray code sequence is:
+// 
+// 00 - 0
+// 01 - 1
+// 11 - 3
+// 10 - 2
+// 
+// 
+// Note:
+// For a given n, a gray code sequence is not uniquely defined.
+// 
+// For example, [0,2,3,1] is also a valid gray code sequence according to the above definition.
+// 
+// For now, the judge is able to judge based on one instance of gray code sequence. Sorry about that.
 
-public class Solution {
-  // public List<Integer> grayCode(int n) {
-  //   Integer[] codes = new Integer[1 << n];
-  //   codes[0] = 0;
-  //   int exponent = 0;
-  //   for (int i=1; i<(1 << n); i++) {
-  //     if ((i & (1 << exponent)) != 0) {
-  //       exponent++;
-  //     }
-  //     codes[i] = codes[(1 << exponent) - i - 1] + (1 << (exponent - 1));
-  //   }
 
-  //   return Arrays.asList(codes);
-  // }
-  public List<Integer> grayCode(int n) {
-    List<Integer> codes = new ArrayList<Integer>();
-    codes.add(0);
-
-    for (int i=0; i<n; i++) {
-      // double the array by reversing it
-      for (int j=codes.size() - 1; j>=0; j--) {
-        codes.add(codes.get(j) | 1 << i);
-      }
-    }
-
-    return codes;
-  }
-  public static void main (String[] args) {
-    Solution s = new Solution();
-    assert s.grayCode(2).equals(Arrays.asList( 0, 1, 3, 2 ));
-  }
-}
+// https://leetcode.com/problems/gray-code

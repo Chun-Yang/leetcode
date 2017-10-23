@@ -15,7 +15,7 @@ function stringify (index, href) {
 questions.forEach((props) => {
   const { index, href, title } = props
   const fullHref = 'https://leetcode.com' + href
-  const valid = index > 400 && index <= 500
+  const valid = index > 81 && index <= 100
   if (!valid) {
     return
   }

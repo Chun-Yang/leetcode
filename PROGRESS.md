@@ -3,6 +3,8 @@
 ### TODO:
 - review 1-400
 - next 76-80
+- find paradims for while loop to maintain the constrain and break it
+  binary search vs sliding window
 
 ### HARD:
 4-median-of-two-sorted-arrays.java

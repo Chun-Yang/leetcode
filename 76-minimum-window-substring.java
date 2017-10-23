@@ -1,7 +1,34 @@
+// Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).
+
+// For example,
+// S = "ADOBECODEBANC"
+// T = "ABC"
+// Minimum window is "BANC".
+
+// Note:
+// If there is no such window in S that covers all characters in T, return the empty string "".
+
+// If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
+
+
+// Solution1: sliding window / pointers
+// the faster pointer is the iterator(also right boundary)
+// the slow pointer is the left boundary
+// constrain: the sliding window contains all chars in t
+// - a list to save count of letters (26 if lowercase)
+// 1. we add new char in
+//    - check if we have valid substring
+//    - if not we add it in
+//    - else we need to remove as many chars as possible and
+//      maintains the constrain
+//      NOTE: we can break the constrain since we know the shortest one
+//      starting with the current starting point is already captured
+//    - then we check if length is smaller
+
 import java.util.HashMap;
 import java.util.Arrays;
 
-public class Solution {
+class Solution {
   // public String minWindow(String s, String t) {
   //   if (s.length() == 0 || t.length() == 0) return "";
 

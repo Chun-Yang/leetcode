@@ -1,4 +1,20 @@
-public class Solution {
+// Follow up for "Search in Rotated Sorted Array":
+// What if duplicates are allowed?
+
+// Would this affect the run-time complexity? How and why?
+// Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+
+// (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).
+
+// Write a function to determine if a given target is in the array.
+
+// The array may contain duplicates.
+
+// solution1: binary search
+// deal with edget case when the nums[lo] == nums[hi], we only move lo
+// since this value may be the value we are searching
+
+class Solution {
   public boolean search(int[] nums, int target) {
     if (nums.length == 0) return false;
 
@@ -10,9 +26,6 @@ public class Solution {
 
       if (nums[lo] == nums[hi]) {
         lo++;
-      } else if (nums[lo] < nums[hi]) {
-        if (target < nums[mid]) hi = mid;
-        else lo = mid + 1;
       } else {
         if (nums[mid] >= nums[lo]) {
           if (target >= nums[lo] && target < nums[mid]) hi = mid;

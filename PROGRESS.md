@@ -14,6 +14,7 @@
 47-permutations-ii.java
 52-n-queens-ii.java
 72-edit-distance.java
+81-search-in-rotated-sorted-array-ii.java
 
 ### TEACH:
 1. Know solution to every problem in the pool

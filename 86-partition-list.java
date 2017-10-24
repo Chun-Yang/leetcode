@@ -15,10 +15,12 @@
 
 // solution1: pointers
 // - iterator
-// - hatLeft
-// - hatRight
+// - hatL
+// - hatR
 // - endL
 // - endG
 //
-// hatLess.next = hatGE.next
-// hatLess
+// endL.next = hatR.next
+// hatR.next = null
+//
+// return hatL.next

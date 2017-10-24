@@ -13,3 +13,5 @@
 
 
 // https://leetcode.com/problems/maximal-rectangle
+
+// solution1: for each row, we convert it to largest ranctangle

@@ -15,6 +15,7 @@
 52-n-queens-ii.java
 72-edit-distance.java
 81-search-in-rotated-sorted-array-ii.java
+87-scramble-string.java
 
 ### TEACH:
 1. Know solution to every problem in the pool

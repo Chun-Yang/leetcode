@@ -1,10 +1,11 @@
-// Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
-// 
-// 
+// Given n, how many structurally unique BST's (binary search trees)
+// that store values 1...n?
+//
+//
 // For example,
 // Given n = 3, there are a total of 5 unique BST's.
-// 
-// 
+//
+//
 // 1         3     3      2      1
 // \       /     /      / \      \
 // 3     2     1      1   3      2
@@ -13,3 +14,19 @@
 
 
 // https://leetcode.com/problems/unique-binary-search-trees
+
+// solution1: pattern
+// dp
+// time: O(n ^ 2) space: O(n)
+class Solution {
+  public int numTrees(int n) {
+    int[] counts = new int[n+1];
+    counts[0] = 1;
+    for (int i=1; i<=n; i++) {
+      for (int j=0; j<i; j++) {
+        counts[i] += counts[j] * counts[i-1-j];
+      }
+    }
+    return counts[n];
+  }
+}

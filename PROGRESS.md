@@ -16,6 +16,9 @@
 72-edit-distance.java
 81-search-in-rotated-sorted-array-ii.java
 87-scramble-string.java
+94-binary-tree-inorder-traversal.java
+- inorder is good
+- postorder and preorder are similar
 
 ### TEACH:
 1. Know solution to every problem in the pool

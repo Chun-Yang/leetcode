@@ -15,8 +15,8 @@
 
 // https://leetcode.com/problems/unique-binary-search-trees
 
-// solution1: pattern
-// dp
+// solution1:
+// dp from pattern
 // time: O(n ^ 2) space: O(n)
 class Solution {
   public int numTrees(int n) {
@@ -30,3 +30,6 @@ class Solution {
     return counts[n];
   }
 }
+
+// solution2: catalan tree
+// https://discuss.leetcode.com/topic/13321/a-very-simple-and-straight-ans-based-on-math-catalan-number-o-n-times-o-1-space

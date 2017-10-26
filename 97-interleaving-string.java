@@ -15,7 +15,7 @@
 // https://leetcode.com/problems/interleaving-string
 
 // solution1:
-// dp bottom-up
+// dp bottom-up (Or we can use dfs top to bottom)
 // time O(m * n) space O(m * n)
 
 class Solution {

@@ -2,7 +2,7 @@
 
 ### TODO:
 - review 1-400
-- next 96-100
+- next 101-105
 - find paradims for while loop to maintain the constrain and break it
   binary search vs sliding window
 
@@ -19,6 +19,7 @@
 94-binary-tree-inorder-traversal.java
 - inorder is good
 - postorder and preorder are similar
+99-recover-binary-search-tree.java
 
 ### TEACH:
 1. Know solution to every problem in the pool

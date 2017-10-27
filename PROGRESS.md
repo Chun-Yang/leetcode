@@ -2,7 +2,7 @@
 
 ### TODO:
 - review 1-400
-- next 101-105
+- next 103-105
 - find paradims for while loop to maintain the constrain and break it
   binary search vs sliding window
 
@@ -17,7 +17,6 @@
 81-search-in-rotated-sorted-array-ii.java
 87-scramble-string.java
 94-binary-tree-inorder-traversal.java
-- inorder is good
 - postorder and preorder are similar
 99-recover-binary-search-tree.java
 

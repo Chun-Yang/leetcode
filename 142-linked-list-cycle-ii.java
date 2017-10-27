@@ -1,38 +1,12 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
-  public ListNode detectCycle(ListNode head) {
-    if (head == null) return null;
+// Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
+// 
+// 
+// 
+// Note: Do not modify the linked list.
+// 
+// 
+// Follow up:
+// Can you solve it without using extra space?
 
-    ListNode slow = head;
-    ListNode fast = head;
-    boolean hasCycle = false;
 
-    while (fast.next != null && fast.next.next != null) {
-      slow = slow.next;
-      fast = fast.next.next;
-      if (slow == fast) {
-        hasCycle = true;
-        break;
-      }
-    }
-
-    if (!hasCycle) return null;
-
-    ListNode begin = head;
-    while (begin != slow) {
-      begin = begin.next;
-      slow = slow.next;
-    }
-    return begin;
-  }
-}
+// https://leetcode.com/problems/linked-list-cycle-ii

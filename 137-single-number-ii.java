@@ -1,15 +1,9 @@
-public class Solution {
-  public int singleNumber(int[] nums) {
-    int single = 0;
+// Given an array of integers, every element appears three times except for one, which appears exactly once. Find that single one.
+// 
+// 
+// 
+// Note:
+// Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 
-    for (int i=31; i>=0; i--) {
-      int digit = 0;
-      for (int num: nums) {
-        digit += (num >> i) & 1;
-      }
-      single = (single << 1) + (digit % 3);
-    }
 
-    return single;
-  }
-}
+// https://leetcode.com/problems/single-number-ii

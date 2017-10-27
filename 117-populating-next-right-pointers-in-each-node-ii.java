@@ -1,69 +1,28 @@
-/**
- * Definition for binary tree with next pointer.
- * public class TreeLinkNode {
- *     int val;
- *     TreeLinkNode left, right, next;
- *     TreeLinkNode(int x) { val = x; }
- * }
- */
-// https://discuss.leetcode.com/topic/1106/o-1-space-o-n-complexity-iterative-solution/6
-// https://discuss.leetcode.com/topic/8447/simple-solution-using-constant-space
-public class Solution {
-  public void connect(TreeLinkNode root) {
-    TreeLinkNode upperHead = root;
-    TreeLinkNode lowerHat = new TreeLinkNode(0);
-    while (upperHead != null) {
-      lowerHat.next = null;
-      TreeLinkNode lowerIter = lowerHat;
-      while (upperHead != null) {
-        if (upperHead.left != null) {
-          lowerIter.next = upperHead.left;
-          lowerIter = lowerIter.next;
-        }
-        if (upperHead.right != null) {
-          lowerIter.next = upperHead.right;
-          lowerIter = lowerIter.next;
-        }
-        upperHead = upperHead.next;
-      }
-      upperHead = lowerHat.next;
-    }
-  }
+// Follow up for problem "Populating Next Right Pointers in Each Node".
+// What if the given tree could be any binary tree? Would your previous solution still work?
+// 
+// Note:
+// You may only use constant extra space.
+// 
+// 
+// For example,
+// Given the following binary tree,
+// 
+// 1
+// /  \
+// 2    3
+// / \    \
+// 4   5    7
+// 
+// 
+// 
+// After calling your function, the tree should look like:
+// 
+// 1 -> NULL
+// /  \
+// 2 -> 3 -> NULL
+// / \    \
+// 4-> 5 -> 7 -> NULL
 
-  // public void connect(TreeLinkNode root) {
-  //   TreeLinkNode upperHead = root;
-  //   TreeLinkNode lowerHat = new TreeLinkNode(0);
-  //   while (upperHead != null) {
-  //     lowerHat.next = null;
-  //     TreeLinkNode lowerIter = lowerHat;
-  //     while (upperHead != null) {
-  //       if (upperHead.left != null) {
-  //         lowerIter.next = upperHead.left;
-  //         lowerIter = lowerIter.next;
-  //       }
-  //       if (upperHead.right != null) {
-  //         lowerIter.next = upperHead.right;
-  //         lowerIter = lowerIter.next;
-  //       }
-  //       upperHead = upperHead.next;
-  //     }
-  //     upperHead = lowerHat.next;
-  //   }
-  // }
-  // public void connect(TreeLinkNode root) {
-  //   if (root == null) return;
 
-  //   Queue<TreeLinkNode> level = new ArrayDeque<>();
-  //   level.offer(root);
-  //   while (!level.isEmpty()) {
-  //     int size = level.size();
-  //     TreeLinkNode cur = new TreeLinkNode(0);
-  //     for (int i=0; i<size; i++) {
-  //       cur.next = level.poll();
-  //       cur = cur.next;
-  //       if (cur.left != null) level.offer(cur.left);
-  //       if (cur.right != null) level.offer(cur.right);
-  //     }
-  //   }
-  // }
-}
+// https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii

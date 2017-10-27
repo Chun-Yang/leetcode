@@ -1,9 +1,9 @@
 // Given numRows, generate the first numRows of Pascal's triangle.
-// 
-// 
+//
+//
 // For example, given numRows = 5,
 // Return
-// 
+//
 // [
 // [1],
 // [1,1],
@@ -14,3 +14,5 @@
 
 
 // https://leetcode.com/problems/pascals-triangle
+
+// solution1: dp

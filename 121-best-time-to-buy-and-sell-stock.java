@@ -26,6 +26,10 @@
 // NOTE: this is similar to Kadane's algorithem
 
 // solution1: dp
+// NOTE:
+// the meaning of sell: for all buy-sell sequences
+// that ends with a sell
+// that is equal to or shorter to the current values length
 class Solution {
   public int maxProfit(int[] prices) {
     int buy = Integer.MIN_VALUE;

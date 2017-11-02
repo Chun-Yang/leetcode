@@ -10,3 +10,7 @@
 
 
 // https://leetcode.com/problems/reorder-list
+
+// 1. can we do it one at a time from start to finish?
+// not easily
+// 2. split(slow,fast) + reverse the second one + merge

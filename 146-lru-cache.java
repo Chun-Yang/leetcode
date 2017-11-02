@@ -1,18 +1,22 @@
-// Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
-// 
-// 
-// 
-// get(key) - Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
-// put(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
-// 
-// 
+// Design and implement a data structure for Least Recently Used (LRU) cache.
+// It should support the following operations: get and put.
+//
+//
+//
+// get(key) - Get the value (will always be positive) of the key if the key
+// exists in the cache, otherwise return -1.
+// put(key, value) - Set or insert the value if the key is not already present.
+// When the cache reached its capacity, it should invalidate the least recently
+// used item before inserting a new item.
+//
+//
 // Follow up:
 // Could you do both operations in O(1) time complexity?
-// 
+//
 // Example:
-// 
+//
 // LRUCache cache = new LRUCache( 2 /* capacity */ );
-// 
+//
 // cache.put(1, 1);
 // cache.put(2, 2);
 // cache.get(1);       // returns 1
@@ -25,3 +29,28 @@
 
 
 // https://leetcode.com/problems/lru-cache
+
+// solution1 HashMap + LinkedListNode (double linked)
+// - capacity
+// - length
+// - create a LinkedListNode class
+//   - value
+//   - key
+//   - prev
+//   - next
+// - need a start and an end LinkedListNode
+//   - add a celing
+//   - add a floor
+//   - the start is the newest
+//   - the end is the oldest (which)
+// - create a HashMap
+//   - key is the key
+//   - value is the LinkedListNode
+// - get
+//   - check if we have it in HashMap, return accordingly
+//   - if we have that value, move that Node into the front
+// - put
+//   - check if we have it in HashMap, increase the length accrodingly
+//   - if new value, we insert it at start of the LinkedList
+//   - when the length is larger than the capacity, we remove the last one,
+//     also remove the key from the hash for the last one

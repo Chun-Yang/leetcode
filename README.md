@@ -1,9 +1,8 @@
 ## 2017-10-10(3rd)
 
 ### TODO:
-- TRY: 117-populating-next-right-pointers-in-each-node-ii.java
 - review 1-400
-- next 130-140
+- next 141-150
 
 ### HARD:
 4-median-of-two-sorted-arrays.java

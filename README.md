@@ -15,7 +15,6 @@
 81-search-in-rotated-sorted-array-ii.java
 87-scramble-string.java
 94-binary-tree-inorder-traversal.java
-- postorder and preorder are similar
 99-recover-binary-search-tree.java
 138-copy-list-with-random-pointer.java
 151-reverse-words-in-a-string.java

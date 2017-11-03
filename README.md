@@ -18,6 +18,7 @@
 - postorder and preorder are similar
 99-recover-binary-search-tree.java
 138-copy-list-with-random-pointer.java
+151-reverse-words-in-a-string.java
 
 ### TEACH:
 1. Know solution to every problem in the pool, create a excel

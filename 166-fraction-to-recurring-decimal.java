@@ -1,27 +1,16 @@
-public class Solution {
-  public String fractionToDecimal(int numerator, int denominator) {
-    StringBuilder sb = new StringBuilder();
-    String sign = (numerator > 0 == denominator > 0 || numerator == 0) ? "" : "-";
-    sb.append(sign);
+// Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.
+// 
+// If the fractional part is repeating, enclose the repeating part in parentheses.
+// 
+// For example,
+// 
+// Given numerator = 1, denominator = 2, return "0.5".
+// Given numerator = 2, denominator = 1, return "2".
+// Given numerator = 2, denominator = 3, return "0.(6)".
+// 
+// 
+// 
+// Credits:Special thanks to @Shangrila for adding this problem and creating all test cases.
 
-    long num = Math.abs((long)numerator);
-    long den = Math.abs((long)denominator);
-    sb.append(num / den);
-    long rem = num % den;
 
-    if (rem == 0) return sb.toString();
-    sb.append(".");
-
-    HashMap<Long, Integer> rems = new HashMap<>();
-    while (!rems.containsKey(rem)) {
-      rems.put(rem, sb.length());
-      rem = 10 * rem;
-      sb.append(rem / den);
-      rem = rem % den;
-    }
-    sb.insert(rems.get(rem), "(");
-    sb.append(")");
-
-    return sb.toString().replace("(0)", "");
-  }
-}
+// https://leetcode.com/problems/fraction-to-recurring-decimal

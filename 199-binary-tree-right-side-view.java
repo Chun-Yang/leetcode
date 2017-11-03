@@ -1,35 +1,16 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-  public List<Integer> rightSideView(TreeNode root) {
-    List<Integer> list = new ArrayList<Integer>();
-    dfs(root, list, 0);
-    return list;
-  }
-  private void dfs(TreeNode node, List<Integer> list, int depth) {
-    if (node == null) return;
-    if (list.size() == depth) list.add(node.val);
-    dfs(node.right, list, depth+1);
-    dfs(node.left, list, depth+1);
-  }
-  // public List<Integer> rightSideView(TreeNode root) {
-  //   if (root == null) return new ArrayList<>();
+// Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+// 
+// 
+// For example:
+// Given the following binary tree,
+// 
+// 1
+// 
+// 
+// You should return [1, 3, 4].
+// 
+// 
+// Credits:Special thanks to @amrsaqr for adding this problem and creating all test cases.
 
-  //   List<Integer> combined = new ArrayList<>();
-  //   combined.add(root.val);
-  //   List<Integer> lefts = rightSideView(root.left);
-  //   List<Integer> rights = rightSideView(root.right);
-  //   combined.addAll(rights);
-  //   if (lefts.size() > rights.size()) {
-  //     combined.addAll(lefts.subList(rights.size(), lefts.size()));
-  //   }
-  //   return combined;
-  // }
-}
+
+// https://leetcode.com/problems/binary-tree-right-side-view

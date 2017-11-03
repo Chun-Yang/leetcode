@@ -1,39 +1,20 @@
-public class Solution {
-  // public int findPeakElement(int[] nums) {
-  //   int lo = 0;
-  //   int hi = nums.length - 1;
+// A peak element is an element that is greater than its neighbors.
+// 
+// Given an input array where num[i] ≠ num[i+1], find a peak element and return its index.
+// 
+// The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
+// 
+// You may imagine that num[-1] = num[n] = -∞.
+// 
+// For example, in array [1, 2, 3, 1], 3 is a peak element and your function should return the index number 2.
+// 
+// click to show spoilers.
+// 
+// Note:
+// Your solution should be in logarithmic complexity.
+// 
+// 
+// Credits:Special thanks to @ts for adding this problem and creating all test cases.
 
-  //   while (lo < hi) {
-  //     int mid = lo + (hi - lo) / 2;
-  //     if (mid == 0) {
-  //       return nums[1] > nums[0] ? 1 : 0;
-  //     }
 
-  //     if (nums[mid - 1] > nums[mid]) {
-  //       hi = mid;
-  //     } else if (nums[mid + 1] > nums[mid]) {
-  //       lo = mid + 1;
-  //     } else {
-  //       return mid;
-  //     }
-  //   }
-
-  //   return lo;
-  // }
-  public int findPeakElement(int[] nums) {
-    int lo = 0;
-    int hi = nums.length - 1;
-
-    while (lo < hi) {
-      int mid = lo + (hi - lo) / 2;
-      int midPlus = mid + 1;
-      if (nums[mid] > nums[midPlus]) {
-        hi = mid;
-      } else {
-        lo = midPlus;
-      }
-    }
-
-    return lo;
-  }
-}
+// https://leetcode.com/problems/find-peak-element

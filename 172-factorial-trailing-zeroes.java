@@ -1,12 +1,8 @@
-public class Solution {
-  public int trailingZeroes(int n) {
-    long nl = (long)n;
-    long base = 5;
-    int zeros = 0;
-    while (n >= base && base <= Integer.MAX_VALUE) {
-      zeros += n / base;
-      base *= 5;
-    }
-    return zeros;
-  }
-}
+// Given an integer n, return the number of trailing zeroes in n!.
+// 
+// Note: Your solution should be in logarithmic time complexity.
+// 
+// Credits:Special thanks to @ts for adding this problem and creating all test cases.
+
+
+// https://leetcode.com/problems/factorial-trailing-zeroes

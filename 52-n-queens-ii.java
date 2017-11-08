@@ -8,6 +8,7 @@
 
 // Solution1: O(n ^ n * n)
 // same as N-queens-i return number/count instead of configuration
+// we can do O(n ^ n) for N-queens-i too using the technique bellow
 
 // Solution2: O(n ^ n)
 // https://discuss.leetcode.com/topic/5962/accepted-java-solution

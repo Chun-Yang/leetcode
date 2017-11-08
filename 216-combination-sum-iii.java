@@ -1,38 +1,23 @@
-public class Solution {
-  List<List<Integer>> combs;
-  List<Integer> comb;
-  public List<List<Integer>> combinationSum3(int k, int n) {
-    combs = new ArrayList<List<Integer>>();
-    comb = new ArrayList<Integer>();
-    dfs(k, n, 0);
-    return combs;
-  }
-  private void dfs(int k, int n, int last) {
-    // do not have enough nums to pick
-    if (last + k > 9) return;
+// Find all possible combinations of k numbers that add up to a number n, given that only numbers from 1 to 9 can be used and each combination should be a unique set of numbers.
+// 
+// 
+// 
+// Example 1:
+// Input:  k = 3,  n = 7
+// Output:
+// 
+// [[1,2,4]]
+// 
+// 
+// Example 2:
+// Input:  k = 3,  n = 9
+// Output:
+// 
+// [[1,2,6], [1,3,5], [2,3,4]]
+// 
+// 
+// 
+// Credits:Special thanks to @mithmatt for adding this problem and creating all test cases.
 
-    int min = (last + 1 + last + k) * k / 2;
-    if (n < min) return;
-    if (n == min) {
-      ArrayList<Integer> found = new ArrayList<>(comb);
-      for (int i=last+1; i<=last+k; i++) found.add(i);
-      combs.add(found);
-      return;
-    }
 
-    int max = (9 - k + 1 + 9) * k / 2;
-    if (n == max) {
-      ArrayList<Integer> found = new ArrayList<>(comb);
-      for (int i=9-k+1; i<=9; i++) found.add(i);
-      combs.add(found);
-      return;
-    }
-    if (n > max) return;
-
-    for (int i=last+1; i<9-k+1; i++) {
-      comb.add(i);
-      dfs(k-1, n-i, i);
-      comb.remove(comb.size() - 1);
-    }
-  }
-}
+// https://leetcode.com/problems/combination-sum-iii

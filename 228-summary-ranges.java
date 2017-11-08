@@ -1,20 +1,18 @@
-public class Solution {
-  public List<String> summaryRanges(int[] nums) {
-    if (nums.length == 0) return new LinkedList<>();
-    int start;
-    int end;
-    start = end = nums[0];
-    List<String> ranges = new LinkedList<String>();
-    for (int i = 1; i < nums.length; i++) {
-      if (nums[i] - end == 1) end++;
-      else {
-        if (start == end) ranges.add(Integer.toString(start));
-        else ranges.add(start + "->" + end);
-        start = end = nums[i];
-      }
-    }
-    if (start == end) ranges.add(Integer.toString(start));
-    else ranges.add(start + "->" + end);
-    return ranges;
-  }
-}
+// Given a sorted integer array without duplicates, return the summary of its ranges.
+// 
+// Example 1:
+// Input: [0,1,2,4,5,7]
+// Output: ["0->2","4->5","7"]
+// 
+// 
+// 
+// Example 2:
+// Input: [0,2,3,4,6,8,9]
+// Output: ["0","2->4","6","8->9"]
+// 
+// 
+// 
+// Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
+
+// https://leetcode.com/problems/summary-ranges

@@ -1,20 +1,18 @@
-public class Solution {
-  public boolean isIsomorphic(String s, String t) {
-    if (s.length() != t.length()) return false;
-    int l = s.length();
+// Given two strings s and t, determine if they are isomorphic.
+// 
+// Two strings are isomorphic if the characters in s can be replaced to get t.
+// 
+// All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
+// 
+// For example,
+// Given "egg", "add", return true.
+// 
+// Given "foo", "bar", return false.
+// 
+// Given "paper", "title", return true.
+// 
+// Note:
+// You may assume both s and t have the same length.
 
-    HashMap<Character, Integer> sMap = new HashMap<>();
-    HashMap<Character, Integer> tMap = new HashMap<>();
-    for (int i=0; i<l; i++) {
-      char sChar = s.charAt(i);
-      char tChar = t.charAt(i);
-      int sIndex = sMap.getOrDefault(sChar, i);
-      int tIndex = tMap.getOrDefault(tChar, i);
-      if (sIndex != tIndex) return false;
-      sMap.put(sChar, sIndex);
-      tMap.put(tChar, tIndex);
-    }
 
-    return true;
-  }
-}
+// https://leetcode.com/problems/isomorphic-strings

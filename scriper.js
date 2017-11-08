@@ -15,13 +15,23 @@ function stringify (index, href) {
 questions.forEach((props) => {
   const { index, href, title } = props
   const fullHref = 'https://leetcode.com' + href
-  const valid = index > 150 && index <= 200
+  const valid = index > 200 && index <= 300
   if (!valid) {
     return
   }
   scrapeIt(fullHref, { q: '.question-description' })
     .then(({ q }) => {
       const fileName = stringify(index, href)
+
+      if (!q) {
+        fs.writeFile(fileName, '', { flag: 'wx' }, (e) => {
+          if (e && e.code !== 'EEXIST') {
+            console.log('FILE ERROR: ', e)
+          }
+        })
+        return
+      }
+
       const formattedQ = q
         .split('\n')
         .map(s => '// ' + s.trim())
@@ -32,7 +42,6 @@ questions.forEach((props) => {
           console.log('FILE ERROR: ', e)
         }
       })
-      // fs.writeSync('./pages/${stringify(index, title)}', q)
     })
     .catch((e) => {
       console.log('PROMISE ERROR: ', e)

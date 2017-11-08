@@ -1,27 +1,7 @@
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-  public int countNodes(TreeNode root) {
-    int h = height(root);
-    if (h == 0) return 0;
-    int rightH = height(root.right);
-    if (h == rightH + 1) return (1 << (h-1)) + countNodes(root.right);
-    else return (1 << (h-2)) + countNodes(root.left);
-  }
+// Given a complete binary tree, count the number of nodes.
+// 
+// Definition of a complete binary tree from Wikipedia:
+// In a complete binary tree every level, except possibly the last, is completely filled, and all nodes in the last level are as far left as possible. It can have between 1 and 2h nodes inclusive at the last level h.
 
-  private int height(TreeNode node) {
-    int h = 0;
-    while (node != null) {
-      node = node.left;
-      h++;
-    }
-    return h;
-  }
-}
+
+// https://leetcode.com/problems/count-complete-tree-nodes

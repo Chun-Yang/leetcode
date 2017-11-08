@@ -1,42 +1,22 @@
-public class Solution {
-  public int calculate(String s) {
-    int plus = 0;
-    int mult = 1;
-    char plusSign = '+';
-    char multSign = '*';
-    int num = 0;
+// Implement a basic calculator to evaluate a simple expression string.
+// 
+// The expression string contains only non-negative integers, +, -, *, / operators and empty spaces  . The integer division should truncate toward zero.
+// 
+// You may assume that the given expression is always valid.
+// 
+// Some examples:
+// 
+// "3+2*2" = 7
+// " 3/2 " = 1
+// " 3+5 / 2 " = 5
+// 
+// 
+// 
+// 
+// Note: Do not use the eval built-in library function.
+// 
+// 
+// Credits:Special thanks to @ts for adding this problem and creating all test cases.
 
-    char[] chars = s.toCharArray();
-    for (int i=0; i<chars.length; i++) {
-      switch(chars[i]) {
-        case '+':
-        case '-':
-          plus += (plusSign == '+' ? 1 : -1) * mult;
-          plusSign = chars[i];
-          mult = 1;
-          multSign = '*';
-          break;
-        case '*':
-        case '/':
-          multSign = chars[i];
-        case ' ':
-          break;
-        default:
-          // this is number
-          num = 0;
-          while (i < chars.length && chars[i] >= '0' && chars[i] <= '9') {
-            num = num * 10 + (chars[i] - '0');
-            i++;
-          }
-          if (multSign == '*') mult *= num;
-          else mult /= num;
-          i--;
-          break;
-      }
-    }
 
-    plus += (plusSign == '+' ? 1 : -1) * mult;
-
-    return plus;
-  }
-}
+// https://leetcode.com/problems/basic-calculator-ii

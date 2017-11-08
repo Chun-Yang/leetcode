@@ -1,115 +1,32 @@
-// cycle detection
-// 1. [MINE] dfs using visited and sorted
-// if I try to visite a visited and not sorted node, there must be a cycle
-// because connecting from a lower lever to a higher level will create a cycle
-// 2. [ALGO4] dfs using back tracking
-// 3. bfs kahn's algorithem ( keep track of outdegree )
-// - queue start from 0 outdegree
-// - decrease indegress of adjencent ones
-// - put the ones that are zero into queue
-// TODO: topological sort (when we encounter)
-// 1. [MINE] dfs
-// 2. [ALGO4] dfs reversed post order
-// 3. bfs kahn's algorithem
-//
-// java stack.push != stack.offer, stack.pop == stack.poll
-public class Solution {
-  public boolean canFinish(int numCourses, int[][] prerequisites) {
-    HashMap<Integer, List<Integer>> adj = new HashMap<>();
-    for (int[] prerequisite: prerequisites) {
-      int from = prerequisite[0];
-      int to = prerequisite[1];
-      if (!adj.containsKey(to)) adj.put(to, new ArrayList<Integer>());
-      adj.get(to).add(from);
-    }
-
-    int[] outdegree = new int[numCourses];
-    Arrays.fill(outdegree, 0);
-    for (int[] prerequisite: prerequisites) {
-      int from = prerequisite[0];
-      outdegree[from]++;
-    }
-
-    int count = 0;
-    Queue<Integer> verges = new LinkedList<Integer>();
-    for (int i=0; i<numCourses; i++) {
-      if (outdegree[i] == 0) verges.offer(i);
-    }
-    while (!verges.isEmpty()) {
-      count++;
-      int to = verges.poll();
-      for (int from : adj.getOrDefault(to, new ArrayList<>())) {
-        outdegree[from]--;
-        if (outdegree[from] == 0) {
-          verges.offer(from);
-        }
-      }
-    }
-
-    return count == numCourses;
-  }
-  // // 2. [ALGO4] dfs using back tracking
-  // public boolean canFinish(int numCourses, int[][] prerequisites) {
-  //   HashMap<Integer, List<Integer>> adj = new HashMap<>();
-  //   for (int[] prerequisite: prerequisites) {
-  //     int from = prerequisite[0];
-  //     int to = prerequisite[1];
-  //     if (!adj.containsKey(from)) adj.put(from, new ArrayList<Integer>());
-  //     adj.get(from).add(to);
-  //   }
-
-  //   boolean[] onStack = new boolean[numCourses];
-  //   boolean[] visited = new boolean[numCourses];
-  //   for (int i=0; i<numCourses; i++) {
-  //     if (!dfs(i, adj, onStack, visited)) return false;
-  //   }
-  //   return true;
-  // }
-
-  // private boolean dfs(int i, HashMap<Integer, List<Integer>> adj, boolean[] onStack, boolean[] visited) {
-  //   if (onStack[i]) return false;
-  //   if (visited[i]) return true;
-  //   visited[i] = true;
-  //   onStack[i] = true;
-
-  //   for (int j : adj.getOrDefault(i, new ArrayList<>())) {
-  //     if (!dfs(j, adj, onStack, visited)) return false;
-  //   }
-
-  //   onStack[i] = false;
-  //   return true;
-  // }
+// There are a total of n courses you have to take, labeled from 0 to n - 1.
+// 
+// Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
+// 
+// 
+// Given the total number of courses and a list of prerequisite pairs, is it possible for you to finish all courses?
+// 
+// 
+// For example:
+// 2, [[1,0]]
+// There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible.
+// 
+// 2, [[1,0],[0,1]]
+// There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.
+// 
+// Note:
+// 
+// The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
+// You may assume that there are no duplicate edges in the input prerequisites.
+// 
+// 
+// 
+// click to show more hints.
+// 
+// Hints:
+// 
+// This problem is equivalent to finding if a cycle exists in a directed graph. If a cycle exists, no topological ordering exists and therefore it will be impossible to take all courses.
+// Topological Sort via DFS - A great video tutorial (21 minutes) on Coursera explaining the basic concepts of Topological Sort.
+// Topological sort could also be done via BFS.
 
 
-  // // 1. [MINE] dfs using visited and sorted
-  // public boolean canFinish(int numCourses, int[][] prerequisites) {
-  //   // create the map
-  //   HashMap<Integer, List<Integer>> edges = new HashMap<>();
-  //   for (int[] prerequisite: prerequisites) {
-  //     int from = prerequisite[0];
-  //     int to = prerequisite[1];
-  //     if (!edges.containsKey(from)) edges.put(from, new ArrayList<Integer>());
-  //     edges.get(from).add(to);
-  //   }
-
-  //   // dfs
-  //   boolean[] visited = new boolean[numCourses];
-  //   boolean[] sorted = new boolean[numCourses];
-
-  //   for (int i=0; i<numCourses; i++) {
-  //     if (!dfs(i, edges, visited, sorted)) return false;
-  //   }
-  //   return true;
-  // }
-  // private boolean dfs(int i, HashMap<Integer, List<Integer>> edges, boolean[] visited, boolean[] sorted) {
-  //   if (visited[i]) {
-  //     return sorted[i];
-  //   }
-  //   visited[i] = true;
-  //   for (int j: edges.getOrDefault(i, new ArrayList<Integer>())) {
-  //     if (!dfs(j, edges, visited, sorted)) return false;
-  //   }
-  //   sorted[i] = true;
-  //   return true;
-  // }
-}
+// https://leetcode.com/problems/course-schedule

@@ -1,18 +1,15 @@
-public class Solution {
-  public int nthUglyNumber(int n) {
-    int[] uglyNums = new int[n];
-    Arrays.fill(uglyNums, Integer.MAX_VALUE);
-    uglyNums[0] = 1;
-    int[] primes = new int[]{2, 3, 5};
-    int[] indexes = new int[]{0, 0, 0};
-    for (int i=1; i<n; i++) {
-      for (int j=0; j<3; j++) {
-        uglyNums[i] = Math.min(uglyNums[i], uglyNums[indexes[j]] * primes[j]);
-      }
-      for (int j=0; j<3; j++) {
-        if (uglyNums[i] == uglyNums[indexes[j]] * primes[j]) indexes[j]++;
-      }
-    }
-    return uglyNums[n-1];
-  }
-}
+// Write a program to find the n-th ugly number.
+// 
+// 
+// 
+// Ugly numbers are positive numbers whose prime factors only include 2, 3, 5. For example, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 is the sequence of the first 10 ugly numbers.
+// 
+// 
+// 
+// Note that 1 is typically treated as an ugly number, and n does not exceed 1690.
+// 
+// 
+// Credits:Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
+
+
+// https://leetcode.com/problems/ugly-number-ii

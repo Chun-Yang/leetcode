@@ -1,18 +1,7 @@
-public class Solution {
-  public int countPrimes(int n) {
-    int count = 0;
-    boolean[] primes = new boolean[n];
-    Arrays.fill(primes, true);
+// Description:
+// Count the number of prime numbers less than a non-negative number, n.
+// 
+// Credits:Special thanks to @mithmatt for adding this problem and creating all test cases.
 
-    for (int i=2; i<n; i++) {
-      if (primes[i]) {
-        count++;
-        for (int j=2; j*i<n; j++) {
-          primes[j*i] = false;
-        }
-      }
-    }
 
-    return count;
-  }
-}
+// https://leetcode.com/problems/count-primes

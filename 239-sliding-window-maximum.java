@@ -1,23 +1,26 @@
-public class Solution {
-  // NOTE:
-  // head - - - tail
-  // -> index increase
-  // -> value decrease
-  public int[] maxSlidingWindow(int[] nums, int k) {
-    if (k <= 1) return nums;
-    int[] maxes = new int[nums.length - k + 1];
-    Deque<Integer> queue = new LinkedList<>();
-    for (int i=0; i<nums.length; i++) {
-      // remove all the values that is out of the window
-      while (!queue.isEmpty() && queue.peekFirst() <= i - k) queue.pollFirst();
-      // remove all the values that is less than current value
-      while (!queue.isEmpty() && nums[queue.peekLast()] <= nums[i]) queue.pollLast();
-      // put the value at the tail
-      queue.offerLast(i);
-      // add to maxes
-      if (i - k + 1 >= 0) maxes[i-k+1] = nums[queue.peekFirst()];
-    }
+// Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+// 
+// For example,
+// Given nums = [1,3,-1,-3,5,3,6,7], and k = 3.
+// 
+// 
+// Window position                Max
+// ---------------               -----
+// [1  3  -1] -3  5  3  6  7       3
+// 1 [3  -1  -3] 5  3  6  7       3
+// 1  3 [-1  -3  5] 3  6  7       5
+// 1  3  -1 [-3  5  3] 6  7       5
+// 1  3  -1  -3 [5  3  6] 7       6
+// 1  3  -1  -3  5 [3  6  7]      7
+// 
+// 
+// Therefore, return the max sliding window as [3,3,5,5,6,7].
+// 
+// Note:
+// You may assume k is always valid, ie: 1 ≤ k ≤ input array's size for non-empty array.
+// 
+// Follow up:
+// Could you solve it in linear time?
 
-    return maxes;
-  }
-}
+
+// https://leetcode.com/problems/sliding-window-maximum

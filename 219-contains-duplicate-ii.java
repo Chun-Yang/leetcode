@@ -5,4 +5,4 @@
 
 // https://leetcode.com/problems/contains-duplicate-ii
 
-// solution1:
+// solution1: sliding window + set

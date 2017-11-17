@@ -5,3 +5,5 @@
 
 
 // https://leetcode.com/problems/contains-duplicate-iii
+
+// solution1: sliding window + TreeSet

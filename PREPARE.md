@@ -1,14 +1,5 @@
 # Prepare for Interview
 
-## Materials
-- Thought Process
-  - http://www.crackingthecodinginterview.com/uploads/6/5/2/8/6528028/handout_-_cracking_the_coding_skills.png
-- Basic Algorithems
-  - http://www.geeksforgeeks.org/fundamentals-of-algorithms/
-- Facebook
-  - https://www.interviewbit.com/search/?q=Facebook
-  - http://www.geeksforgeeks.org/Facebook-topics-interview-preparation/
-
 ## Knowledge
 
 ### Algorithems

@@ -21,6 +21,7 @@
 156-binary-tree-upside-down.java (iterative)
 168-excel-sheet-column-title.java
 202-happy-number.java (O(1) space)
+218-the-skyline-problem.java
 
 ### TEACH:
 1. Know solution to every problem in the pool, create a excel

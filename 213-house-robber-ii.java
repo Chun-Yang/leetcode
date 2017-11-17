@@ -12,3 +12,5 @@
 
 
 // https://leetcode.com/problems/house-robber-ii
+
+// solution1: use two dps one with first robbed, one not

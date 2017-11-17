@@ -15,7 +15,7 @@
 // The input is always valid. You may assume that evaluating the queries will
 // result in no division by zero and there is no contradiction.
 
-// Solution1: dfs
+// solution1: dfs
 import java.util.*;
 class Solution {
   public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
@@ -65,4 +65,4 @@ class Solution {
   }
 }
 
-// Solution2: calculate values from the equations, with assumptions that unknown values are 1
+// solution2: calculate values from the equations, with assumptions that unknown values are 1

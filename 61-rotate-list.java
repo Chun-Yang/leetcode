@@ -18,7 +18,7 @@
  * }
  */
 // NOTE: has to count the length since it's possible k >> length
-// Solution1: Do not use hat
+// solution1: Do not use hat
 // class Solution {
 //   public ListNode rotateRight(ListNode head, int k) {
 //     if (head == null) return head;
@@ -47,7 +47,7 @@
 //   }
 // }
 
-// Solution2: use hat
+// solution2: use hat
 class Solution {
   public ListNode rotateRight(ListNode head, int k) {
     if (head == null) return head;

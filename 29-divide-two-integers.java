@@ -5,5 +5,5 @@
 
 
 // https://leetcode.com/problems/divide-two-integers
-// Solution1: binary search O(log(n))
+// solution1: binary search O(log(n))
 // one example https://discuss.leetcode.com/topic/39501/ac-javascript-code

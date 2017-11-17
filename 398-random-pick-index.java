@@ -18,8 +18,8 @@
 // // pick(1) should return 0. Since in the array only nums[0] is equal to 1.
 // solution.pick(1);
 
-// Solution1: HashMap + ArrayList : key is num, values are indexes
-// Solution2: Sort and record indexes using another array
+// solution1: HashMap + ArrayList : key is num, values are indexes
+// solution2: Sort and record indexes using another array
 // Solution3: O(n) pick, reservoir sampling
 
 class Solution {

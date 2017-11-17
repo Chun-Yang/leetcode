@@ -13,7 +13,7 @@
 
 // https://leetcode.com/problems/length-of-last-word
 
-// Solution1: pointer (start of last word)
+// solution1: pointer (start of last word)
 
 class Solution {
   public int lengthOfLastWord(String s) {

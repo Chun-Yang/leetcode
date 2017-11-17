@@ -18,7 +18,7 @@
 
 // https://leetcode.com/problems/jump-game
 
-// Solution1: two pointers
+// solution1: two pointers
 // class Solution {
 //   public boolean canJump(int[] nums) {
 //     int end = 0;
@@ -38,7 +38,7 @@
 //   }
 // }
 
-// Solution2: one pointer
+// solution2: one pointer
 class Solution {
   public boolean canJump(int[] nums) {
     int end = 0;

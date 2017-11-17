@@ -16,6 +16,6 @@
 
 // https://leetcode.com/problems/sudoku-solver
 
-// Solution1: dfs and backtracking
+// solution1: dfs and backtracking
 // time: O(n ^ (n ^ 2)) for each cell, we can try n options
 // space: O(n) stack

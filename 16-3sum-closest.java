@@ -11,7 +11,7 @@
 
 import java.util.*;
 
-// Solution1: sort and two pointers
+// solution1: sort and two pointers
 // time: O(n ^ 2) space: O(1)
 class Solution {
   public int threeSumClosest(int[] nums, int target) {

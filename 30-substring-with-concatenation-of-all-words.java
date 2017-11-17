@@ -23,13 +23,13 @@
 // wl is the length of each word
 // n is the count of words
 
-// Solution2:
+// solution2:
 // we maintain wl sliding windows
 // for each sliding window, we slide through the whole string
 // using (l / wl) checks and each check cost wl for hashing
 // time O(l * wl)
 
-// Solution1:
+// solution1:
 // for each window that contains char count equals to words char count,
 // we check if we can form a substring
 // time O(l * n * wl)

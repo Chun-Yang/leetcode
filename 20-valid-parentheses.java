@@ -7,7 +7,7 @@
 
 // https://leetcode.com/problems/valid-parentheses
 
-// Solution1: Stack
+// solution1: Stack
 class Solution {
   public boolean isValid(String s) {
 

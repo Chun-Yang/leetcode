@@ -27,7 +27,7 @@
 // or
 // 7 -> 6 -> 3 -> 2 -> 1
 
-// Solution1 greedy
+// solution1 greedy
 // try to solve several cases first
 class Solution {
   public int integerReplacement(int n) {

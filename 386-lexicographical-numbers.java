@@ -5,7 +5,7 @@
 // Please optimize your algorithm to use less time and space. The input size may
 // be as large as 5,000,000.
 
-// Solution1: O(n * log(n)) sort by number
+// solution1: O(n * log(n)) sort by number
 import java.util.*;
 
 // class Solution {
@@ -21,7 +21,7 @@ import java.util.*;
 //   }
 // }
 
-// Solution2: O(n) bfs
+// solution2: O(n) bfs
 class Solution {
   public List<Integer> lexicalOrder(int n) {
     List<Integer> list = new ArrayList<Integer>();

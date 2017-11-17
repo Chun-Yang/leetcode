@@ -16,8 +16,8 @@
 
 // https://leetcode.com/problems/permutations
 
-// Solution1: dfs + backtracking + set(need to convert set to array to iterate)
-// Solution2: dp using insertion at different positions
+// solution1: dfs + backtracking + set(need to convert set to array to iterate)
+// solution2: dp using insertion at different positions
 // - 1
 // - 1,2 | 2,1
 // - 1,2,3 | 1,3,2 | 3,1,2 | 2,1,3 | 2,3,1 | 3,2,1

@@ -3,7 +3,7 @@
 
 // https://leetcode.com/problems/merge-k-sorted-lists
 
-// Solution1: PriorityQueue
+// solution1: PriorityQueue
 // n is the length of lists
 // m is the length of longest list
 // time O(n * log(m)) auxiliary space O(n)

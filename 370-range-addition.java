@@ -45,10 +45,10 @@
 
 
 
-// Solution1 O(k log(k) + n) create merged array of changes [startAt, change]
+// solution1 O(k log(k) + n) create merged array of changes [startAt, change]
 // sort them and go through the list and add up the values
 
-// Solution2 O(k + n) label start and end values as changes one pass to set the values
+// solution2 O(k + n) label start and end values as changes one pass to set the values
 class Solution {
   public int[] rangeAddition(int[][] updates, int n) {
     int[] values = new int[n];

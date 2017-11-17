@@ -15,13 +15,13 @@
 
 // return 3. (Placing a bomb at (1,1) kills 3 enemies)
 
-// Solution1: for each empty point, we go left, right, up and down untill wall
+// solution1: for each empty point, we go left, right, up and down untill wall
 // or edge, and count the enemies
 // m: rows
 // n: columns
 // O(m * n * (m + n))
 
-// Solution2: we create a map of numbers of enemies that we can kill at that spot
+// solution2: we create a map of numbers of enemies that we can kill at that spot
 // and add the two maps get the max
 // O(m * n)
 

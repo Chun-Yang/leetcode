@@ -19,7 +19,7 @@
 
 // https://leetcode.com/problems/median-of-two-sorted-arrays
 
-// Solution1:
+// solution1:
 // https://discuss.leetcode.com/topic/2778/share-my-simple-o-log-m-n-solution-for-your-reference/36
 class Solution {
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {

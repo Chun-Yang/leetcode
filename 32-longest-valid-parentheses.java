@@ -11,6 +11,6 @@
 
 
 // https://leetcode.com/problems/longest-valid-parentheses
-// Solution1: track lefts and rights
+// solution1: track lefts and rights
 // - rights is larger, start from here
 // - left is larger, use the right to calculate length

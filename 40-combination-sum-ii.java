@@ -24,7 +24,7 @@
 
 // https://leetcode.com/problems/combination-sum-ii
 
-// Solution1: dfs + backtracking
+// solution1: dfs + backtracking
 
 import java.util.*;
 class Solution {

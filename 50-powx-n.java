@@ -1,10 +1,10 @@
 // Implement pow(x, n).
 
-// Solution1: binary search, rich to the top, then reduce (iterative)
+// solution1: binary search, rich to the top, then reduce (iterative)
 // gredually (NOTE: this is not binary search the following is a good implement)
 // https://discuss.leetcode.com/topic/40546/iterative-log-n-solution-with-clear-explanation
 
-// Solution2: recursive using odd and even (recursive)
+// solution2: recursive using odd and even (recursive)
 // https://discuss.leetcode.com/topic/5425/short-and-easy-to-understand-solution
 
 // Solution3: several approachs

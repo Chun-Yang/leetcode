@@ -23,7 +23,7 @@
 
 // https://leetcode.com/problems/combination-sum
 
-// Solution1: dp (bottom to top)
+// solution1: dp (bottom to top)
 // 1: 1
 // 2: 1 1, 2
 // 3: 1 1 1, 1 2, 3
@@ -31,5 +31,5 @@
 // n is the target
 // time O(n ^ 2)
 
-// Solution2: dfs + backtracking + cache (top to bottom)
+// solution2: dfs + backtracking + cache (top to bottom)
 // Solution3: dfs + backtracking

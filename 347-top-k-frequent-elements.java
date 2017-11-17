@@ -8,8 +8,8 @@
 // Your algorithm's time complexity must be better than O(n log n), where n is the
 // array's size.
 
-// Solution1: save counter and use quick sort
-// Solution2: bucket sort
+// solution1: save counter and use quick sort
+// solution2: bucket sort
 // create n + 1(0, ..., n) buckets, i bucket contains all nums that has count of i
 // iterate from back to front and append it to an array
 import java.util.*;

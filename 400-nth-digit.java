@@ -39,7 +39,7 @@ class Solution {
   }
 }
 
-// Solution2: use divisions instead of multiplication to prevent overflow
+// solution2: use divisions instead of multiplication to prevent overflow
 // https://discuss.leetcode.com/topic/59378/short-python-java
 // public int findNthDigit(int n) {
 //     n -= 1;

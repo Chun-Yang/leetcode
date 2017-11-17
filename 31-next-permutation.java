@@ -20,7 +20,7 @@
 // 1,2,3 -> 1,3,2
 // 1,3,2 -> 2,1,3
 // 1,2,6,5,4,3 -> 1,3,2,3,5,6
-// Solution1:
+// solution1:
 // - from right to left, get the boundary of assending sequence
 // - if boundary is -1, we reverse
 // - otherwise, use the smallest one that is larger than the current one

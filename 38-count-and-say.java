@@ -33,5 +33,5 @@
 
 // https://leetcode.com/problems/count-and-say
 
-// Solution1: dp iterative
+// solution1: dp iterative
 // time O(n^2) space O(n)

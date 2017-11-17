@@ -3,7 +3,7 @@
 
 // https://leetcode.com/problems/longest-common-prefix
 
-// Solution1: for each string, we check if they all have the same prefix
+// solution1: for each string, we check if they all have the same prefix
 // time O(m) (m is # of chars in all strs) space O(1)
 class Solution {
   public String longestCommonPrefix(String[] strs) {

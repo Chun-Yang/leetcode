@@ -17,7 +17,7 @@
 // Explanation:
 // 'e' is the letter that was added.
 
-// Solution1: counter O(n) time, O(1) space
+// solution1: counter O(n) time, O(1) space
 class Solution {
   public char findTheDifference(String s, String t) {
     int[] counter = new int[26];
@@ -32,4 +32,4 @@ class Solution {
   }
 }
 
-// Solution2: xor
+// solution2: xor

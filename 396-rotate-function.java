@@ -21,7 +21,7 @@
 
 // So the maximum value of F(0), F(1), F(2), F(3) is F(3) = 26.
 
-// Solution1:
+// solution1:
 // F(k + 1) = F(k) + (sum - n * a_((n-k) % n))
 class Solution {
   public int maxRotateFunction(int[] A) {

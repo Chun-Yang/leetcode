@@ -23,8 +23,8 @@
 // 6
 
 
-// Solution1: brutal force time: O(n * log(n)), space: O(n)
-// Solution2: recursive time: O(log(n)), space: O(log(n))
+// solution1: brutal force time: O(n * log(n)), space: O(n)
+// solution2: recursive time: O(log(n)), space: O(log(n))
 class Solution {
   public int lastRemaining(int n) {
     if (n == 1) return 1;

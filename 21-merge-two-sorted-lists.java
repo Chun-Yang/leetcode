@@ -4,4 +4,4 @@
 
 // https://leetcode.com/problems/merge-two-sorted-lists
 
-// Solution1: hat
+// solution1: hat

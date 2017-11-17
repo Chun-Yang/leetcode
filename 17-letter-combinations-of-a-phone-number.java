@@ -16,7 +16,7 @@
 
 // https://leetcode.com/problems/letter-combinations-of-a-phone-number
 
-// Solution1: dfs backtracking
+// solution1: dfs backtracking
 // n is the number of digits, m is the letters of each digit
 // time: O(m^n) space: O(m^n) the recursion stack takes O(n)
 class Solution {
@@ -25,5 +25,5 @@ class Solution {
   }
 }
 
-// Solution2: Queue (BFS)
+// solution2: Queue (BFS)
 // https://discuss.leetcode.com/topic/8465/my-java-solution-with-fifo-queue

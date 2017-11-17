@@ -14,11 +14,11 @@
 
 // https://leetcode.com/problems/group-anagrams
 
-// Solution1:
+// solution1:
 // HashMap key is the frequency array in string
 // value is an ArrayList that contains strings
 
-// Solution2:
+// solution2:
 // similar to solution1, but use sorted chars as key
 
 // Solution3:

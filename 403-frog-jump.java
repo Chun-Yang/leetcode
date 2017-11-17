@@ -37,7 +37,7 @@
 
 // https://leetcode.com/problems/frog-jump
 
-// Solution1: dp
+// solution1: dp
 // for each position, we track a list of posible next steps
 // for each next step, we update the following positions
 // time O(n^2) space O(n^2)

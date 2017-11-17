@@ -19,7 +19,7 @@
 
 // https://leetcode.com/problems/spiral-matrix
 
-// Solution1:
+// solution1:
 // 1,2
 // 3,6
 // 9,8

@@ -6,5 +6,5 @@
 
 
 // https://leetcode.com/problems/implement-strstr
-// Solution1: O(m * n) naive
-// Solution2: O(m + n) KMP
+// solution1: O(m * n) naive
+// solution2: O(m + n) KMP

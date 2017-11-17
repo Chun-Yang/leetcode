@@ -14,5 +14,5 @@
 
 // https://leetcode.com/problems/unique-paths
 
-// Solution1: C(m-1 + n-1) (m-1)
+// solution1: C(m-1 + n-1) (m-1)
 // time: O(Math.max(m, n))

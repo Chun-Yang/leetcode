@@ -11,7 +11,7 @@
 // If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.
 
 
-// Solution1: sliding window / pointers
+// solution1: sliding window / pointers
 // the faster pointer is the iterator(also right boundary)
 // the slow pointer is the left boundary
 // constrain: the sliding window contains all chars in t

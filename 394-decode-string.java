@@ -17,7 +17,7 @@
 // s = "3[a2[c]]", return "accaccacc".
 // s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 
-// Solution1: useing two stack to track current string
+// solution1: useing two stack to track current string
 import java.util.*;
 
 // class Solution {

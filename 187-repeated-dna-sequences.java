@@ -16,7 +16,7 @@
 
 // https://leetcode.com/problems/repeated-dna-sequences
 
-// Solution1: sliding window and two sets
+// solution1: sliding window and two sets
 // one set to save strings that appear once
 // another set to save strings that appear twice
 // O(n)

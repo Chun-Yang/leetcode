@@ -11,10 +11,10 @@
 //       4   5
 // Returns [4, 5, 3], [2], [1].
 
-// Solution1: find max depth, create an array and use the
+// solution1: find max depth, create an array and use the
 // max depth of current node to position the element in the array
 
-// Solution2: combine two ArrayList into one (too much computation)
+// solution2: combine two ArrayList into one (too much computation)
 
 // Solution3: create ArrayList on the fly when needed with postOrder
 

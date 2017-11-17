@@ -31,6 +31,6 @@
 
 // https://leetcode.com/problems/remove-k-digits
 
-// Solution1: stack + greedy
+// solution1: stack + greedy
 // - keep a increasing stack, remove all digits that is larger than the current one
 // - check if we can remove first x to get rid of multiple 0

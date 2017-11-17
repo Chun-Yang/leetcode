@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// Solution2: dp
+// solution2: dp
 // time: O(mn) space: O(n)
 class Solution {
   public int minPathSum(int[][] grid) {
@@ -26,7 +26,7 @@ class Solution {
   }
 }
 
-// Solution1: dp
+// solution1: dp
 // time: O(mn) space: O(mn)
 // class Solution {
 //   public int minPathSum(int[][] grid) {

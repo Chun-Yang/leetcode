@@ -14,7 +14,7 @@
 // ]
 // Given target = 3, return true.
 
-// Solution1: binary search, treat it as a 1-d array by using index properly
+// solution1: binary search, treat it as a 1-d array by using index properly
 import java.util.Arrays;
 
 class Solution {

@@ -20,7 +20,7 @@
 
 // https://leetcode.com/problems/unique-paths-ii
 
-// Solution1: dp
+// solution1: dp
 // time: O(m*n) space: O(m*n)
 // NOTE: we can improve the space complexity to O(Math.min(m,n))
 class Solution {

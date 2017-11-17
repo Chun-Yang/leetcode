@@ -11,7 +11,7 @@
 // [1,3,5,6], 7 → 4
 // [1,3,5,6], 0 → 0
 
-// Solution1: remove all smaller ones
+// solution1: remove all smaller ones
 class Solution {
   // public int searchInsert(int[] nums, int target) {
   //   int lo = 0, mid = 0, hi = nums.length - 1;

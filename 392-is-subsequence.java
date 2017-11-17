@@ -24,7 +24,7 @@
 // want to check one by one to see if T has its subsequence. In this scenario, how
 // would you change your code?
 
-// Solution1 two pointers
+// solution1 two pointers
 // class Solution {
 //   public boolean isSubsequence(String s, String t) {
 //     if (s.length() == 0) return true;
@@ -39,7 +39,7 @@
 // }
 
 // FOR follow up:
-// Solution2 tri time: O(m), space: O(2^n)
+// solution2 tri time: O(m), space: O(2^n)
 // Solution3 TreeSet for different chars
 // a [1,2,3,9,100]
 // b [12,32,34]

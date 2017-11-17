@@ -6,11 +6,11 @@
 
 // https://leetcode.com/problems/n-queens-ii
 
-// Solution1: O(n ^ n * n)
+// solution1: O(n ^ n * n)
 // same as N-queens-i return number/count instead of configuration
 // we can do O(n ^ n) for N-queens-i too using the technique bellow
 
-// Solution2: O(n ^ n)
+// solution2: O(n ^ n)
 // https://discuss.leetcode.com/topic/5962/accepted-java-solution
 // (set, clear)
 // https://discuss.leetcode.com/topic/29626/easiest-java-solution-1ms-98-22

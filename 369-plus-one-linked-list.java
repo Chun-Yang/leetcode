@@ -11,7 +11,7 @@
 // Output:
 // 1->2->4
 
-// Solution1: recursive
+// solution1: recursive
 class Solution {
   public LinkedNode plusOneLinkedList(LinkedNode head) {
     boolean carry = plusOne(head);
@@ -28,4 +28,4 @@ class Solution {
     return node.val == 0;
   }
 }
-// Solution2: https://discuss.leetcode.com/topic/49603/two-pointers-java-solution-o-n-time-o-1-space
+// solution2: https://discuss.leetcode.com/topic/49603/two-pointers-java-solution-o-n-time-o-1-space

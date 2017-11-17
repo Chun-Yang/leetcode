@@ -5,7 +5,7 @@
 // b = "1"
 // Return "100".
 
-// Solution1: use a stack or reverse StringBuilder
+// solution1: use a stack or reverse StringBuilder
 class Solution {
   public String addBinary(String a, String b) {
     int i = a.length();

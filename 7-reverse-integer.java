@@ -29,7 +29,7 @@
 
 import java.util.*;
 
-// Solution1: use long
+// solution1: use long
 class Solution {
   public int reverse(int x) {
     boolean isNegative = x < 0;
@@ -45,7 +45,7 @@ class Solution {
   }
 }
 
-// Solution2: check constrain violation
+// solution2: check constrain violation
 // https://discuss.leetcode.com/topic/6104/my-accepted-15-lines-of-code-for-java
 // class Solution {
 //   public int reverse(int x)

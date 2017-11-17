@@ -23,7 +23,7 @@
 // repeated 3 times.
 
 
-// Solution1: We calculate counter for each index of s, get any pair to check
+// solution1: We calculate counter for each index of s, get any pair to check
 // if this is valid.
 // time O(n ^ 2) space O(n) where n == s.length()
 // class Solution {
@@ -31,7 +31,7 @@
 // }
 // }
 
-// Solution2:
+// solution2:
 // time O(n) space O(n)
 // https://discuss.leetcode.com/topic/57596/java-strict-o-n-two-pointer-solution/2
 // for each counts (1, 2, 3...26 letters) we maintain a window.

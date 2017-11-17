@@ -27,7 +27,7 @@
 
 // https://leetcode.com/problems/n-queens
 
-// Solution1: backtracking
+// solution1: backtracking
 // STEP1: save an array of number to indicate position
 // for each position, we check if it is valid
 // - same column

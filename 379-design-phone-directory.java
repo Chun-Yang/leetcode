@@ -29,7 +29,7 @@
 // // Number 2 is available again, return true.
 // directory.check(2);
 
-// Solution1: 2 HashSet
+// solution1: 2 HashSet
 // - available
 // - occupied
-// Solution2: HashSet + LinkedList this has better constant, but same big o
+// solution2: HashSet + LinkedList this has better constant, but same big o

@@ -15,7 +15,7 @@
 
 // https://leetcode.com/problems/first-missing-positive
 
-// Solution1:
+// solution1:
 // two pass:
 // pointer jump + change positive to negative
 // select the first index whose value is positive
@@ -45,7 +45,7 @@
 //   }
 // }
 
-// Solution2: move value to its own position
+// solution2: move value to its own position
 // https://discuss.leetcode.com/topic/1361/a-very-nice-solution-from-ants-aasma-stackoverflow
 
 class Solution {

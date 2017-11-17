@@ -17,7 +17,7 @@
 
 // https://leetcode.com/problems/4sum
 
-// Solution1: sort and two pointers
+// solution1: sort and two pointers
 // r is the number of results
 // time: O(n ^ 3) space: O(r)
 class Solution {
@@ -26,7 +26,7 @@ class Solution {
   }
 }
 
-// Solution2: HashMap, key is the sum of two, value is a list of pairs,
+// solution2: HashMap, key is the sum of two, value is a list of pairs,
 // use a counter to check if the quadruplets is valid
 // time: ? space: O(n ^ 2)
 

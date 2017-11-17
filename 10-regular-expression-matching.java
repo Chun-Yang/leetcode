@@ -17,7 +17,7 @@
 
 // https://leetcode.com/problems/regular-expression-matching
 
-// Solution1 DP
+// solution1 DP
 class Solution {
   public boolean isMatch(String s, String p) {
     int m = s.length();

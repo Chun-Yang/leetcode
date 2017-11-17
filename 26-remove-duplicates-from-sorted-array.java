@@ -18,7 +18,7 @@
 
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array
 
-// Solution1: two pointers
+// solution1: two pointers
 // - first pointer is the length of the sequence
 // - second pointer is the number to examine
 

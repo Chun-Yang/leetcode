@@ -13,7 +13,7 @@
 
 // https://leetcode.com/problems/search-for-a-range
 
-// Solution1: binary search
+// solution1: binary search
 class Solution {
   public int[] searchRange(int[] nums, int target) {
     int lo = 0;

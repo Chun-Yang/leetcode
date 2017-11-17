@@ -17,4 +17,4 @@
 
 // https://leetcode.com/problems/valid-sudoku
 
-// Solution1: dfs and backtracking different from 37?
+// solution1: dfs and backtracking different from 37?

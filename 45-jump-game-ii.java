@@ -25,13 +25,13 @@
 
 // https://leetcode.com/problems/jump-game-ii
 
-// Solution1: dp
+// solution1: dp
 // time: O(n ^ 2) space: O(n)
 // 2 3 1 1 4
 // 2 1 2 1 0
 // keep track of maxIndex and minStep
 
-// Solution2: deque
+// solution2: deque
 // time: O(n) space: O(n)
 
 // import java.util.*;

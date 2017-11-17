@@ -17,9 +17,9 @@
 
 // https://leetcode.com/problems/longest-palindromic-substring
 
-// Solution1: for each position in the string (including splits), expand to fullest palindrom
+// solution1: for each position in the string (including splits), expand to fullest palindrom
 // time O(N ^ 2), space O(1)
-// Solution2: dp [a, b, d, b]
+// solution2: dp [a, b, d, b]
 class Solution {
   public String longestPalindrome(String s) {
     if (s.length() == 0) return "";

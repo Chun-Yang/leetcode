@@ -15,7 +15,7 @@
 
 // https://leetcode.com/problems/remove-element
 
-// Solution1: two pointers
+// solution1: two pointers
 // - lo pointer is the end of filtered nums
 // - hi pointer is the start of removed nums
 class Solution {

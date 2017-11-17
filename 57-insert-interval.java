@@ -12,7 +12,7 @@
 
 import java.util.*;
 
-// Solution2: split intervals into three goups: before, overlayps and after
+// solution2: split intervals into three goups: before, overlayps and after
 class Solution {
   public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
     List<Interval> lefts = new ArrayList<>();

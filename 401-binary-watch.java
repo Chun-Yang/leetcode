@@ -18,5 +18,5 @@
 
 // https://leetcode.com/problems/binary-watch
 
-// Solution1:
+// solution1:
 // iterate each number, if the count of 1 is n, we convert it to a number

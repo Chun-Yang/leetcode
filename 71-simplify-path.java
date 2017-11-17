@@ -5,7 +5,7 @@
 // path = "/a/./b/../../c/", => "/c"
 
 
-// Solution1: stack
+// solution1: stack
 // NOTE: asked in a facebook interview, a main path was introduced in
 // the arguments
 import java.util.*;

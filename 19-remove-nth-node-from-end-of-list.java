@@ -16,7 +16,7 @@
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list
 
-// Solution1: hat + get the one before the one need to be deleted
+// solution1: hat + get the one before the one need to be deleted
 /**
  * Definition for singly-linked list.
  * public class ListNode {

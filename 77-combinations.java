@@ -12,7 +12,7 @@
 //   [1,4],
 // ]
 
-// Solution1: backtracking, treat it as a tree,
+// solution1: backtracking, treat it as a tree,
 // we are trying to get all leafs of the tree
 // NOTE: use two constrains (may be redundent) is sometimes simpler
 // to reason about

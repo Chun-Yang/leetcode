@@ -17,7 +17,7 @@
 
 import java.util.*;
 
-// Solution1: sort and two pointer
+// solution1: sort and two pointer
 // time: O(n^2) space: O(# of result)
 class Solution {
   public List<List<Integer>> threeSum(int[] nums) {

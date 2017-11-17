@@ -7,7 +7,7 @@
 // b) Delete a character
 // c) Replace a character
 
-// Solution1:
+// solution1:
 // dp, create a distance matrix, use length as the bases
 // time: O(mn), space O(mn)
 // NOTE: we can improve space to O(Math.min(m, n))

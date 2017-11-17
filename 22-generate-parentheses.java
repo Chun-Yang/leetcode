@@ -15,7 +15,7 @@
 
 // https://leetcode.com/problems/generate-parentheses
 
-// Solution1: dfs + backtracking
+// solution1: dfs + backtracking
 class Solution {
   public List<String> generateParenthesis(int n) {
 

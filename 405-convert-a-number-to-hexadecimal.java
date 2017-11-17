@@ -29,5 +29,5 @@
 
 // https://leetcode.com/problems/convert-a-number-to-hexadecimal
 
-// Solution1:
+// solution1:
 // for every 4 bits, convert it to a hexadecimal

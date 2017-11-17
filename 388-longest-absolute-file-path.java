@@ -38,7 +38,7 @@
 // Notice that a/aa/aaa/file1.txt is not the longest file path, if there is
 // another path aaaaaaaaaaaaaaaaaaaaa/sth.png.
 
-// Solution1: dfs backtracking
+// solution1: dfs backtracking
 import java.util.*;
 
 class Solution {

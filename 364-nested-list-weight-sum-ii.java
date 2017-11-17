@@ -16,8 +16,8 @@
 // Given the list [1,[4,[6]]], return 17.
 // (one 1 at depth 3, one 4 at depth 2, and one 6 at depth 1; 1*3 + 4*2 + 6*1 = 17)
 
-// Solution1: two dfs, first get depth, second get values
-// Solution2: bfs, get values in each level and get pop them combined the current depth
+// solution1: two dfs, first get depth, second get values
+// solution2: bfs, get values in each level and get pop them combined the current depth
 // Solution3: https://discuss.leetcode.com/topic/49041/no-depth-variable-no-multiplication
 
 class Solution {

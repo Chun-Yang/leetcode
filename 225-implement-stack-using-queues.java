@@ -29,3 +29,11 @@
 
 
 // https://leetcode.com/problems/implement-stack-using-queues
+
+// solution1: one queue
+// - rotate the whole queue (n-1) times to expose the "top" one to the front
+// - keep track of the "top" value
+// - time O(n)
+
+// solution2: using queue as an object wrapper
+// https://discuss.leetcode.com/topic/15961/o-1-purely-with-queues/39

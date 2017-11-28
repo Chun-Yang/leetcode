@@ -20,8 +20,9 @@
 // https://leetcode.com/problems/basic-calculator
 
 // solution1: stack
-// use a stack to track +/- signs before a bracket
-// signMultiplier = 1 change when we have a sign, if we have a bracket, we times the current sign
-// lastSign = '+' change when we have a sign
-// when we encouter a (, we push lastSign in the stack
-// toggle signMultiplier when we encouter a ) by poping stack
+// - contextMultiplier
+// - currentMultiplier
+// - multipliers
+// - sum += contextMultiplier * currentMultiplier * number
+// - when we encounter '(', we push the currentMultiplier to the stack
+// - when we encounter ')', we pop and multiply it on contextMultiplier

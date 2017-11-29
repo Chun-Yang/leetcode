@@ -27,7 +27,8 @@
 // - sumOfPM (plus, minus)
 // - sumOfMD (multiplication, division)
 // - num (1)
-// - sign (*)
+// - signOfPM (+)
+// - signOfMD (-)
 // - to deal with end like this: 1+2*3, we append + to the end to trigger a plus
 //
 // NOTE: there are only two levels of priority

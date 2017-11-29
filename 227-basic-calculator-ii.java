@@ -22,3 +22,23 @@
 
 
 // https://leetcode.com/problems/basic-calculator-ii
+
+// solution1: use two values to keep track of current expression
+// - sumOfPM (plus, minus)
+// - sumOfMD (multiplication, division)
+// - num (1)
+// - sign (*)
+// - to deal with end like this: 1+2*3, we append + to the end to trigger a plus
+//
+// NOTE: there are only two levels of priority
+// cases:
+// - 1
+// - 1 + 2
+// - 1 + 2 * 3
+
+// solution2: use three values
+// - pluMin 0
+// - mulDiv 1
+// - sum
+// - pluMinSign +
+// - mulDivSign *

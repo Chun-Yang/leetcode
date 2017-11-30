@@ -2,7 +2,7 @@
 
 ### TODO:
 - review 1-400
-- next 221-230
+- next 231-240
 
 ### HARD:
 4-median-of-two-sorted-arrays.java
@@ -22,6 +22,7 @@
 168-excel-sheet-column-title.java
 202-happy-number.java (O(1) space)
 218-the-skyline-problem.java
+229-majority-element-ii.java
 
 ### TEACH:
 1. Know solution to every problem in the pool, create a excel

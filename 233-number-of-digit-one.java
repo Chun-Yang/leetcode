@@ -10,7 +10,5 @@
 // https://leetcode.com/problems/number-of-digit-one
 
 // solution1: for each digit, we count all numbers where that digit is 1
-// - left * right
-// - bounderay left and right
-// - whether the current digit is one, zero or other
-// - when left is maximum and when left is less than maximum
+// - left steaks(0,1,other) + right when left is at maximum(0,1,other)
+// https://discuss.leetcode.com/topic/18054/4-lines-o-log-n-c-java-python

@@ -1,2 +1,8 @@
 // give us all the strings with length n.
-// 0, 1, 8, 6, 9
+
+// solution1: bfs, grow from a core
+// for odd, ["1", "8"]
+// for even, [""]
+// first loop through levels
+// seond loop through paris
+// solution2: use queue

@@ -21,3 +21,8 @@
 
 
 // https://leetcode.com/problems/different-ways-to-add-parentheses
+
+// solution1: dfs
+// if the current string is a number, we return an array of number
+// else we split at all signs
+// This is like creating different trees

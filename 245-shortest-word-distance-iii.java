@@ -1,6 +1,8 @@
-// This is a follow-up problem of Shortest Word Distance. The only difference is now word1 could be the same as word2.
+// This is a follow-up problem of Shortest Word Distance. The only difference
+// is now word1 could be the same as word2.
 
-// Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
+// Given a list of words and two words word1 and word2, return the shortest
+// distance between these two words in the list.
 
 // word1 and word2 may be the same and they represent two individual words in the list.
 
@@ -9,3 +11,7 @@
 
 // Given word1 = “makes”, word2 = “coding”, return 1.
 // Given word1 = "makes", word2 = "makes", return 3.
+
+// solution1: use two methods to solve two different senarios
+// when the two words are the same,
+// we update the smaller one

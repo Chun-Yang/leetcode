@@ -22,3 +22,8 @@
 //           4   4   5
 // Output: 5
 // There are five subtrees with single values.
+
+// solution1: post order
+// use a gloabl counter to count
+// return Integer, null -> not a univalue subtree, number -> is univalue
+// check if is leaf node

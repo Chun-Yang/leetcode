@@ -13,3 +13,4 @@
 
 // - use compareTo to compare string as number
 // - grow gradually (dfs)
+// - base on top of fixed length, we check sTest whose length <= max >= min

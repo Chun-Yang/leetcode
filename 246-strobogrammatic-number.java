@@ -9,6 +9,7 @@
 // they all start from middle (different for even, same for odd)
 // and move towards boundaries.
 // use a map to determin the pair:
+// 0 -> 0
 // 1 -> 1
 // 6 -> 9
 // 8 -> 8

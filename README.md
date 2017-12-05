@@ -2,7 +2,7 @@
 
 ### TODO:
 - review 1-400
-- next 251-260
+- next 261-270
 
 ### HARD:
 4-median-of-two-sorted-arrays.java
@@ -24,6 +24,7 @@
 218-the-skyline-problem.java
 229-majority-element-ii.java
 253-meeting-rooms-ii.java
+260-single-number-iii.java
 
 ### TEACH:
 1. Know solution to every problem in the pool, create a excel

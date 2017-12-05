@@ -37,7 +37,7 @@
 // of a Binary Search Tree.
 
 // solution1: dfs resursive
-class Solution() {
+class Solution {
   int[] pre;
   int index;
   int length;
@@ -48,20 +48,21 @@ class Solution() {
     return check(Integer.MIN_VALUE, Integer.MAX_VALUE);
   }
   private boolean check(int minLimit, int maxLimit) {
-    if (index === length) {
+    if (index == length) {
       return true;
     }
-    if (pre[index] <= minLimit || pre[index] >= maxLimit) {
+    int current = pre[index];
+    if (current <= minLimit || current >= maxLimit) {
       return false;
     }
     index++;
-    return check(minLimit, pre[index]) || check(pre[index], maxLimit);
+    return check(minLimit, current) || check(current, maxLimit);
   }
 
-  public Solution() {
-    assert new Solution().verify(int[] { 2, 4, 3 }) == true;
-    assert new Solution().verify(int[] { 2, 4, 1 }) == false;
-    assert new Solution().verify(int[] { 40, 30, 35, 80, 100 }) == true;
-    assert new Solution().verify(int[] { 40, 30, 35, 20, 80, 100 }) == false;
+  public static void main(String[] args) {
+    assert new Solution().verify(new int[] { 2, 4, 3 }) == true;
+    assert new Solution().verify(new int[] { 2, 4, 1 }) == false;
+    assert new Solution().verify(new int[] { 40, 30, 35, 80, 100 }) == true;
+    assert new Solution().verify(new int[] { 40, 30, 35, 20, 80, 100 }) == false;
   }
 }

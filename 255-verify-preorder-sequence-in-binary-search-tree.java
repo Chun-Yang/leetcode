@@ -36,5 +36,32 @@
 // Given array cannot represent preorder traversal
 // of a Binary Search Tree.
 
-// My Solution
-// dfs
+// solution1: dfs resursive
+class Solution() {
+  int[] pre;
+  int index;
+  int length;
+  public boolean verify(int[] pre) {
+    index = 0;
+    length = pre.length;
+    this.pre = pre;
+    return check(Integer.MIN_VALUE, Integer.MAX_VALUE);
+  }
+  private boolean check(int minLimit, int maxLimit) {
+    if (index === length) {
+      return true;
+    }
+    if (pre[index] <= minLimit || pre[index] >= maxLimit) {
+      return false;
+    }
+    index++;
+    return check(minLimit, pre[index]) || check(pre[index], maxLimit);
+  }
+
+  public Solution() {
+    assert new Solution().verify(int[] { 2, 4, 3 }) == true;
+    assert new Solution().verify(int[] { 2, 4, 1 }) == false;
+    assert new Solution().verify(int[] { 40, 30, 35, 80, 100 }) == true;
+    assert new Solution().verify(int[] { 40, 30, 35, 20, 80, 100 }) == false;
+  }
+}

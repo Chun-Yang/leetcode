@@ -8,7 +8,7 @@
 // You may assume that n is always positive.
 // Factors should be greater than 1 and less than n.
 
-// My Solution:
+// solution1:
 // dfs, we can use back tracking
 // 2 to sqrt(n), next one >= current one
 // e.g.

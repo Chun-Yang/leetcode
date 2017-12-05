@@ -1,48 +1,68 @@
-import java.util.*;
+// Check if a given array can represent Preorder Traversal of Binary Search Tree
+// Given an array of numbers, return true if given array can represent
+// preorder traversal of a Binary Search Tree, else return false.
+// Expected time complexity is O(n).
 
-public class Solution {
-  public static void main (String[] args) {
-    Solution s = new Solution();
-    s.findSubstring("barfoothefoobarman", new String[]{"foo","bar"});
+// Examples:
+
+// Input:  pre[] = {2, 4, 3}
+// Output: true
+// Given array can represent preorder traversal
+// of below tree
+//     2
+//      \
+//       4
+//      /
+//     3
+
+// Input:  pre[] = {2, 4, 1}
+// Output: false
+// Given array cannot represent preorder traversal
+// of a Binary Search Tree.
+
+// Input:  pre[] = {40, 30, 35, 80, 100}
+// Output: true
+// Given array can represent preorder traversal
+// of below tree
+//      40
+//    /   \
+//  30    80
+//   \      \
+//   35     100
+
+
+// Input:  pre[] = {40, 30, 35, 20, 80, 100}
+// Output: false
+// Given array cannot represent preorder traversal
+// of a Binary Search Tree.
+
+// solution1: dfs resursive
+class Solution {
+  int[] pre;
+  int index;
+  int length;
+  public boolean verify(int[] pre) {
+    index = 0;
+    length = pre.length;
+    this.pre = pre;
+    return check(Integer.MIN_VALUE, Integer.MAX_VALUE);
   }
-  public List<Integer> findSubstring(String s, String[] words) {
-    // check for edge cases
-    int l = s.length();
-    int n = words.length;
-    if (n == 0) return new ArrayList<Integer>();
-    int wl = words[0].length();
-    if (l < n * wl) return new ArrayList<Integer>();
-
-    // create counter of words
-    HashMap<String, Integer> counter = new HashMap<>();
-    for (String word : words) counter.put(word, counter.getOrDefault(word, 0) + 1);
-
-    // for each sliding windows
-    List<Integer> starts = new ArrayList<Integer>();
-    int maxI = Math.min(wl - 1, l - n * wl);
-    for (int i=0; i<=maxI; i++) {
-      // slide through the whole string
-      HashMap<String, Integer> curCounter = new HashMap<>(counter);
-      for (int start=i; start + wl <= l; start += wl) {
-        // add to window
-        String toAdd = s.substring(start, start + wl);
-        curCounter.put(toAdd, curCounter.getOrDefault(toAdd, 0) - 1);
-        if (curCounter.get(toAdd) == 0) curCounter.remove(toAdd);
-        // remove from window
-        // n = 1
-        // wl = 2
-        // 0 1 2 3 4 5
-        // [ ]
-        //   [ ]
-        if (start >= n * wl) {
-          String toRemove = s.substring(start - n * wl, start - n * wl + wl);
-          curCounter.put(toRemove, curCounter.getOrDefault(toRemove, 0) + 1);
-          if (curCounter.get(toRemove) == 0) curCounter.remove(toRemove);
-        }
-        if (curCounter.isEmpty()) starts.add(start);
-      }
+  private boolean check(int minLimit, int maxLimit) {
+    if (index == length) {
+      return true;
     }
+    int current = pre[index];
+    if (current <= minLimit || current >= maxLimit) {
+      return false;
+    }
+    index++;
+    return check(minLimit, current) || check(current, maxLimit);
+  }
 
-    return starts;
+  public static void main(String[] args) {
+    assert new Solution().verify(new int[] { 2, 4, 3 }) == true;
+    assert new Solution().verify(new int[] { 2, 4, 1 }) == false;
+    assert new Solution().verify(new int[] { 40, 30, 35, 80, 100 }) == true;
+    assert new Solution().verify(new int[] { 40, 30, 35, 20, 80, 100 }) == false;
   }
 }

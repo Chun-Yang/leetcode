@@ -11,10 +11,16 @@
 // return the pq size
 // O(n * log(n))
 // proof:
-// simple case: one this is correct
+// simple case: one meeting (apprant)
 // recursive case:
-// if we do not use the end_min, instead we use end_x > end_min
-// 1. end_x > start && end_min < start we add an extra room
-// current: end_min end_i
-// use min: end_x   end_i
-// 2. end_x < start
+// if we do not use the end_min, instead we use end_not_min > end_min
+// 1. end_not_min > start_i && end_min < start_i we add an extra room
+// current: end_not_min end_i end_min
+// use min: end_not_min end_i
+// the "use min" one is better
+// we can manually create a room starts at 0 and beat the current one
+// 2. end_not_min < start_i
+// current: end_i end_min
+// use-min: end_i end_not_min
+// since start_i is larger than end_not_min,
+// end_min and end_not_min are equivalent

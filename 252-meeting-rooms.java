@@ -4,10 +4,13 @@
 // For example, Given [[0, 30],[5, 10],[15, 20]], return false.
 
 // solution1: sort by start time
-// time: O(n * log(n)) space: O(1)
+// time: O(n * log(n)) extra space: O(1)
 
 // solution2: balanced binary search tree
-// time: O(n * log(n)) space: O(n)
+// time: O(n * log(n)) extra space: O(n)
 // this is better since we may have early termination
 // and we do not need to sort the whole array
-// TODO: check if anyone is doing this?
+
+// solution3: early termination with sorting, like solution2
+// https://discuss.leetcode.com/topic/20959/ac-clean-java-solution/2
+// time: O(n * log(n)) extra space: O(1)

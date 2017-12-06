@@ -25,6 +25,7 @@
 229-majority-element-ii.java
 253-meeting-rooms-ii.java
 260-single-number-iii.java
+261-graph-valid-tree.java
 
 ### TEACH:
 1. Know solution to every problem in the pool, create a excel

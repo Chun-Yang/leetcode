@@ -11,3 +11,5 @@
 
 // Input:  words[] = {"caa", "aaa", "aab"}
 // Output: Order of characters is 'c', 'a', 'b'
+
+// solution1: build a dependency try using two pairs + dependency resolution
